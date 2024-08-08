@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\source\\repos\\proyectodam\\proyectodam\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\source\\repos\\proyectodam\\proyectodam\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\source\\repos\\proyectodam\\proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\ProyectoDAM\\Form1.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\Form1.cs",
@@ -26,7 +34,34 @@
               "RelativeToolTip": "ProyectoDAM\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T17:04:01.974Z",
+              "IsPinned": true,
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\ProyectoDAM\\DDBB\\Conexion.cs",
+              "RelativeDocumentMoniker": "ProyectoDAM\\DDBB\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\ProyectoDAM\\DDBB\\Conexion.cs",
+              "RelativeToolTip": "ProyectoDAM\\DDBB\\Conexion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T18:32:13.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\ProyectoDAM\\Form1.cs",
+              "RelativeDocumentMoniker": "ProyectoDAM\\Form1.cs",
+              "ToolTip": "C:\\Users\\Mario\\source\\repos\\ProyectoDAM\\ProyectoDAM\\Form1.cs",
+              "RelativeToolTip": "ProyectoDAM\\Form1.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T18:15:29.371Z",
+              "EditorCaption": ""
             }
           ]
         }

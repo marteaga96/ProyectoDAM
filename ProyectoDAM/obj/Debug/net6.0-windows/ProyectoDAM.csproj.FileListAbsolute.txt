@@ -44,3 +44,4 @@ C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\Mic
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\MySqlConnector.dll
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.LogIn.resources
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.main.resources
+C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.Properties.Resources.resources

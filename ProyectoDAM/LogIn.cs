@@ -20,6 +20,7 @@ namespace ProyectoDAM
             Application.Exit(); // Cierra toda la aplicación cuando se cierra el formulario Main
         }
 
+
         private void btnConexion_Click(object sender, EventArgs e)
         {
             try
@@ -41,7 +42,7 @@ namespace ProyectoDAM
                 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 //Si la conexión es NOK, muestra cartel rojo
                 lblNOK.Visible = true;

@@ -9,31 +9,60 @@ namespace ProyectoDAM.DDBB
 {
     public class Conexion
     {
+
         public static MySqlConnection datos_conexion = new MySqlConnection();
 
-        //Datos de conexión
-        static string server = "127.0.0.1;";
-        static string database = "prueba;";
-        static string Uid = "mario;";
-        static string password = "mario;";
 
-        public static MySqlConnection dataSource()
+
+        //Datos de conexión
+        private string server = "127.0.0.1;";
+        private string database = "prueba;";
+        private string Uid;
+        private string password;
+
+
+        public Conexion(string password, string Uid)
         {
-            datos_conexion = new MySqlConnection($"server={server} database={database} Uid={Uid} password={password}");
-            return datos_conexion;
+            this.password = password;
+            this.Uid = Uid;
+            string connectionString = $"server={server};database={database};Uid={Uid};password={password}";
+            datos_conexion = new MySqlConnection(connectionString);
         }
 
         //Abrir conexión
-        public void connOpen() { 
-            dataSource();
-            datos_conexion.Open();
-
+        public void connOpen()
+        {
+            try
+            {
+                if (datos_conexion.State == System.Data.ConnectionState.Closed)
+                {
+                    datos_conexion.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al abrir la conexión a la base de datos: " + ex.Message);
+            }
         }
 
-        //Cerrar conexión
-        public void connClose() {
-            dataSource();
-            datos_conexion.Close();
+        public void connClose()
+        {
+            try
+            {
+                if (datos_conexion.State == System.Data.ConnectionState.Open)
+                {
+                    datos_conexion.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cerrar la conexión a la base de datos: " + ex.Message);
+            }
+        }
+
+        public MySqlConnection GetConnection()
+        {
+            return datos_conexion;
         }
     }
 }

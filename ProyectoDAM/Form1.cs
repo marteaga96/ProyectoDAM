@@ -1,44 +1,44 @@
 using MySql.Data.MySqlClient;
-
+using ProyectoDAM;
 
 namespace ProyectoDAM
 {
-    
     public partial class Form1 : Form
     {
-        //Objeto para conexión a la DDBB
-        DDBB.Conexion conexion = new DDBB.Conexion();
-
+        // Constructor de la clase Form1
         public Form1()
         {
             InitializeComponent();
             lblOK.Visible = false;
             lblNOK.Visible = false;
         }
-         
+
         private void btnConexion_Click(object sender, EventArgs e)
         {
             try
             {
+                string usuario = txtUSUARIO.Text;
+                string contraseña = txtCONTRASEÑA.Text;
+
+                // Pasar la contraseña a la clase Conexion
+                DDBB.Conexion conexion = new DDBB.Conexion(contraseña, usuario);
+
                 //Si la conexión es OK, muestra cartel verde
-                DDBB.Conexion.dataSource();
                 conexion.connOpen();
-                lblOK.Visible=true;
+                lblOK.Visible = true;
                 conexion.connClose();
             }
-
             catch (Exception)
             {
                 //Si la conexión es NOK, muestra cartel rojo
                 lblNOK.Visible = true;
-                conexion.connClose();
             }
-
-            finally {
-                //Cierra conexión
+            finally
+            {
+                // Cierra la conexión
+                DDBB.Conexion conexion = new DDBB.Conexion(txtCONTRASEÑA.Text, txtUSUARIO.Text);
                 conexion.connClose();
             }
         }
-
     }
 }

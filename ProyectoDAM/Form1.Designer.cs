@@ -31,12 +31,16 @@
             btnConexion = new Button();
             lblOK = new Label();
             lblNOK = new Label();
+            lblUSUARIO = new Label();
+            lblCONTRASEÑA = new Label();
+            txtUSUARIO = new TextBox();
+            txtCONTRASEÑA = new TextBox();
             SuspendLayout();
             // 
             // btnConexion
             // 
             btnConexion.Font = new Font("Segoe UI", 45F, FontStyle.Regular, GraphicsUnit.Point);
-            btnConexion.Location = new Point(276, 123);
+            btnConexion.Location = new Point(277, 22);
             btnConexion.Name = "btnConexion";
             btnConexion.Size = new Size(247, 92);
             btnConexion.TabIndex = 0;
@@ -66,11 +70,47 @@
             lblNOK.TabIndex = 2;
             lblNOK.Text = "CONEXION NOK";
             // 
+            // lblUSUARIO
+            // 
+            lblUSUARIO.AutoSize = true;
+            lblUSUARIO.Location = new Point(109, 181);
+            lblUSUARIO.Name = "lblUSUARIO";
+            lblUSUARIO.Size = new Size(50, 15);
+            lblUSUARIO.TabIndex = 3;
+            lblUSUARIO.Text = "Usuario:";
+            // 
+            // lblCONTRASEÑA
+            // 
+            lblCONTRASEÑA.AutoSize = true;
+            lblCONTRASEÑA.Location = new Point(109, 234);
+            lblCONTRASEÑA.Name = "lblCONTRASEÑA";
+            lblCONTRASEÑA.Size = new Size(70, 15);
+            lblCONTRASEÑA.TabIndex = 4;
+            lblCONTRASEÑA.Text = "Contraseña:";
+            // 
+            // txtUSUARIO
+            // 
+            txtUSUARIO.Location = new Point(212, 173);
+            txtUSUARIO.Name = "txtUSUARIO";
+            txtUSUARIO.Size = new Size(100, 23);
+            txtUSUARIO.TabIndex = 5;
+            // 
+            // txtCONTRASEÑA
+            // 
+            txtCONTRASEÑA.Location = new Point(212, 226);
+            txtCONTRASEÑA.Name = "txtCONTRASEÑA";
+            txtCONTRASEÑA.Size = new Size(100, 23);
+            txtCONTRASEÑA.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtCONTRASEÑA);
+            Controls.Add(txtUSUARIO);
+            Controls.Add(lblCONTRASEÑA);
+            Controls.Add(lblUSUARIO);
             Controls.Add(lblNOK);
             Controls.Add(lblOK);
             Controls.Add(btnConexion);
@@ -85,5 +125,9 @@
         private Button btnConexion;
         private Label lblOK;
         private Label lblNOK;
+        private Label lblUSUARIO;
+        private Label lblCONTRASEÑA;
+        private TextBox txtUSUARIO;
+        private TextBox txtCONTRASEÑA;
     }
 }

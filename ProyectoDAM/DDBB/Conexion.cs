@@ -15,8 +15,8 @@ namespace ProyectoDAM.DDBB
 
 
         //Datos de conexión
-        private string server = "127.0.0.1;";
-        private string database = "prueba;";
+        private string server = "127.0.0.1";
+        private string database = "prueba";
         private string Uid;
         private string password;
 
@@ -30,7 +30,7 @@ namespace ProyectoDAM.DDBB
         }
 
         //Abrir conexión
-        public void connOpen()
+        public void conAbrir()
         {
             try
             {
@@ -41,11 +41,11 @@ namespace ProyectoDAM.DDBB
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al abrir la conexión a la base de datos: " + ex.Message);
+                throw new Exception("Error al abrir la base de datos: " + ex.Message);
             }
         }
 
-        public void connClose()
+        public void conCerrar()
         {
             try
             {
@@ -56,13 +56,8 @@ namespace ProyectoDAM.DDBB
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al cerrar la conexión a la base de datos: " + ex.Message);
+                throw new Exception("Error al cerrar la base de datos: " + ex.Message);
             }
-        }
-
-        public MySqlConnection GetConnection()
-        {
-            return datos_conexion;
         }
     }
 }

@@ -28,7 +28,6 @@ C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\run
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.csproj.AssemblyReference.cache
-C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.Form1.resources
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.csproj.GenerateResource.cache
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.AssemblyInfoInputs.cache
@@ -43,3 +42,5 @@ C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\Pro
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ref\ProyectoDAM.dll
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\MySqlConnector.dll
+C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.LogIn.resources
+C:\Users\Mario\source\repos\ProyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.main.resources

@@ -1,0 +1,192 @@
+﻿namespace ProyectoDAM
+{
+    partial class LogIn
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            btnConexion = new Button();
+            lblOK = new Label();
+            lblNOK = new Label();
+            lblUSUARIO = new Label();
+            lblCONTRASEÑA = new Label();
+            txtUSUARIO = new TextBox();
+            txtCONTRASEÑA = new TextBox();
+            imgUSUARIO = new PictureBox();
+            imgPASS = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)imgUSUARIO).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgPASS).BeginInit();
+            SuspendLayout();
+            // 
+            // btnConexion
+            // 
+            btnConexion.Font = new Font("Segoe UI", 45F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConexion.Location = new Point(525, 437);
+            btnConexion.Margin = new Padding(3, 4, 3, 4);
+            btnConexion.Name = "btnConexion";
+            btnConexion.Size = new Size(281, 123);
+            btnConexion.TabIndex = 0;
+            btnConexion.Text = "CHECK CONNECTION";
+            btnConexion.UseVisualStyleBackColor = true;
+            btnConexion.Click += btnConexion_Click;
+            // 
+            // lblOK
+            // 
+            lblOK.AutoSize = true;
+            lblOK.BackColor = Color.Transparent;
+            lblOK.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOK.ForeColor = Color.FromArgb(0, 192, 0);
+            lblOK.Location = new Point(399, 655);
+            lblOK.Name = "lblOK";
+            lblOK.Size = new Size(243, 46);
+            lblOK.TabIndex = 1;
+            lblOK.Text = "CONEXION OK";
+            // 
+            // lblNOK
+            // 
+            lblNOK.AutoSize = true;
+            lblNOK.BackColor = Color.Transparent;
+            lblNOK.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNOK.ForeColor = Color.Red;
+            lblNOK.Location = new Point(690, 655);
+            lblNOK.Name = "lblNOK";
+            lblNOK.Size = new Size(268, 46);
+            lblNOK.TabIndex = 2;
+            lblNOK.Text = "CONEXION NOK";
+            // 
+            // lblUSUARIO
+            // 
+            lblUSUARIO.AutoSize = true;
+            lblUSUARIO.BackColor = Color.Transparent;
+            lblUSUARIO.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            lblUSUARIO.ForeColor = Color.FromArgb(41, 128, 185);
+            lblUSUARIO.Location = new Point(562, 159);
+            lblUSUARIO.Name = "lblUSUARIO";
+            lblUSUARIO.Size = new Size(96, 26);
+            lblUSUARIO.TabIndex = 3;
+            lblUSUARIO.Text = "Usuario:";
+            // 
+            // lblCONTRASEÑA
+            // 
+            lblCONTRASEÑA.AutoSize = true;
+            lblCONTRASEÑA.BackColor = Color.Transparent;
+            lblCONTRASEÑA.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCONTRASEÑA.ForeColor = Color.FromArgb(41, 128, 185);
+            lblCONTRASEÑA.Location = new Point(562, 257);
+            lblCONTRASEÑA.Name = "lblCONTRASEÑA";
+            lblCONTRASEÑA.Size = new Size(143, 26);
+            lblCONTRASEÑA.TabIndex = 4;
+            lblCONTRASEÑA.Text = "Contraseña:";
+            // 
+            // txtUSUARIO
+            // 
+            txtUSUARIO.BackColor = Color.White;
+            txtUSUARIO.Cursor = Cursors.IBeam;
+            txtUSUARIO.ForeColor = SystemColors.MenuHighlight;
+            txtUSUARIO.Location = new Point(562, 196);
+            txtUSUARIO.Margin = new Padding(3, 4, 3, 4);
+            txtUSUARIO.Name = "txtUSUARIO";
+            txtUSUARIO.Size = new Size(201, 27);
+            txtUSUARIO.TabIndex = 5;
+            // 
+            // txtCONTRASEÑA
+            // 
+            txtCONTRASEÑA.Location = new Point(562, 291);
+            txtCONTRASEÑA.Margin = new Padding(3, 4, 3, 4);
+            txtCONTRASEÑA.Name = "txtCONTRASEÑA";
+            txtCONTRASEÑA.Size = new Size(201, 27);
+            txtCONTRASEÑA.TabIndex = 6;
+            txtCONTRASEÑA.UseSystemPasswordChar = true;
+            // 
+            // imgUSUARIO
+            // 
+            imgUSUARIO.BackColor = Color.Transparent;
+            imgUSUARIO.Image = Properties.Resources.usuario;
+            imgUSUARIO.Location = new Point(497, 160);
+            imgUSUARIO.Margin = new Padding(3, 4, 3, 4);
+            imgUSUARIO.Name = "imgUSUARIO";
+            imgUSUARIO.Size = new Size(41, 53);
+            imgUSUARIO.SizeMode = PictureBoxSizeMode.Zoom;
+            imgUSUARIO.TabIndex = 7;
+            imgUSUARIO.TabStop = false;
+            // 
+            // imgPASS
+            // 
+            imgPASS.BackColor = Color.Transparent;
+            imgPASS.Image = Properties.Resources.password;
+            imgPASS.Location = new Point(496, 268);
+            imgPASS.Margin = new Padding(3, 4, 3, 4);
+            imgPASS.Name = "imgPASS";
+            imgPASS.Size = new Size(42, 53);
+            imgPASS.SizeMode = PictureBoxSizeMode.Zoom;
+            imgPASS.TabIndex = 8;
+            imgPASS.TabStop = false;
+            // 
+            // LogIn
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MintCream;
+            BackgroundImage = Properties.Resources.fondo;
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(1031, 744);
+            Controls.Add(imgPASS);
+            Controls.Add(imgUSUARIO);
+            Controls.Add(txtCONTRASEÑA);
+            Controls.Add(txtUSUARIO);
+            Controls.Add(lblCONTRASEÑA);
+            Controls.Add(lblUSUARIO);
+            Controls.Add(lblNOK);
+            Controls.Add(lblOK);
+            Controls.Add(btnConexion);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "LogIn";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Inicia sesion";
+            ((System.ComponentModel.ISupportInitialize)imgUSUARIO).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgPASS).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnConexion;
+        private Label lblOK;
+        private Label lblNOK;
+        private Label lblUSUARIO;
+        private Label lblCONTRASEÑA;
+        private TextBox txtUSUARIO;
+        private TextBox txtCONTRASEÑA;
+        private PictureBox imgUSUARIO;
+        private PictureBox imgPASS;
+
+
+    }
+
+
+}
+

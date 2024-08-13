@@ -12,7 +12,6 @@ namespace ProyectoDAM
         public LogIn()
         {
             InitializeComponent();
-            this.FormClosed += new FormClosedEventHandler(Main_FormClosed);
             lblOK.Visible = false;
             lblNOK.Visible = false;
         }

@@ -211,7 +211,6 @@ C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\runti
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.csproj.AssemblyReference.cache
-C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.Form1.resources
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.LogIn.resources
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.main.resources
 C:\Users\marteaga\Desktop\proyectoDAM\ProyectoDAM\obj\Debug\net6.0-windows\ProyectoDAM.Properties.Resources.resources

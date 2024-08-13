@@ -2902,11 +2902,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\ProyectoDAM.csproj",
+      "projectUniqueName": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
       "projectName": "ProyectoDAM",
-      "projectPath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\ProyectoDAM.csproj",
+      "projectPath": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
       "packagesPath": "C:\\Users\\marteaga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\obj\\",
+      "outputPath": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marteaga\\AppData\\Roaming\\NuGet\\NuGet.Config",

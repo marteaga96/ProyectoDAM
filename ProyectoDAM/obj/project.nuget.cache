@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rN6aA9BldqDeSDTm+erKvO4YvJxdP8SypSsI0zScdYBlNbLHejNV6o4Tn7J7+GnlwlatVo8E2xQKtDr6htnUoA==",
+  "dgSpecHash": "kffUOfmpPjj0qlO3tn0dv91Gucgwwtl2chiVLzV6BgJr30LYyT/pNY78okZFDNRMgo9DkIGWDRdtXkJbYLrBQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\ProyectoDAM.csproj",
+  "projectFilePath": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marteaga\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\marteaga\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

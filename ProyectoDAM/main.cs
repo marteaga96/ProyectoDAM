@@ -17,14 +17,7 @@ namespace ProyectoDAM
         public main()
         {
             InitializeComponent();
-            this.FormClosed += new FormClosedEventHandler(Main_FormClosed);
             DialogResult = DialogResult.OK;
-        }
-
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // Detiene la aplicación cuando se cierra este formulario
-            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

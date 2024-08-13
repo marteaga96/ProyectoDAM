@@ -31,14 +31,29 @@ namespace ProyectoDAM
                 string contraseña = txtCONTRASEÑA.Text;
 
 
+                //Instancia conexion
+                DDBB.Conexion asdf = new DDBB.Conexion(usuario, contraseña);
 
-                //Si la conexión es OK, muestra cartel verde
+                
 
-                this.Hide();
-                main mainForm = new main();
-               mainForm.ShowDialog(); // Abre el formulario Main como ventana no modal
-                if (mainForm.DialogResult == DialogResult.OK) { mostrarDatosUsuario(); }
-            
+                
+                //Login correcto
+                if (asdf.conAbrir() == true)
+                {
+                    //Main.cs
+                    main mainForm = new main();
+
+                    //Mensaje bienvendia 
+                    MessageBox.Show($"Login Correcto. Bienvenido {usuario}");
+                    if (mainForm.DialogResult == DialogResult.OK) //<-- Comprobar en main???
+                    {
+                        //Si el main se ha abierto correctamente, lo muestra como ventana principal
+                        mainForm.ShowDialog();
+
+                        //mostrarDatosUsuario();
+                    }
+                }
+
 
             }
             catch (Exception ex)
@@ -51,35 +66,36 @@ namespace ProyectoDAM
 
         }
 
-        private void mostrarDatosUsuario()
-        {
-            string R ="";
+        //private void mostrarDatosUsuario()
+        //{
+        //    string R = "";
 
-            // Pasar datos de login a la clase Conexion
-            DDBB.Conexion conexion = new DDBB.Conexion();
+        //    // Pasar datos de login a la clase Conexion
+        //    DDBB.Conexion conexion = new DDBB.Conexion();
 
-            SqlCommand comando = new SqlCommand();
-            comando.CommandText = Properties.Resources.Consulta1;
-            comando.Parameters.AddWithValue("@user", txtUSUARIO.Text);
-            comando.Connection = conexion.datos_conexion;
+        //    SqlCommand comando = new SqlCommand();
+        //    comando.CommandText = Properties.Resources.Consulta1;
+        //    comando.Parameters.AddWithValue("@user", txtUSUARIO.Text);
+        //    comando.Connection = conexion.datos_conexion;
 
-           
-            if (conexion.conAbrir())
-            {
-                SqlDataReader Reader = comando.ExecuteReader();
-                while (Reader.Read())
-                {
-                    R = Reader.GetString(0) + " " + Reader.GetString(1) + " " + Reader.GetString(2) + " " + Reader.GetString(3) + " " + Reader.GetString(4);
 
-                }
- Reader.Close();
-                lblOK.Visible = true;
-                lblNOK.Visible = false;
-                conexion.conCerrar();
+        //    if (conexion.conAbrir())
+        //    {
+        //        SqlDataReader Reader = comando.ExecuteReader();
+        //        while (Reader.Read())
+        //        {
+        //            R = Reader.GetString(0) + " " + Reader.GetString(1) + " " + Reader.GetString(2) + " " + Reader.GetString(3) + " " + Reader.GetString(24);
 
-                MessageBox.Show(R);
-            }
-        }
+        //        }
+
+        //        Reader.Close();
+        //        lblOK.Visible = true;
+        //        lblNOK.Visible = false;
+        //        conexion.conCerrar();
+
+        //        MessageBox.Show(R);
+        //    }
+        //}
 
 
     }

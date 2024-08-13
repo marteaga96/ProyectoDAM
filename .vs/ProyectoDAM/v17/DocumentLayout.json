@@ -1,38 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\",
+  "WorkspaceRootPath": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam-pruebas\\proyectodam-pruebas\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam-pruebas\\proyectodam-pruebas\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\proyectodam\\proyectodam.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\proyectodam.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\proyectodam\\resources\\sql\\consulta1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\resources\\sql\\consulta1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam-pruebas\\proyectodam-pruebas\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\proyectoDAM\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam-pruebas\\proyectodam-pruebas\\proyectodam\\resources\\sql\\consulta1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\resources\\sql\\consulta1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\proyectoDAM\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\marteaga\\Desktop\\proyectoDAM\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam\\proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\marteaga\\desktop\\proyectodam\\proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\LogIn.cs",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\LogIn.cs",
+              "ToolTip": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeToolTip": "ProyectoDAM\\LogIn.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCQAAAAPAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T12:55:59.648Z",
               "IsPinned": true,
@@ -60,25 +48,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\DDBB\\Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\DDBB\\Conexion.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\DDBB\\Conexion.cs",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\DDBB\\Conexion.cs",
+              "ToolTip": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\DDBB\\Conexion.cs",
               "RelativeToolTip": "ProyectoDAM\\DDBB\\Conexion.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAArwCIAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T12:52:48.892Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoDAM\\Program.cs",
+              "ToolTip": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\Program.cs",
+              "RelativeToolTip": "ProyectoDAM\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T11:46:22.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "main.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\main.cs",
+              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\main.cs",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\main.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\main.cs [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoDAM\\main.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T13:48:36.45Z",
@@ -86,51 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "main.cs",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\main.cs",
+              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\main.cs",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\main.cs",
+              "ToolTip": "C:\\Users\\marteaga\\Desktop\\proyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeToolTip": "ProyectoDAM\\main.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAvwBIAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T13:46:55.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\LogIn.cs",
-              "RelativeDocumentMoniker": "ProyectoDAM\\LogIn.cs",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\LogIn.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoDAM\\LogIn.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T13:25:09.087Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProyectoDAM",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\ProyectoDAM.csproj",
-              "RelativeDocumentMoniker": "ProyectoDAM\\ProyectoDAM.csproj",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\ProyectoDAM.csproj",
-              "RelativeToolTip": "ProyectoDAM\\ProyectoDAM.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-12T13:17:42.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Consulta1.sql ",
-              "DocumentMoniker": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\Resources\\SQL\\Consulta1.sql",
-              "RelativeDocumentMoniker": "ProyectoDAM\\Resources\\SQL\\Consulta1.sql",
-              "ToolTip": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM-pruebas\\ProyectoDAM-pruebas\\ProyectoDAM\\Resources\\SQL\\Consulta1.sql",
-              "RelativeToolTip": "ProyectoDAM\\Resources\\SQL\\Consulta1.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-08-12T13:15:48.506Z",
               "EditorCaption": ""
             }
           ]

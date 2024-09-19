@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +11,24 @@
       "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\Mario\\Desktop\\ProyectoDAM\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\ddbb\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|C:\\Users\\Mario\\Desktop\\ProyectoDAM\\proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|c:\\users\\mario\\desktop\\proyectodam\\proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F71198D-A3B8-4F53-A970-9D9CECAB03DA}|ProyectoDAM\\ProyectoDAM.csproj|solutionrelative:proyectodam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LogIn.cs",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\LogIn.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeToolTip": "ProyectoDAM\\LogIn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAwC0AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T12:55:59.648Z",
               "IsPinned": true,
@@ -62,14 +62,14 @@
               "RelativeDocumentMoniker": "ProyectoDAM\\DDBB\\Conexion.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\DDBB\\Conexion.cs",
               "RelativeToolTip": "ProyectoDAM\\DDBB\\Conexion.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T18:45:17.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\Program.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\Program.cs",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "main.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\main.cs",
@@ -94,33 +94,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\main.Designer.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\main.Designer.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\main.Designer.cs",
               "RelativeToolTip": "ProyectoDAM\\main.Designer.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAqwDkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwEAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T14:32:00.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "main.cs",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\main.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\main.cs",
               "RelativeToolTip": "ProyectoDAM\\main.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwB4AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T14:32:17.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "LogIn.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeDocumentMoniker": "ProyectoDAM\\LogIn.cs",

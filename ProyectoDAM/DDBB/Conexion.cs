@@ -22,7 +22,7 @@ namespace ProyectoDAM.DDBB
 
         public Conexion(string Uid, string password)
         {
-            string connectionString = $"data source=192.168.40.3;Initial Catalog=REGISTROPLC;Persist Security Info=True;TrustServerCertificate=true;User ID={Uid};Password={password}";
+            string connectionString = $"data source=127.0.0.1;Initial Catalog=master;Persist Security Info=True;TrustServerCertificate=true;User ID={Uid};Password={password}";
             datos_conexion = new SqlConnection(connectionString);
         }
 

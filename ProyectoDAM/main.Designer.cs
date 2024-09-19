@@ -47,20 +47,21 @@
             panelNAV.Controls.Add(btnCOMPRAS);
             panelNAV.Controls.Add(btnPERFIL);
             panelNAV.Location = new Point(0, 0);
+            panelNAV.Margin = new Padding(3, 2, 3, 2);
             panelNAV.Name = "panelNAV";
-            panelNAV.Size = new Size(1920, 120);
+            panelNAV.Size = new Size(1680, 90);
             panelNAV.TabIndex = 0;
             // 
             // lblBIENVENIDA
-            // 
+            //
             lblBIENVENIDA.AutoSize = true;
-            lblBIENVENIDA.Font = new Font("Franklin Gothic Medium Cond", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblBIENVENIDA.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblBIENVENIDA.ForeColor = SystemColors.ButtonHighlight;
-            lblBIENVENIDA.Location = new Point(1405, 27);
+            lblBIENVENIDA.Location = new Point(1229, 20);
             lblBIENVENIDA.Name = "lblBIENVENIDA";
-            lblBIENVENIDA.Size = new Size(143, 25);
+            lblBIENVENIDA.Size = new Size(134, 20);
             lblBIENVENIDA.TabIndex = 6;
-            lblBIENVENIDA.Text = "Bienvenido Mario.";
+            lblBIENVENIDA.Text = "Bienvenid@.";
             // 
             // btnINVENTARIO
             // 
@@ -72,12 +73,11 @@
             btnINVENTARIO.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
             btnINVENTARIO.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
             btnINVENTARIO.FlatStyle = FlatStyle.Flat;
-            btnINVENTARIO.Font = new Font("Franklin Gothic Medium Cond", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnINVENTARIO.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnINVENTARIO.ForeColor = SystemColors.ButtonHighlight;
-            btnINVENTARIO.Location = new Point(900, 0);
-            btnINVENTARIO.Margin = new Padding(3, 4, 3, 4);
+            btnINVENTARIO.Location = new Point(788, 0);
             btnINVENTARIO.Name = "btnINVENTARIO";
-            btnINVENTARIO.Size = new Size(135, 120);
+            btnINVENTARIO.Size = new Size(147, 90);
             btnINVENTARIO.TabIndex = 5;
             btnINVENTARIO.Text = "INVENTARIO";
             btnINVENTARIO.UseVisualStyleBackColor = false;
@@ -92,12 +92,11 @@
             btnVENTAS.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
             btnVENTAS.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
             btnVENTAS.FlatStyle = FlatStyle.Flat;
-            btnVENTAS.Font = new Font("Franklin Gothic Medium Cond", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVENTAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnVENTAS.ForeColor = SystemColors.ButtonHighlight;
-            btnVENTAS.Location = new Point(675, 0);
-            btnVENTAS.Margin = new Padding(3, 4, 3, 4);
+            btnVENTAS.Location = new Point(591, 0);
             btnVENTAS.Name = "btnVENTAS";
-            btnVENTAS.Size = new Size(129, 120);
+            btnVENTAS.Size = new Size(113, 90);
             btnVENTAS.TabIndex = 4;
             btnVENTAS.Text = "VENTAS";
             btnVENTAS.UseVisualStyleBackColor = false;
@@ -112,12 +111,11 @@
             btnCOMPRAS.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
             btnCOMPRAS.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
             btnCOMPRAS.FlatStyle = FlatStyle.Flat;
-            btnCOMPRAS.Font = new Font("Franklin Gothic Medium Cond", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCOMPRAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnCOMPRAS.ForeColor = SystemColors.ButtonHighlight;
-            btnCOMPRAS.Location = new Point(450, 0);
-            btnCOMPRAS.Margin = new Padding(3, 4, 3, 4);
+            btnCOMPRAS.Location = new Point(394, 0);
             btnCOMPRAS.Name = "btnCOMPRAS";
-            btnCOMPRAS.Size = new Size(129, 120);
+            btnCOMPRAS.Size = new Size(133, 90);
             btnCOMPRAS.TabIndex = 3;
             btnCOMPRAS.Text = "COMPRAS";
             btnCOMPRAS.UseVisualStyleBackColor = false;
@@ -132,23 +130,21 @@
             btnPERFIL.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
             btnPERFIL.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
             btnPERFIL.FlatStyle = FlatStyle.Flat;
-            btnPERFIL.Font = new Font("Franklin Gothic Medium Cond", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPERFIL.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnPERFIL.ForeColor = SystemColors.ButtonHighlight;
-            btnPERFIL.Location = new Point(225, 0);
-            btnPERFIL.Margin = new Padding(3, 4, 3, 4);
+            btnPERFIL.Location = new Point(197, 0);
             btnPERFIL.Name = "btnPERFIL";
-            btnPERFIL.Size = new Size(129, 120);
+            btnPERFIL.Size = new Size(113, 90);
             btnPERFIL.TabIndex = 2;
             btnPERFIL.Text = "PERFIL";
             btnPERFIL.UseVisualStyleBackColor = false;
             // 
             // main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1664, 775);
             Controls.Add(panelNAV);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "main";
             Text = "main";
             panelNAV.ResumeLayout(false);

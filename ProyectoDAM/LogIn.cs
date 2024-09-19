@@ -31,19 +31,20 @@ namespace ProyectoDAM
 
 
                 //Instancia conexion
-                DDBB.Conexion asdf = new DDBB.Conexion(usuario, contraseña);
+                DDBB.Conexion conexion = new DDBB.Conexion(usuario, contraseña);
 
                 
 
                 
                 //Login correcto
-                if (asdf.conAbrir() == true)
+                if (conexion.conAbrir() == true)
                 {
                     //Main.cs
                     main mainForm = new main();
 
                     //Mensaje bienvendia 
                     MessageBox.Show($"Login Correcto. Bienvenido {usuario}");
+                    this.Hide();
                     if (mainForm.DialogResult == DialogResult.OK) //<-- Comprobar en main???
                     {
                         //Si el main se ha abierto correctamente, lo muestra como ventana principal

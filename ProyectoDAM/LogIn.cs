@@ -40,7 +40,7 @@ namespace ProyectoDAM
                 if (conexion.conAbrir() == true)
                 {
                     //Main.cs
-                    main mainForm = new main();
+                    main mainForm = new main(usuario);
 
                     //Mensaje bienvendia 
                     MessageBox.Show($"Login Correcto. Bienvenido {usuario}");

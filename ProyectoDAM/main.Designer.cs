@@ -34,6 +34,7 @@
             btnVENTAS = new Button();
             btnCOMPRAS = new Button();
             btnPERFIL = new Button();
+            button1 = new Button();
             panelNAV.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             // 
             panelNAV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panelNAV.BackColor = Color.FromArgb(32, 43, 54);
+            panelNAV.Controls.Add(button1);
             panelNAV.Controls.Add(lblBIENVENIDA);
             panelNAV.Controls.Add(btnINVENTARIO);
             panelNAV.Controls.Add(btnVENTAS);
@@ -53,15 +55,14 @@
             panelNAV.TabIndex = 0;
             // 
             // lblBIENVENIDA
-            //
+            // 
             lblBIENVENIDA.AutoSize = true;
             lblBIENVENIDA.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblBIENVENIDA.ForeColor = SystemColors.ButtonHighlight;
             lblBIENVENIDA.Location = new Point(1229, 20);
             lblBIENVENIDA.Name = "lblBIENVENIDA";
-            lblBIENVENIDA.Size = new Size(134, 20);
+            lblBIENVENIDA.Size = new Size(0, 20);
             lblBIENVENIDA.TabIndex = 6;
-            lblBIENVENIDA.Text = "Bienvenid@.";
             // 
             // btnINVENTARIO
             // 
@@ -75,7 +76,7 @@
             btnINVENTARIO.FlatStyle = FlatStyle.Flat;
             btnINVENTARIO.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnINVENTARIO.ForeColor = SystemColors.ButtonHighlight;
-            btnINVENTARIO.Location = new Point(788, 0);
+            btnINVENTARIO.Location = new Point(765, 0);
             btnINVENTARIO.Name = "btnINVENTARIO";
             btnINVENTARIO.Size = new Size(147, 90);
             btnINVENTARIO.TabIndex = 5;
@@ -94,7 +95,7 @@
             btnVENTAS.FlatStyle = FlatStyle.Flat;
             btnVENTAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnVENTAS.ForeColor = SystemColors.ButtonHighlight;
-            btnVENTAS.Location = new Point(591, 0);
+            btnVENTAS.Location = new Point(600, 0);
             btnVENTAS.Name = "btnVENTAS";
             btnVENTAS.Size = new Size(113, 90);
             btnVENTAS.TabIndex = 4;
@@ -113,7 +114,7 @@
             btnCOMPRAS.FlatStyle = FlatStyle.Flat;
             btnCOMPRAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnCOMPRAS.ForeColor = SystemColors.ButtonHighlight;
-            btnCOMPRAS.Location = new Point(394, 0);
+            btnCOMPRAS.Location = new Point(400, 0);
             btnCOMPRAS.Name = "btnCOMPRAS";
             btnCOMPRAS.Size = new Size(133, 90);
             btnCOMPRAS.TabIndex = 3;
@@ -132,12 +133,31 @@
             btnPERFIL.FlatStyle = FlatStyle.Flat;
             btnPERFIL.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnPERFIL.ForeColor = SystemColors.ButtonHighlight;
-            btnPERFIL.Location = new Point(197, 0);
+            btnPERFIL.Location = new Point(200, 0);
             btnPERFIL.Name = "btnPERFIL";
             btnPERFIL.Size = new Size(113, 90);
             btnPERFIL.TabIndex = 2;
             btnPERFIL.Text = "PERFIL";
             btnPERFIL.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            button1.BackColor = Color.Transparent;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = SystemColors.ActiveCaption;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(959, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(147, 90);
+            button1.TabIndex = 7;
+            button1.Text = "INVENTARIO";
+            button1.UseVisualStyleBackColor = false;
             // 
             // main
             // 
@@ -160,5 +180,6 @@
         private Button btnCOMPRAS;
         private Button btnINVENTARIO;
         private Label lblBIENVENIDA;
+        private Button button1;
     }
 }

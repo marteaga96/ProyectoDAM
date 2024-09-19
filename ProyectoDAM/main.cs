@@ -16,7 +16,7 @@ namespace ProyectoDAM
     {
         private float originalFontSize;
         private bool isIncreasing;
-        private float fontStep = 1.0f; // Tamaño del paso de aumento/disminución de la fuente
+        private float fontStep = 1.0f;
         public main()
         {
 
@@ -35,6 +35,13 @@ namespace ProyectoDAM
         {
             panelNAV.BackColor = Color.FromArgb(255, 32, 43, 54);
 
+        }
+
+        public main(string usuario)
+        {
+            InitializeComponent();
+            lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
+            DialogResult = DialogResult.OK;
         }
 
     }

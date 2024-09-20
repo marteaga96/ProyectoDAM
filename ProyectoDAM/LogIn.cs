@@ -37,7 +37,7 @@ namespace ProyectoDAM
 
                 
                 //Login correcto
-                if (conexion.conAbrir() == true)
+                if (true)//conexion.conAbrir() == true)
                 {
                     //Main.cs
                     main mainForm = new main(usuario);
@@ -49,9 +49,11 @@ namespace ProyectoDAM
                     {
                         //Si el main se ha abierto correctamente, lo muestra como ventana principal
                         mainForm.ShowDialog();
+                        MessageBox.Show("");
 
                         //mostrarDatosUsuario();
                     }
+                    this.Show();
                 }
 
 

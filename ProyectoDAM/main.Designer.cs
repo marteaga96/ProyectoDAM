@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             panelNAV = new Panel();
+            btnCERRARSESION = new Button();
+            button1 = new Button();
             lblBIENVENIDA = new Label();
             btnINVENTARIO = new Button();
             btnVENTAS = new Button();
             btnCOMPRAS = new Button();
             btnPERFIL = new Button();
-            button1 = new Button();
             panelNAV.SuspendLayout();
             SuspendLayout();
             // 
             // panelNAV
             // 
-            panelNAV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panelNAV.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panelNAV.BackColor = Color.FromArgb(32, 43, 54);
+            panelNAV.Controls.Add(btnCERRARSESION);
             panelNAV.Controls.Add(button1);
             panelNAV.Controls.Add(lblBIENVENIDA);
             panelNAV.Controls.Add(btnINVENTARIO);
@@ -54,12 +56,43 @@
             panelNAV.Size = new Size(1680, 90);
             panelNAV.TabIndex = 0;
             // 
+            // btnCERRARSESION
+            // 
+            btnCERRARSESION.Location = new Point(1460, 51);
+            btnCERRARSESION.Name = "btnCERRARSESION";
+            btnCERRARSESION.Size = new Size(153, 23);
+            btnCERRARSESION.TabIndex = 8;
+            btnCERRARSESION.Text = "Cerrar sesión";
+            btnCERRARSESION.UseVisualStyleBackColor = true;
+            btnCERRARSESION.Click += btnCERRARSESION_Click;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            button1.BackColor = Color.Transparent;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = SystemColors.ActiveCaption;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(959, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(147, 90);
+            button1.TabIndex = 7;
+            button1.Text = "INVENTARIO";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // lblBIENVENIDA
             // 
+            lblBIENVENIDA.Anchor = AnchorStyles.Top;
             lblBIENVENIDA.AutoSize = true;
             lblBIENVENIDA.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblBIENVENIDA.ForeColor = SystemColors.ButtonHighlight;
-            lblBIENVENIDA.Location = new Point(1229, 20);
+            lblBIENVENIDA.Location = new Point(1330, 19);
+            lblBIENVENIDA.Margin = new Padding(0);
             lblBIENVENIDA.Name = "lblBIENVENIDA";
             lblBIENVENIDA.Size = new Size(0, 20);
             lblBIENVENIDA.TabIndex = 6;
@@ -140,25 +173,6 @@
             btnPERFIL.Text = "PERFIL";
             btnPERFIL.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = SystemColors.ActiveCaption;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(959, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(147, 90);
-            button1.TabIndex = 7;
-            button1.Text = "INVENTARIO";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -181,5 +195,6 @@
         private Button btnINVENTARIO;
         private Label lblBIENVENIDA;
         private Button button1;
+        private Button btnCERRARSESION;
     }
 }

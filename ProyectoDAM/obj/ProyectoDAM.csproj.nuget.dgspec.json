@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marteaga\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj": {}
+    "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marteaga\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj": {
+    "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
+        "projectUniqueName": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
         "projectName": "ProyectoDAM",
-        "projectPath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
-        "packagesPath": "C:\\Users\\marteaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marteaga\\Desktop\\ProyectoDAM\\ProyectoDAM\\obj\\",
+        "projectPath": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\ProyectoDAM.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marteaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,24 +74,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.30, 6.0.30]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.30, 6.0.30]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.30, 6.0.30]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.30, 6.0.30]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -95,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

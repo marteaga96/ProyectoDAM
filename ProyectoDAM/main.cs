@@ -39,9 +39,15 @@ namespace ProyectoDAM
 
         public main(string usuario)
         {
+            //Texto de bienvenida.
             InitializeComponent();
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
-            DialogResult = DialogResult.OK;
+        }
+
+        private void btnCERRARSESION_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sesión cerrada con éxito.");
+            Application.Exit();
         }
 
     }

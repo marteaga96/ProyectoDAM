@@ -20,9 +20,9 @@ namespace ProyectoDAM.DDBB
         private string server = "127.0.0.1";
         private string database = "prueba";
 
-        public Conexion(string Uid, string password)
+        public Conexion(string usuario, string password)
         {
-            string connectionString = $"data source=127.0.0.1;Initial Catalog=master;Persist Security Info=True;TrustServerCertificate=true;User ID={Uid};Password={password}";
+            string connectionString = $"data source=127.0.0.1;Initial Catalog=master;Persist Security Info=True;TrustServerCertificate=true;User ID={usuario};Password={password}";
             datos_conexion = new SqlConnection(connectionString);
         }
 

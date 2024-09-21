@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoDAM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfd47d674975faeefe75427e8c49e525c9812fa1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+492f8406899390bb0991223a9e02ae2776b4d355")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoDAM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoDAM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

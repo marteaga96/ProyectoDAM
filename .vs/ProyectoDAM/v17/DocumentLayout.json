@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "ProyectoDAM\\LogIn.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\ProyectoDAM\\ProyectoDAM\\LogIn.cs",
               "RelativeToolTip": "ProyectoDAM\\LogIn.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wCwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T12:55:59.648Z",
               "IsPinned": true,
@@ -60,8 +60,7 @@
               "RelativeToolTip": "ProyectoDAM\\main.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T14:46:31.295Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -73,8 +72,7 @@
               "RelativeToolTip": "ProyectoDAM\\DDBB\\Conexion.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAowC4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:24:39.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T07:24:39.064Z"
             },
             {
               "$type": "Document",
@@ -86,8 +84,7 @@
               "RelativeToolTip": "ProyectoDAM\\main.Designer.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAqwEUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:11:38.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T07:11:38.896Z"
             },
             {
               "$type": "Document",
@@ -99,8 +96,7 @@
               "RelativeToolTip": "ProyectoDAM\\main.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T14:32:17.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T14:32:17.368Z"
             },
             {
               "$type": "Document",
@@ -112,8 +108,7 @@
               "RelativeToolTip": "ProyectoDAM\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:08:23.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T07:08:23.365Z"
             }
           ]
         }

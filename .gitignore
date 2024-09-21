@@ -5,6 +5,18 @@
 /bin/
 /obj/
 
+.vs/
+ProyectoDAM/bin/
+ProyectoDAM/obj/
+
+
+# Archivos de compilación
+**/ProyectoDAM/bin/
+**/ProyectoDAM/obj/
+/.vs/
+/bin/
+/obj/
+
 **/.ProyectoDAM/bin/
 **/.ProyectoDAM/obj/
 **/..vs/

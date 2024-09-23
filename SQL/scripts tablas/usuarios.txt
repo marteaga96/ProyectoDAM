@@ -1,9 +1,66 @@
 CREATE TABLE USUARIOS (
-    ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	DNI VARCHAR(9) UNIQUE NOT NULL,
-    NOMBRE VARCHAR(100) NOT NULL,
-	APELLIDOS VARCHAR(50) NOT NULL,
-    EMAIL VARCHAR(100) UNIQUE NOT NULL,
+    ID_USUARIO INT PRIMARY KEY IDENTITY(1,1), -- ID autoincremental
+    NOMBRE_SESION VARCHAR(15) NOT NULL UNIQUE, -- Tomado de la tabla de usuarios de SQL
+    NOMBRE_USUARIO VARCHAR(15),             -- Nombre del usuario
+    APELLIDO_USUARIO VARCHAR(25),           -- Apellido del usuario
+    DEPARTAMENTO_USUARIO VARCHAR(20)        -- Departamento del usuario
 );
 
-he cambiado
+
+
+CREATE TABLE ROLES (
+    ID_USUARIO INT NOT NULL,                          -- Tomado de la tabla USUARIOS
+    NOMBRE_SESION VARCHAR(15) NOT NULL,              -- Tomado de la tabla USUARIOS
+    ROL INT,                                 -- Rol del usuario
+    FOREIGN KEY (ID_USUARIO) REFERENCES USUARIOS(ID_USUARIO), -- Relación con USUARIOS
+    FOREIGN KEY (NOMBRE_SESION) REFERENCES USUARIOS(NOMBRE_SESION) -- Relación con USUARIOS
+);
+
+
+
+CREATE TABLE PROVEEDOR (
+    ID_PROVEEDOR INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
+    DNI_O_CIF_PROVEEDOR VARCHAR(9) UNIQUE NOT NULL, -- DNI/CIF del proveedor
+    NOMBRE_PROVEEDOR VARCHAR(25) NOT NULL,               -- Nombre del proveedor
+    APELLIDOS_PROVEEDOR VARCHAR(25),            -- Apellidos del proveedor
+    DIRECCION_PROVEEDOR VARCHAR(50) NOT NULL,            -- Dirección del proveedor
+    EMAIL_PROVEEDOR VARCHAR(35) NOT NULL,                -- Email del proveedor
+    TELEFONO_PROVEEDOR NVARCHAR(9) NOT NULL              -- Teléfono del proveedor
+);
+
+
+
+CREATE TABLE CLIENTE (
+    ID_CLIENTE INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
+    DNI_CIF_CLIENTE VARCHAR(9) UNIQUE NOT NULL, -- DNI/CIF del cliente
+    NOMBRE_CLIENTE VARCHAR(25) NOT NULL,        -- Nombre del cliente
+    APELLIDOS_CLIENTE VARCHAR(25),              -- Apellidos del cliente
+    DIRECCION_CLIENTE VARCHAR(50) NOT NULL,     -- Dirección del cliente
+    EMAIL_CLIENTE VARCHAR(35) NOT NULL,         -- Email del cliente
+    TELEFONO_CLIENTE NVARCHAR(9) NOT NULL       -- Teléfono del cliente
+);
+
+
+
+CREATE TABLE PRODUCTOS (
+    ID_PRODUCTO INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
+    NOMBRE_PRODUCTO VARCHAR(35) NOT NULL,      -- Nombre del producto
+    PRECIO_SIN_IVA_PRODUCTO FLOAT NOT NULL,     -- Precio sin IVA del producto
+    IVA_PRODUCTO FLOAT NOT NULL,                 -- IVA del producto
+    PRECIO_TOTAL_PRODUCTO FLOAT NOT NULL         -- Precio total del producto
+);
+
+
+
+CREATE TABLE COMPRAS (
+    ID_COMPRA INT PRIMARY KEY IDENTITY(1,1),     -- ID auto incremental
+    ID_PROVEEDOR INT NOT NULL,                    -- ID del proveedor (debe existir en PROVEEDOR)
+    APROBADO_POR VARCHAR(50),                     -- Aprobado por
+    NOMBRE_PROVEEDOR VARCHAR(25) NOT NULL,       -- Nombre del proveedor (debe coincidir con ID_PROVEEDOR)
+    ID_PRODUCTO INT NOT NULL,                     -- ID del producto (debe existir en PRODUCTOS)
+    NOMBRE_PRODUCTO VARCHAR(35) NOT NULL,        -- Nombre del producto (debe coincidir con ID_PRODUCTO)
+    CANTIDAD_COMPRA_PRODUCTO FLOAT NOT NULL,      -- Cantidad comprada
+    FECHA DATETIME DEFAULT GETDATE(),             -- Fecha de la compra
+    FOREIGN KEY (ID_PROVEEDOR) REFERENCES PROVEEDOR(ID_PROVEEDOR),  -- Relación con PROVEEDOR
+    FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTOS(ID_PRODUCTO)      -- Relación con PRODUCTOS
+);

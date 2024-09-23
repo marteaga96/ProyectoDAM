@@ -33,8 +33,8 @@ namespace ProyectoDAM
 
 
                 //Login correcto
-                //if (true)
-                if (conexion.conAbrir() == true)
+                if (true)
+                //if (conexion.conAbrir() == true)
                 {
                     //Main.cs
                     main mainForm = new main(usuario);

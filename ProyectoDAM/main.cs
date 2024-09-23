@@ -22,7 +22,7 @@ namespace ProyectoDAM
 
             InitializeComponent();
             DialogResult = DialogResult.OK;
-            originalFontSize = btnPERFIL.Font.Size;
+            originalFontSize = btnHOME.Font.Size;
         }
 
         private void button1_Click_1(object sender, EventArgs e)

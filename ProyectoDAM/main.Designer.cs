@@ -40,9 +40,15 @@
             btnCOMPRAS = new Button();
             btnHOME = new Button();
             groupGESTION = new GroupBox();
-            lblEDITARUSUARIO = new Label();
-            lblANADIRUSUARIO = new Label();
-            lblDATOSPERSONALES = new Label();
+            btnEDITAR_DATOS_PERSONALES = new Button();
+            lblROL = new Label();
+            lblDEPARTAMENTO = new Label();
+            lblFECHA_NACIMIENTO = new Label();
+            lblAPELLIDOS = new Label();
+            label1 = new Label();
+            lblDATOS_PERSONALES = new Label();
+            btnEDITAR_USUARIO = new Button();
+            btnANADIR_USUARIO = new Button();
             panelNAV.SuspendLayout();
             groupHOME.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -91,7 +97,7 @@
             // 
             // btnCERRARSESION
             // 
-            btnCERRARSESION.Location = new Point(1060, 51);
+            btnCERRARSESION.Location = new Point(1650, 54);
             btnCERRARSESION.Name = "btnCERRARSESION";
             btnCERRARSESION.Size = new Size(153, 23);
             btnCERRARSESION.TabIndex = 8;
@@ -208,45 +214,106 @@
             // 
             // groupGESTION
             // 
-            groupGESTION.Controls.Add(lblDATOSPERSONALES);
-            groupGESTION.Controls.Add(lblEDITARUSUARIO);
-            groupGESTION.Controls.Add(lblANADIRUSUARIO);
+            groupGESTION.Controls.Add(btnEDITAR_DATOS_PERSONALES);
+            groupGESTION.Controls.Add(lblROL);
+            groupGESTION.Controls.Add(lblDEPARTAMENTO);
+            groupGESTION.Controls.Add(lblFECHA_NACIMIENTO);
+            groupGESTION.Controls.Add(lblAPELLIDOS);
+            groupGESTION.Controls.Add(label1);
+            groupGESTION.Controls.Add(lblDATOS_PERSONALES);
+            groupGESTION.Controls.Add(btnEDITAR_USUARIO);
+            groupGESTION.Controls.Add(btnANADIR_USUARIO);
             groupGESTION.Location = new Point(0, 95);
             groupGESTION.Name = "groupGESTION";
-            groupGESTION.Size = new Size(1371, 656);
+            groupGESTION.Size = new Size(1800, 1080);
             groupGESTION.TabIndex = 1;
             groupGESTION.TabStop = false;
             groupGESTION.Text = "GESTIÓN";
             // 
-            // lblEDITARUSUARIO
+            // btnEDITAR_DATOS_PERSONALES
             // 
-            lblEDITARUSUARIO.AutoSize = true;
-            lblEDITARUSUARIO.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEDITARUSUARIO.Location = new Point(161, 237);
-            lblEDITARUSUARIO.Name = "lblEDITARUSUARIO";
-            lblEDITARUSUARIO.Size = new Size(214, 36);
-            lblEDITARUSUARIO.TabIndex = 1;
-            lblEDITARUSUARIO.Text = "EDITAR USUARIO";
+            btnEDITAR_DATOS_PERSONALES.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEDITAR_DATOS_PERSONALES.Location = new Point(329, 523);
+            btnEDITAR_DATOS_PERSONALES.Name = "btnEDITAR_DATOS_PERSONALES";
+            btnEDITAR_DATOS_PERSONALES.Size = new Size(360, 60);
+            btnEDITAR_DATOS_PERSONALES.TabIndex = 8;
+            btnEDITAR_DATOS_PERSONALES.Text = "EDITAR DATOS PERSONALES";
+            btnEDITAR_DATOS_PERSONALES.UseVisualStyleBackColor = true;
             // 
-            // lblANADIRUSUARIO
+            // lblROL
             // 
-            lblANADIRUSUARIO.AutoSize = true;
-            lblANADIRUSUARIO.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
-            lblANADIRUSUARIO.Location = new Point(161, 95);
-            lblANADIRUSUARIO.Name = "lblANADIRUSUARIO";
-            lblANADIRUSUARIO.Size = new Size(225, 36);
-            lblANADIRUSUARIO.TabIndex = 0;
-            lblANADIRUSUARIO.Text = "AÑADIR USUARIO";
+            lblROL.AutoSize = true;
+            lblROL.Location = new Point(1105, 411);
+            lblROL.Name = "lblROL";
+            lblROL.Size = new Size(32, 15);
+            lblROL.TabIndex = 7;
+            lblROL.Text = "ROL:";
             // 
-            // lblDATOSPERSONALES
+            // lblDEPARTAMENTO
             // 
-            lblDATOSPERSONALES.AutoSize = true;
-            lblDATOSPERSONALES.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDATOSPERSONALES.Location = new Point(736, 86);
-            lblDATOSPERSONALES.Name = "lblDATOSPERSONALES";
-            lblDATOSPERSONALES.Size = new Size(254, 36);
-            lblDATOSPERSONALES.TabIndex = 2;
-            lblDATOSPERSONALES.Text = "DATOS PERSONALES";
+            lblDEPARTAMENTO.AutoSize = true;
+            lblDEPARTAMENTO.Location = new Point(1105, 367);
+            lblDEPARTAMENTO.Name = "lblDEPARTAMENTO";
+            lblDEPARTAMENTO.Size = new Size(97, 15);
+            lblDEPARTAMENTO.TabIndex = 6;
+            lblDEPARTAMENTO.Text = "DEPARTAMENTO:";
+            // 
+            // lblFECHA_NACIMIENTO
+            // 
+            lblFECHA_NACIMIENTO.AutoSize = true;
+            lblFECHA_NACIMIENTO.Location = new Point(1105, 324);
+            lblFECHA_NACIMIENTO.Name = "lblFECHA_NACIMIENTO";
+            lblFECHA_NACIMIENTO.Size = new Size(138, 15);
+            lblFECHA_NACIMIENTO.TabIndex = 5;
+            lblFECHA_NACIMIENTO.Text = "FECHA DE NACIMIENTO:";
+            // 
+            // lblAPELLIDOS
+            // 
+            lblAPELLIDOS.AutoSize = true;
+            lblAPELLIDOS.Location = new Point(1105, 277);
+            lblAPELLIDOS.Name = "lblAPELLIDOS";
+            lblAPELLIDOS.Size = new Size(69, 15);
+            lblAPELLIDOS.TabIndex = 4;
+            lblAPELLIDOS.Text = "APELLIDOS:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1105, 231);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 3;
+            label1.Text = "NOMBRE:";
+            // 
+            // lblDATOS_PERSONALES
+            // 
+            lblDATOS_PERSONALES.AutoSize = true;
+            lblDATOS_PERSONALES.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDATOS_PERSONALES.Location = new Point(1089, 114);
+            lblDATOS_PERSONALES.Name = "lblDATOS_PERSONALES";
+            lblDATOS_PERSONALES.Size = new Size(254, 36);
+            lblDATOS_PERSONALES.TabIndex = 2;
+            lblDATOS_PERSONALES.Text = "DATOS PERSONALES";
+            // 
+            // btnEDITAR_USUARIO
+            // 
+            btnEDITAR_USUARIO.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEDITAR_USUARIO.Location = new Point(329, 322);
+            btnEDITAR_USUARIO.Name = "btnEDITAR_USUARIO";
+            btnEDITAR_USUARIO.Size = new Size(360, 60);
+            btnEDITAR_USUARIO.TabIndex = 1;
+            btnEDITAR_USUARIO.Text = "EDITAR USUARIO";
+            btnEDITAR_USUARIO.UseVisualStyleBackColor = true;
+            // 
+            // btnANADIR_USUARIO
+            // 
+            btnANADIR_USUARIO.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
+            btnANADIR_USUARIO.Location = new Point(329, 114);
+            btnANADIR_USUARIO.Name = "btnANADIR_USUARIO";
+            btnANADIR_USUARIO.Size = new Size(360, 60);
+            btnANADIR_USUARIO.TabIndex = 0;
+            btnANADIR_USUARIO.Text = "AÑADIR USUARIO";
+            btnANADIR_USUARIO.UseVisualStyleBackColor = true;
             // 
             // main
             // 
@@ -279,8 +346,14 @@
         private GroupBox groupHOME;
         private PictureBox pictureBox1;
         private GroupBox groupGESTION;
-        private Label lblEDITARUSUARIO;
-        private Label lblANADIRUSUARIO;
-        private Label lblDATOSPERSONALES;
+        private Label lblDATOS_PERSONALES;
+        private Button btnEDITAR_USUARIO;
+        private Button btnANADIR_USUARIO;
+        private Label lblROL;
+        private Label lblDEPARTAMENTO;
+        private Label lblFECHA_NACIMIENTO;
+        private Label lblAPELLIDOS;
+        private Label label1;
+        private Button btnEDITAR_DATOS_PERSONALES;
     }
 }

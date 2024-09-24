@@ -35,19 +35,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(629, 250);
+            label1.Location = new Point(290, 260);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(487, 77);
+            label1.Size = new Size(327, 52);
             label1.TabIndex = 0;
             label1.Text = "USER CONTROL 2";
             // 
             // UserControl2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "UserControl2";
-            Size = new Size(1291, 791);
+            Size = new Size(904, 475);
             ResumeLayout(false);
             PerformLayout();
         }

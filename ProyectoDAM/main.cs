@@ -17,6 +17,9 @@ namespace ProyectoDAM
         private float originalFontSize;
         private bool isIncreasing;
         private float fontStep = 1.0f;
+        private UserControl1 userControl1;
+        private UserControl2 userControl2;
+
         public main()
         {
 
@@ -40,11 +43,14 @@ namespace ProyectoDAM
             InitializeComponent();
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
 
-            // Crear instancia de UserControl1(HOME)
-            UserControl1 userControl1 = new UserControl1();
+            // Crear instancia de UserControl1 (HOME) y agregar al formulario
+            userControl1 = new UserControl1();
+            userControl1.Dock = DockStyle.Fill;  // Asegúrate de que ocupe todo el espacio
+            this.Controls.Add(userControl1);      // Agregar UserControl1 al formulario
 
-            // Agregar el UserControl al formulario
-            this.Controls.Add(userControl1);
+            // Crear instancia de UserControl2 (COMPRAS) pero no agregarlo aún
+            userControl2 = new UserControl2();
+            userControl2.Dock = DockStyle.Fill;  // Asegúrate de que ocupe todo el espacio
 
         }
 
@@ -56,19 +62,35 @@ namespace ProyectoDAM
 
         private void btnHOME_Click(object sender, EventArgs e)
         {
-            
+            // Verificar si UserControl2 está visible y ocultarlo
+            if (userControl2.Parent != null)
+            {
+                this.Controls.Remove(userControl2);  // Remover UserControl2 si está visible
+            }
 
-            // Crear instancia de tu UserControl
-            UserControl1 userControl = new UserControl1();
-
-            // Agregar el UserControl al formulario
-            this.Controls.Add(userControl);
+            // Asegurarse de que UserControl1 esté visible
+            if (userControl1.Parent == null)  // Solo agregarlo si no está ya en el formulario
+            {
+                this.Controls.Add(userControl1);
+            }
+            userControl1.Visible = true;  // Asegurarse de que UserControl1 sea visible
 
         }
 
         private void btnCOMPRAS_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear(userControl);
+            // Verificar si UserControl1 está visible y ocultarlo
+            if (userControl1.Parent != null)
+            {
+                this.Controls.Remove(userControl1);  // Remover UserControl1 si está visible
+            }
+
+            // Asegurarse de que UserControl2 esté visible
+            if (userControl2.Parent == null)  // Solo agregarlo si no está ya en el formulario
+            {
+                this.Controls.Add(userControl2);
+            }
+            userControl2.Visible = true;  // Asegurarse de que UserControl2 sea visible
 
         }
     }

@@ -17,81 +17,118 @@ namespace ProyectoDAM
         private float originalFontSize;
         private bool isIncreasing;
         private float fontStep = 1.0f;
+
+        //Variable control de pestaña
+        private string pestaña;
+
+        //Variables UserControl
         private UserControl1 userControl1;
         private UserControl2 userControl2;
+        private UserControl3 userControl3;
+        private UserControl4 userControl4;
+
 
         public main()
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void pestaña_actual(string pestaña)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            switch (pestaña)
+            {
+                case "HOME":
+                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A HOME");
+
+                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
+                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
+                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
+                    Controls.Add(userControl1);
+                    break;
+
+                case "COMPRAS":
+                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A COMPRAS");
+
+                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
+                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
+                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
+                    Controls.Add(userControl2);
+                    break;
+
+                case "VENTAS":
+                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A VENTAS");
+                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
+                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
+                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
+                    Controls.Add(userControl3);
+                    break;
+
+                case "INVENTARIO":
+                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A INVENTARIO");
+                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
+                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
+                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
+                    Controls.Add(userControl4);
+                    break;
+            }
         }
+
+
 
         private void btnPERFIL_Click(object sender, EventArgs e)
         {
+            //Cambio color del NAV a RGB específico
             panelNAV.BackColor = Color.FromArgb(255, 32, 43, 54);
 
         }
 
         public main(string usuario)
         {
-            //Texto de bienvenida.
             InitializeComponent();
+            //Texto de bienvenida.
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
 
-            // Crear instancia de UserControl1 (HOME) y agregar al formulario
+            // Crear instancia de UserControl1(HOME) y mosrtarla en el formulario.
             userControl1 = new UserControl1();
-            userControl1.Dock = DockStyle.Fill;  // Asegúrate de que ocupe todo el espacio
-            this.Controls.Add(userControl1);      // Agregar UserControl1 al formulario
+            userControl1.Dock = DockStyle.Fill;  // Espacio del UserContro1 maximizado
+            this.Controls.Add(userControl1);      // Mostrar UserControl1 en el formulario
 
-            // Crear instancia de UserControl2 (COMPRAS) pero no agregarlo aún
+            //Creo instancias del resto de UsersControls sin mostrarlos.
             userControl2 = new UserControl2();
-            userControl2.Dock = DockStyle.Fill;  // Asegúrate de que ocupe todo el espacio
+            userControl3 = new UserControl3();
+            userControl4 = new UserControl4();
 
         }
 
         private void btnCERRARSESION_Click(object sender, EventArgs e)
         {
+            //Botón que cierra la sesión del usuario conectado.
             MessageBox.Show("Sesión cerrada con éxito.");
             Application.Exit();
         }
 
         private void btnHOME_Click(object sender, EventArgs e)
         {
-            // Verificar si UserControl2 está visible y ocultarlo
-            if (userControl2.Parent != null)
-            {
-                this.Controls.Remove(userControl2);  // Remover UserControl2 si está visible
-            }
-
-            // Asegurarse de que UserControl1 esté visible
-            if (userControl1.Parent == null)  // Solo agregarlo si no está ya en el formulario
-            {
-                this.Controls.Add(userControl1);
-            }
-            userControl1.Visible = true;  // Asegurarse de que UserControl1 sea visible
-
+            pestaña = "HOME";
+            pestaña_actual(pestaña);
         }
 
         private void btnCOMPRAS_Click(object sender, EventArgs e)
         {
-            // Verificar si UserControl1 está visible y ocultarlo
-            if (userControl1.Parent != null)
-            {
-                this.Controls.Remove(userControl1);  // Remover UserControl1 si está visible
-            }
+            pestaña = "COMPRAS";
+            pestaña_actual(pestaña);
+        }
 
-            // Asegurarse de que UserControl2 esté visible
-            if (userControl2.Parent == null)  // Solo agregarlo si no está ya en el formulario
-            {
-                this.Controls.Add(userControl2);
-            }
-            userControl2.Visible = true;  // Asegurarse de que UserControl2 sea visible
+        private void btnVENTAS_Click(object sender, EventArgs e)
+        {
+            pestaña = "VENTAS";
+            pestaña_actual(pestaña);
+        }
 
+        private void btnINVENTARIO_Click(object sender, EventArgs e)
+        {
+            pestaña = "INVENTARIO";
+            pestaña_actual(pestaña);
         }
     }
 }

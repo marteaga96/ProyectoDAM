@@ -36,7 +36,6 @@
             txtCONTRASEÑA = new TextBox();
             imgUSUARIO = new PictureBox();
             imgPASS = new PictureBox();
-            lblOK = new Label();
             ((System.ComponentModel.ISupportInitialize)imgUSUARIO).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgPASS).BeginInit();
             SuspendLayout();
@@ -128,18 +127,6 @@
             imgPASS.TabIndex = 8;
             imgPASS.TabStop = false;
             // 
-            // lblOK
-            // 
-            lblOK.AutoSize = true;
-            lblOK.BackColor = Color.Transparent;
-            lblOK.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOK.ForeColor = Color.FromArgb(0, 192, 0);
-            lblOK.Location = new Point(349, 491);
-            lblOK.Name = "lblOK";
-            lblOK.Size = new Size(193, 37);
-            lblOK.TabIndex = 1;
-            lblOK.Text = "CONEXION OK";
-            // 
             // LogIn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -155,7 +142,6 @@
             Controls.Add(lblCONTRASEÑA);
             Controls.Add(lblUSUARIO);
             Controls.Add(lblNOK);
-            Controls.Add(lblOK);
             Controls.Add(btnConexion);
             Name = "LogIn";
             StartPosition = FormStartPosition.CenterScreen;
@@ -176,7 +162,6 @@
         private TextBox txtCONTRASEÑA;
         private PictureBox imgUSUARIO;
         private PictureBox imgPASS;
-        private Label lblOK;
     }
 
 

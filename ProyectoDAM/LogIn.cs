@@ -12,7 +12,6 @@ namespace ProyectoDAM
         public LogIn()
         {
             InitializeComponent();
-            lblOK.Visible = false;
             lblNOK.Visible = false;
         }
 
@@ -64,9 +63,8 @@ namespace ProyectoDAM
             //Captura de errores
             catch (Exception ex)
             {
-                //Si la conexión es NOK, muestra cartel rojo
+                //Si la conexión es NOK, muestra el textox rojo
                 lblNOK.Visible = true;
-                lblOK.Visible = false;
 
             }
 

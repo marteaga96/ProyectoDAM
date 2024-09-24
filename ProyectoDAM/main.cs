@@ -40,11 +40,11 @@ namespace ProyectoDAM
             InitializeComponent();
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
 
-            // Crear instancia de tu UserControl
-            UserControl1 userControl = new UserControl1();
+            // Crear instancia de UserControl1(HOME)
+            UserControl1 userControl1 = new UserControl1();
 
             // Agregar el UserControl al formulario
-            this.Controls.Add(userControl);
+            this.Controls.Add(userControl1);
 
         }
 
@@ -54,5 +54,22 @@ namespace ProyectoDAM
             Application.Exit();
         }
 
+        private void btnHOME_Click(object sender, EventArgs e)
+        {
+            
+
+            // Crear instancia de tu UserControl
+            UserControl1 userControl = new UserControl1();
+
+            // Agregar el UserControl al formulario
+            this.Controls.Add(userControl);
+
+        }
+
+        private void btnCOMPRAS_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear(userControl);
+
+        }
     }
 }

@@ -158,6 +158,7 @@
             btnCOMPRAS.TabIndex = 3;
             btnCOMPRAS.Text = "COMPRAS";
             btnCOMPRAS.UseVisualStyleBackColor = false;
+            btnCOMPRAS.Click += btnCOMPRAS_Click;
             // 
             // btnHOME
             // 
@@ -178,6 +179,7 @@
             btnHOME.TabIndex = 2;
             btnHOME.Text = "HOME";
             btnHOME.UseVisualStyleBackColor = false;
+            btnHOME.Click += btnHOME_Click;
             // 
             // main
             // 

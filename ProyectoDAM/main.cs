@@ -20,9 +20,6 @@ namespace ProyectoDAM
         public main()
         {
 
-            InitializeComponent();
-            DialogResult = DialogResult.OK;
-            originalFontSize = btnHOME.Font.Size;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -42,6 +39,13 @@ namespace ProyectoDAM
             //Texto de bienvenida.
             InitializeComponent();
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
+
+            // Crear instancia de tu UserControl
+            UserControl1 userControl = new UserControl1();
+
+            // Agregar el UserControl al formulario
+            this.Controls.Add(userControl);
+
         }
 
         private void btnCERRARSESION_Click(object sender, EventArgs e)

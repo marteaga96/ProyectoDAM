@@ -1,4 +1,4 @@
---TRIGGER TABLA USUARIOS
+-------------------------------------------TRIGGERs TABLA USUARIOS-----------------------------------------------
 
 CREATE TRIGGER trg_insertarEnRoles
 ON USUARIOS
@@ -9,45 +9,79 @@ BEGIN
     SELECT ID_USUARIO, NOMBRE_SESION
     FROM inserted; -- 'inserted' es una tabla temporal que contiene los datos recién insertados
 END;
+--------------------------------------------------------------------------------------------------------------------
 
 
 
 
---TRIGGER TABLA COMPRAS
-CREATE TRIGGER trg_comprobarDatosProducto
-ON COMPRAS
-INSTEAD OF INSERT
+
+-------------------------------------------TRIGGERs TABLA PRODUCTOS-----------------------------------------------
+	--CALCULA PRECIO TOTAL CON IVA
+CREATE TRIGGER trg_calcularPrecioTotal
+ON PRODUCTOS
+AFTER INSERT
 AS
 BEGIN
-    DECLARE @ID_PROVEEDOR INT;
-    DECLARE @ID_PRODUCTO INT;
-    DECLARE @NOMBRE_PROVEEDOR VARCHAR(25);
-    DECLARE @NOMBRE_PRODUCTO VARCHAR(35);
-
-    SELECT @ID_PROVEEDOR = ID_PROVEEDOR,
-           @ID_PRODUCTO = ID_PRODUCTO,
-           @NOMBRE_PROVEEDOR = NOMBRE_PROVEEDOR,
-           @NOMBRE_PRODUCTO = NOMBRE_PRODUCTO
-    FROM inserted;
-
-    -- Comprobar que el NOMBRE_PROVEEDOR coincide con el ID_PROVEEDOR
-    IF NOT EXISTS (SELECT 1 FROM PROVEEDOR WHERE ID_PROVEEDOR = @ID_PROVEEDOR AND NOMBRE_PROVEEDOR = @NOMBRE_PROVEEDOR)
-    BEGIN
-        RAISERROR('El NOMBRE_PROVEEDOR no coincide con el ID_PROVEEDOR.', 16, 1);
-        ROLLBACK TRANSACTION;
-        RETURN;
-    END
-
-    -- Comprobar que el NOMBRE_PRODUCTO coincide con el ID_PRODUCTO
-    IF NOT EXISTS (SELECT 1 FROM PRODUCTOS WHERE ID_PRODUCTO = @ID_PRODUCTO AND NOMBRE_PRODUCTO = @NOMBRE_PRODUCTO)
-    BEGIN
-        RAISERROR('El NOMBRE_PRODUCTO no coincide con el ID_PRODUCTO.', 16, 1);
-        ROLLBACK TRANSACTION;
-        RETURN;
-    END
-
-    -- Si las comprobaciones son correctas, insertar el registro
-    INSERT INTO COMPRAS (ID_PROVEEDOR, APROBADO_POR, NOMBRE_PROVEEDOR, ID_PRODUCTO, NOMBRE_PRODUCTO, CANTIDAD_COMPRA_PRODUCTO, FECHA)
-    SELECT ID_PROVEEDOR, APROBADO_POR, NOMBRE_PROVEEDOR, ID_PRODUCTO, NOMBRE_PRODUCTO, CANTIDAD_COMPRA_PRODUCTO, FECHA
-    FROM inserted;
+    UPDATE p
+    SET p.PRECIO_TOTAL_PRODUCTO = ((i.IVA_PRODUCTO / 100) + 1) * i.PRECIO_SIN_IVA_PRODUCTO
+    FROM PRODUCTOS p
+    INNER JOIN inserted i ON p.ID_PRODUCTO = i.ID_PRODUCTO; -- Usar ID_PRODUCTO para asegurar la unicidad
 END;
+
+
+--CREA PRODUCTO EN TABLA ALMACÉN CON STOCK 0 SI NO HAY NINGUNO CREADO
+CREATE TRIGGER trg_moverProductoAAlmacen
+ON PRODUCTOS
+AFTER INSERT
+AS
+BEGIN
+    -- Insertar en ALMACEN solo si no existe un producto con el mismo nombre
+    INSERT INTO ALMACEN (NOMBRE_PRODUCTO, STOCK)
+    SELECT i.NOMBRE_PRODUCTO, 0
+    FROM inserted i
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM ALMACEN a 
+        WHERE a.NOMBRE_PRODUCTO = i.NOMBRE_PRODUCTO
+    );
+END;
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-------------------------------------------TRIGGERs TABLA COMPRAS-----------------------------------------------
+CREATE TRIGGER compra
+ON COMPRAS
+AFTER INSERT
+AS
+BEGIN
+    -- Actualizar el STOCK sumando la cantidad comprada del producto
+    UPDATE a
+    SET a.STOCK = a.STOCK + i.CANTIDAD_COMPRA_PRODUCTO
+    FROM ALMACEN a
+    INNER JOIN inserted i ON a.NOMBRE_PRODUCTO = i.NOMBRE_PRODUCTO;  -- Asegúrate de que NOMBRE_PRODUCTO coincida
+END;
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-------------------------------------------TRIGGERs TABLA VENTAS-----------------------------------------------
+CREATE TRIGGER venta
+ON VENTAS
+AFTER INSERT
+AS
+BEGIN
+    -- Actualizar el STOCK restando la cantidad comprada del producto
+    UPDATE a
+    SET a.STOCK = a.STOCK - i.CANTIDAD_VENDIDA
+    FROM ALMACEN a
+    INNER JOIN inserted i ON a.NOMBRE_PRODUCTO = i.NOMBRE_PRODUCTO;  -- Asegúrate de que NOMBRE_PRODUCTO coincida
+END;
+
+--------------------------------------------------------------------------------------------------------------------
+

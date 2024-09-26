@@ -2,12 +2,14 @@ CREATE TABLE USUARIOS (
     ID_USUARIO INT PRIMARY KEY IDENTITY(1,1), -- ID autoincremental
     NOMBRE_SESION VARCHAR(15) NOT NULL UNIQUE, -- Tomado de la tabla de usuarios de SQL
     NOMBRE_USUARIO VARCHAR(15),             -- Nombre del usuario
-    APELLIDO_USUARIO VARCHAR(25),           -- Apellido del usuario
+    APELLIDOS_USUARIO VARCHAR(25),           -- Apellido del usuario
+    FECHA_NACIMIENTO VARCHAR(10),           -- Fecha de nacimiento del usuario
     DEPARTAMENTO_USUARIO VARCHAR(20)        -- Departamento del usuario
 );
 
 
 
+--EL INT DEL ROL AÑADIRÁ PERMISOS AL USUARIO DE LA APP (niveles 0-5). EL ROL SERÁ NULL Y
 CREATE TABLE ROLES (
     ID_USUARIO INT NOT NULL,                          -- Tomado de la tabla USUARIOS
     NOMBRE_SESION VARCHAR(15) NOT NULL,              -- Tomado de la tabla USUARIOS
@@ -18,7 +20,8 @@ CREATE TABLE ROLES (
 
 
 
-CREATE TABLE PROVEEDOR (
+
+CREATE TABLE PROVEEDORES (
     ID_PROVEEDOR INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
     DNI_O_CIF_PROVEEDOR VARCHAR(9) UNIQUE NOT NULL, -- DNI/CIF del proveedor
     NOMBRE_PROVEEDOR VARCHAR(25) NOT NULL,               -- Nombre del proveedor
@@ -30,7 +33,7 @@ CREATE TABLE PROVEEDOR (
 
 
 
-CREATE TABLE CLIENTE (
+CREATE TABLE CLIENTES (
     ID_CLIENTE INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
     DNI_CIF_CLIENTE VARCHAR(9) UNIQUE NOT NULL, -- DNI/CIF del cliente
     NOMBRE_CLIENTE VARCHAR(25) NOT NULL,        -- Nombre del cliente
@@ -44,23 +47,38 @@ CREATE TABLE CLIENTE (
 
 CREATE TABLE PRODUCTOS (
     ID_PRODUCTO INT PRIMARY KEY IDENTITY(1,1), -- ID auto incremental
-    NOMBRE_PRODUCTO VARCHAR(35) NOT NULL,      -- Nombre del producto
+    NOMBRE_PRODUCTO VARCHAR(35) UNIQUE NOT NULL,      -- Nombre del producto
     PRECIO_SIN_IVA_PRODUCTO FLOAT NOT NULL,     -- Precio sin IVA del producto
     IVA_PRODUCTO FLOAT NOT NULL,                 -- IVA del producto
-    PRECIO_TOTAL_PRODUCTO FLOAT NOT NULL         -- Precio total del producto
+    PRECIO_TOTAL_PRODUCTO FLOAT         -- Precio total del producto
+
 );
 
+
+CREATE TABLE VENTAS (
+    ID_VENTA INT PRIMARY KEY IDENTITY(1,1),      -- ID auto incremental
+    VENDIDO_POR VARCHAR(50),    		 -- Usuario que ha hecho la venta
+    NOMBRE_CLIENTE VARCHAR(25) NOT NULL,         -- Nombre del cliente (debe coincidir con ID_CLIENTE)
+    NOMBRE_PRODUCTO VARCHAR(35) NOT NULL,        -- Nombre del producto (debe coincidir con ID_PRODUCTO)
+    FECHA DATETIME DEFAULT GETDATE(),            -- Fecha de la compra
+    CANTIDAD_VENDIDA FLOAT NOT NULL,      	 -- Cantidad comprada
+);
+
+
+CREATE TABLE ALMACEN (
+    NOMBRE_PRODUCTO VARCHAR(35) UNIQUE,
+    STOCK FLOAT,   
+);
 
 
 CREATE TABLE COMPRAS (
     ID_COMPRA INT PRIMARY KEY IDENTITY(1,1),     -- ID auto incremental
-    ID_PROVEEDOR INT NOT NULL,                    -- ID del proveedor (debe existir en PROVEEDOR)
-    APROBADO_POR VARCHAR(50),                     -- Aprobado por
     NOMBRE_PROVEEDOR VARCHAR(25) NOT NULL,       -- Nombre del proveedor (debe coincidir con ID_PROVEEDOR)
-    ID_PRODUCTO INT NOT NULL,                     -- ID del producto (debe existir en PRODUCTOS)
+    NOMBRE_USUARIO VARCHAR(15),             	--Nombre del usuario
     NOMBRE_PRODUCTO VARCHAR(35) NOT NULL,        -- Nombre del producto (debe coincidir con ID_PRODUCTO)
     CANTIDAD_COMPRA_PRODUCTO FLOAT NOT NULL,      -- Cantidad comprada
     FECHA DATETIME DEFAULT GETDATE(),             -- Fecha de la compra
-    FOREIGN KEY (ID_PROVEEDOR) REFERENCES PROVEEDOR(ID_PROVEEDOR),  -- Relación con PROVEEDOR
-    FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTOS(ID_PRODUCTO)      -- Relación con PRODUCTOS
+    FOREIGN KEY (NOMBRE_PROVEEDOR) REFERENCES PROVEEDORES(NOMBRE_PROVEEDOR),
+    FOREIGN KEY (NOMBRE_USUARIO) REFERENCES USUARIOS(NOMBRE_SESION),  -- Relación con USUARIOS
+    FOREIGN KEY (NOMBRE_PRODUCTO) REFERENCES PRODUCTOS(NOMBRE_PRODUCTO)      -- Relación con PRODUCTOS
 );

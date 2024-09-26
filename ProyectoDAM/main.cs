@@ -27,6 +27,9 @@ namespace ProyectoDAM
         private UserControl3 userControl3;
         private UserControl4 userControl4;
 
+        // UserControl para controlar pestaña actual
+        private UserControl currentControl;
+
 
         public main()
         {
@@ -35,52 +38,39 @@ namespace ProyectoDAM
 
         private void pestaña_actual(string pestaña)
         {
+            //Variable para asignar nueva pestaña acutal
+            UserControl newControl;
+
             switch (pestaña)
             {
                 case "HOME":
-                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A HOME");
-
-                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
-                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
-                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
-                    Controls.Add(userControl1);
+                    newControl = userControl1;
                     break;
 
                 case "COMPRAS":
-                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A COMPRAS");
-
-                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
-                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
-                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
-                    Controls.Add(userControl2);
+                    newControl = userControl2;
                     break;
 
                 case "VENTAS":
-                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A VENTAS");
-                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
-                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
-                    Controls.Remove(userControl4);  // Quitar UserControl4 si está visible
-                    Controls.Add(userControl3);
+                    newControl = userControl3;
                     break;
 
                 case "INVENTARIO":
-                    //MessageBox.Show("HE ENTRADO AL CASE PORQUE VOY A INVENTARIO");
-                    Controls.Remove(userControl1);  // Quitar UserControl1 si está visible
-                    Controls.Remove(userControl2);  // Quitar UserControl2 si está visible
-                    Controls.Remove(userControl3);  // Quitar UserControl3 si está visible
-                    Controls.Add(userControl4);
+                    newControl = userControl4;
                     break;
+
+                default:
+                    MessageBox.Show("Pestaña desconocida.");
+                    return;
             }
+
+
+            // Quitar pestaña actual y añadir nuevo userControl
+            this.Controls.Remove(currentControl);
+            currentControl = newControl;
+            this.Controls.Add(currentControl);
         }
 
-
-
-        private void btnPERFIL_Click(object sender, EventArgs e)
-        {
-            //Cambio color del NAV a RGB específico
-            panelNAV.BackColor = Color.FromArgb(255, 32, 43, 54);
-
-        }
 
         public main(string usuario)
         {
@@ -88,15 +78,18 @@ namespace ProyectoDAM
             //Texto de bienvenida.
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
 
-            // Crear instancia de UserControl1(HOME) y mosrtarla en el formulario.
+            //Crear instancia de UserControl1(HOME) y mosrtarla en el formulario.
             userControl1 = new UserControl1();
-            userControl1.Dock = DockStyle.Fill;  // Espacio del UserContro1 maximizado
             this.Controls.Add(userControl1);      // Mostrar UserControl1 en el formulario
+
+            //Configurar y mostrar el UserControl inicial (HOME)
+            currentControl = userControl1;
+            this.Controls.Add(currentControl);
 
             //Creo instancias del resto de UsersControls sin mostrarlos.
             userControl2 = new UserControl2();
             userControl3 = new UserControl3();
-            userControl4 = new UserControl4();
+            userControl4 = new UserControl4();         
 
         }
 

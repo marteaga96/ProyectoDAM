@@ -32,6 +32,8 @@
             btnCONSULTA_HISTORIAL = new Button();
             btn_CREAR_COMPRA = new Button();
             btn_MODIFICAR_COMPRA = new Button();
+            DatagridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DatagridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -76,10 +78,27 @@
             btn_MODIFICAR_COMPRA.Text = "MODIFICAR COMPRA";
             btn_MODIFICAR_COMPRA.UseVisualStyleBackColor = true;
             // 
+            // DatagridView1
+            // 
+            DatagridView1.AccessibleRole = AccessibleRole.None;
+            DatagridView1.AllowUserToAddRows = false;
+            DatagridView1.AllowUserToDeleteRows = false;
+            DatagridView1.AllowUserToResizeRows = false;
+            DatagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            DatagridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            DatagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DatagridView1.Cursor = Cursors.Hand;
+            DatagridView1.Location = new Point(845, 268);
+            DatagridView1.Name = "DatagridView1";
+            DatagridView1.RowTemplate.Height = 25;
+            DatagridView1.Size = new Size(873, 170);
+            DatagridView1.TabIndex = 4;
+            // 
             // ucCOMPRAS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(DatagridView1);
             Controls.Add(btn_MODIFICAR_COMPRA);
             Controls.Add(btn_CREAR_COMPRA);
             Controls.Add(btnCONSULTA_HISTORIAL);
@@ -87,6 +106,7 @@
             Margin = new Padding(2);
             Name = "ucCOMPRAS";
             Size = new Size(1920, 1080);
+            ((System.ComponentModel.ISupportInitialize)DatagridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +117,6 @@
         private Button btnCONSULTA_HISTORIAL;
         private Button btn_CREAR_COMPRA;
         private Button btn_MODIFICAR_COMPRA;
+        public DataGridView DatagridView1;
     }
 }

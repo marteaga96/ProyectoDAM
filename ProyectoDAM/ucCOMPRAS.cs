@@ -23,7 +23,7 @@ namespace ProyectoDAM
 
         private void CONSULTA_Click(object sender, EventArgs e)
         {
-            Consultas.consulta_historial_compras(this, EventArgs.Empty);
+            Consultas.consulta_historial_compras(this, EventArgs.Empty, this.DatagridView1);
         }
 
     }

@@ -70,6 +70,60 @@ namespace ProyectoDAM.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM CLIENTES.
+        /// </summary>
+        internal static string consultaClientes {
+            get {
+                return ResourceManager.GetString("consultaClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM COMPRAS.
+        /// </summary>
+        internal static string consultaCompras {
+            get {
+                return ResourceManager.GetString("consultaCompras", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM PRODUCTOS.
+        /// </summary>
+        internal static string consultaProductos {
+            get {
+                return ResourceManager.GetString("consultaProductos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM PROVEEDORES.
+        /// </summary>
+        internal static string consultaProveedores {
+            get {
+                return ResourceManager.GetString("consultaProveedores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM USUARIOS.
+        /// </summary>
+        internal static string consultaUsuarios {
+            get {
+                return ResourceManager.GetString("consultaUsuarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM VENTAS.
+        /// </summary>
+        internal static string consultaVentas {
+            get {
+                return ResourceManager.GetString("consultaVentas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap fondo {

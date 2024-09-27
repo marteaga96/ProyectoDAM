@@ -133,4 +133,22 @@
   <data name="consultaAlmacen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consultaAlmacen.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="consultaClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaClientes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="consultaCompras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaCompras.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="consultaProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaProductos.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="consultaProveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaProveedores.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="consultaUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaUsuarios.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="consultaVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultaVentas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

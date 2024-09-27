@@ -84,6 +84,7 @@
             btnGESTION.TabIndex = 7;
             btnGESTION.Text = "GESTIÓN";
             btnGESTION.UseVisualStyleBackColor = false;
+            btnGESTION.Click += btnGESTION_Click;
             // 
             // lblBIENVENIDA
             // 
@@ -185,6 +186,7 @@
             Controls.Add(panelNAV);
             Name = "main";
             Text = "main";
+            WindowState = FormWindowState.Maximized;
             panelNAV.ResumeLayout(false);
             panelNAV.PerformLayout();
             ResumeLayout(false);

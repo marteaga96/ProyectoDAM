@@ -1,6 +1,6 @@
 ﻿namespace ProyectoDAM
 {
-    partial class UserControl3
+    partial class ucHOME
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -29,25 +29,43 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(293, 179);
+            label1.Location = new Point(265, 21);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(327, 52);
+            label1.Size = new Size(174, 52);
             label1.TabIndex = 0;
-            label1.Text = "USER CONTROL 3";
+            label1.Text = "ucHOME";
             // 
-            // UserControl3
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.logo;
+            pictureBox1.Location = new Point(265, 92);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(318, 280);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // ucHOME
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Name = "UserControl3";
-            Size = new Size(977, 492);
+            Location = new Point(680, 350);
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "ucHOME";
+            Size = new Size(1344, 588);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -55,5 +73,6 @@
         #endregion
 
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

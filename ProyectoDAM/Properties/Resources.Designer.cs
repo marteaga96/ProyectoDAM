@@ -61,11 +61,11 @@ namespace ProyectoDAM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a SELECT * FROM USUARIOS WHERE USUARIO=@user;.
+        ///   Busca una cadena traducida similar a SELECT * FROM ALMACEN.
         /// </summary>
-        internal static string Consulta1 {
+        internal static string consultaAlmacen {
             get {
-                return ResourceManager.GetString("Consulta1", resourceCulture);
+                return ResourceManager.GetString("consultaAlmacen", resourceCulture);
             }
         }
         

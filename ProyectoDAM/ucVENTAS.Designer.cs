@@ -1,6 +1,6 @@
 ﻿namespace ProyectoDAM
 {
-    partial class UserControl2
+    partial class ucVENTAS
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -35,21 +35,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(290, 260);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(293, 179);
             label1.Name = "label1";
-            label1.Size = new Size(327, 52);
+            label1.Size = new Size(198, 52);
             label1.TabIndex = 0;
-            label1.Text = "USER CONTROL 2";
+            label1.Text = "ucVENTAS";
             // 
-            // UserControl2
+            // ucVENTAS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "UserControl2";
-            Size = new Size(904, 475);
+            Name = "ucVENTAS";
+            Size = new Size(977, 492);
             ResumeLayout(false);
             PerformLayout();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoDAM
 {
-    public partial class UserControl4 : UserControl
+    public partial class ucGESTION : UserControl
     {
-        public UserControl4()
+        public ucGESTION()
         {
             InitializeComponent();
         }

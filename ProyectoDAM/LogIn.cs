@@ -2,8 +2,8 @@ using System.Web;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using MySql.Data.MySqlClient;
-using ProyectoDAM;
 using ProyectoDAM.DDBB;
+using ProyectoDAM.Resources;
 
 namespace ProyectoDAM
 {
@@ -21,12 +21,14 @@ namespace ProyectoDAM
             try
             {
                 //Variables de los campos de login
-                string usuario = txtUSUARIO.Text;
-                string pass = txtCONTRASEÑA.Text;
+
+                variablesGlobales.usuario = txtUSUARIO.Text;
+                variablesGlobales.password = txtCONTRASEÑA.Text;
+
 
 
                 //Instancia conexion con los parametros
-                DDBB.Conexion conexion = new DDBB.Conexion(usuario, pass);
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
 
 
 
@@ -36,10 +38,10 @@ namespace ProyectoDAM
                 //if (conexion.conAbrir() == true)
                 {
                     //Main.cs
-                    main mainForm = new main(usuario);
+                    main mainForm = new main(variablesGlobales.usuario);
 
                     //Mensaje bienvendia 
-                    MessageBox.Show($"Login Correcto. Bienvenido {usuario}");
+                    MessageBox.Show($"Login Correcto. Bienvenido {variablesGlobales.usuario}");
                     
                     this.Hide();
 
@@ -47,11 +49,8 @@ namespace ProyectoDAM
                     mainForm.ShowDialog();
 
 
-                    //mostrarDatosUsuario(usuario, pass);
-
                     //Si main se cierra, se para la ejecución del programa.
                     //Application.Exit();
-
 
 
                     //Si se quita el Application.Exit, con el this.show se volvería al inicio de sesión.
@@ -65,42 +64,12 @@ namespace ProyectoDAM
             {
                 //Si la conexión es NOK, muestra el textox rojo
                 lblNOK.Visible = true;
+                MessageBox.Show(ex.Message);
+
 
             }
 
         }
-
-        //private void mostrarDatosUsuario(string usuario, string pass)
-        //{
-        //    string R = "";
-
-        //    //Pasar datos de login a la clase Conexion
-        //    DDBB.Conexion conexion = new DDBB.Conexion(usuario, pass);
-
-        //    SqlCommand comando = new SqlCommand();
-        //    comando.CommandText = Properties.Resources.Consulta1;
-        //    comando.Parameters.AddWithValue("@user", txtUSUARIO.Text);
-        //    comando.Connection = conexion.datos_conexion;
-
-
-        //    if (conexion.conAbrir())
-        //    {
-        //        SqlDataReader Reader = comando.ExecuteReader();
-        //        while (Reader.Read())
-        //        {
-        //            R = Reader.GetString(0) + " " + Reader.GetString(1) + " " + Reader.GetString(2) + " " + Reader.GetString(3) + " " + Reader.GetString(24);
-
-        //        }
-
-        //        Reader.Close();
-        //        lblOK.Visible = true;
-        //        lblNOK.Visible = false;
-        //        conexion.conCerrar();
-
-        //        MessageBox.Show(R);
-        //    }
-        //}
-
 
     }
 }

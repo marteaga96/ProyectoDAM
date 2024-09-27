@@ -7,16 +7,19 @@
     <Compile Update="main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControl1.cs">
+    <Compile Update="ucGESTION.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl2.cs">
+    <Compile Update="ucHOME.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl3.cs">
+    <Compile Update="ucCOMPRAS.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl4.cs">
+    <Compile Update="ucVENTAS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ucINVENTARIO.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

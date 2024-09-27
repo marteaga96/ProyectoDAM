@@ -65,7 +65,6 @@
             btn_CREAR_COMPRA.TabIndex = 2;
             btn_CREAR_COMPRA.Text = "CREAR COMPRA";
             btn_CREAR_COMPRA.UseVisualStyleBackColor = true;
-            btn_CREAR_COMPRA.Click += btn_CREAR_COMPRA_Click;
             // 
             // btn_MODIFICAR_COMPRA
             // 

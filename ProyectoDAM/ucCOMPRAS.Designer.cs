@@ -33,6 +33,7 @@
             btn_CREAR_COMPRA = new Button();
             btn_MODIFICAR_COMPRA = new Button();
             DatagridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DatagridView1).BeginInit();
             SuspendLayout();
             // 
@@ -94,10 +95,21 @@
             DatagridView1.Size = new Size(873, 170);
             DatagridView1.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox1.Items.AddRange(new object[] { "MARIO", "PRUEBA", "PRUEBA2" });
+            comboBox1.Location = new Point(260, 143);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 0;
+            // 
             // ucCOMPRAS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(comboBox1);
             Controls.Add(DatagridView1);
             Controls.Add(btn_MODIFICAR_COMPRA);
             Controls.Add(btn_CREAR_COMPRA);
@@ -118,5 +130,6 @@
         private Button btn_CREAR_COMPRA;
         private Button btn_MODIFICAR_COMPRA;
         public DataGridView DatagridView1;
+        private ComboBox comboBox1;
     }
 }

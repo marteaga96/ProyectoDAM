@@ -30,7 +30,7 @@ namespace ProyectoDAM.DDBB
                 if (datos_conexion.State == System.Data.ConnectionState.Closed)
                 {
                     datos_conexion.Open();
-                    rdo = true;
+                        rdo = true;
                 }
             }
             catch (Exception ex)

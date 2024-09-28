@@ -39,7 +39,6 @@ namespace ProyectoDAM
                 {
                     //Main.cs
                     main mainForm = new main(variablesGlobales.usuario);
-
                     //Mensaje bienvendia 
                     MessageBox.Show($"Login Correcto. Bienvenido {variablesGlobales.usuario}");
                     

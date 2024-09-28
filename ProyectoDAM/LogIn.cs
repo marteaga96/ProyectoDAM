@@ -34,8 +34,8 @@ namespace ProyectoDAM
 
 
                 //Login correcto
-                if (true)
-                //if (conexion.conAbrir() == true)
+                //if (true)
+                if (conexion.conAbrir() == true)
                 {
                     //Main.cs
                     main mainForm = new main(variablesGlobales.usuario);
@@ -47,10 +47,6 @@ namespace ProyectoDAM
 
                     //Si el main se ha abierto correctamente, lo muestra como ventana principal
                     mainForm.ShowDialog();
-
-
-                    //Si main se cierra, se para la ejecución del programa.
-                    //Application.Exit();
 
 
                     //Si se quita el Application.Exit, con el this.show se volvería al inicio de sesión.

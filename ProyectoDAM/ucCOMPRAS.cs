@@ -26,5 +26,9 @@ namespace ProyectoDAM
             Consultas.consulta_historial_compras(this, EventArgs.Empty, this.DatagridView1);
         }
 
+        private void btn_CREAR_COMPRA_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("heelo");
+        }
     }
 }

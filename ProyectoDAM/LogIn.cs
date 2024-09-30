@@ -34,11 +34,15 @@ namespace ProyectoDAM
 
 
                 //Login correcto
-                //if (true)
-                if (conexion.conAbrir() == true)
-                {
+#if DEBUG
+                if (true)
+#else
+                    if (conexion.conAbrir() == true)
+#endif
+                    {
                     //Main.cs
-                    main mainForm = new main(variablesGlobales.usuario);
+                    // main mainForm = new main(variablesGlobales.usuario);
+                    FrmMain mainForm = new FrmMain();
                     //Mensaje bienvendia 
                     MessageBox.Show($"Login Correcto. Bienvenido {variablesGlobales.usuario}");
                     

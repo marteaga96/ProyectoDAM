@@ -12,10 +12,13 @@ namespace ProyectoDAM
 {
     public partial class FrmMain : Form
     {
-        public FrmMain()
+        public FrmMain(string usuario)
         {
             InitializeComponent();
+            //Texto de bienvenida.
+            lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,6 +34,18 @@ namespace ProyectoDAM
             {
                 this.MdiChildren.First(y => y.Name == "LogIn").Activate();
             }
+        }
+
+        private void btnCOMPRAS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCERRARSESION_Click(object sender, EventArgs e)
+        {
+            //Botón que cierra la sesión del usuario conectado.
+            MessageBox.Show("Sesión cerrada con éxito.");
+            Application.Exit();
         }
     }
 }

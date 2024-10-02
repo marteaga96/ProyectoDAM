@@ -112,15 +112,16 @@ namespace ProyectoDAM
                                   "NOMBRE_PROVEEDOR = @nombreProveedor, " +
                                   "NOMBRE_PRODUCTO = @nombreProducto, " +
                                   "CANTIDAD_COMPRADA = @cantidadComprada " +
-                                  "WHERE COMPRADO_POR = @compradoPor", // Condición para actualizar
+                                  "WHERE ID_COMPRA = @txtID",// Condición para actualizar
                     Connection = conexion.datos_conexion
                 };
 
-                // Usar la variable global para el campo "COMPRADO_POR" en la condición WHERE
+                // Usar la variable global para el campo "COMPRADO_POR" e   n la condición WHERE
                 comando.Parameters.AddWithValue("@compradoPor", variablesGlobales.usuario);
 
+                comando.Parameters.AddWithValue("@txtID", int.Parse(txtID.Text));
+
                 // Agregar parámetros para los campos que se desean actualizar
-                comando.Parameters.AddWithValue("@nombreProveedor", int.Parse(txtID.Text));
                 comando.Parameters.AddWithValue("@nombreProveedor", txtNombreProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
                 comando.Parameters.AddWithValue("@nombreProducto", txtNombreProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
                 comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtCantidadComprada.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
@@ -144,6 +145,11 @@ namespace ProyectoDAM
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void Compras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

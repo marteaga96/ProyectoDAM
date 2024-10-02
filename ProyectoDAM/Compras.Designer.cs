@@ -152,6 +152,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compras";
             Text = "Compras";
+            Load += Compras_Load;
             ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

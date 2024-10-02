@@ -43,10 +43,13 @@ namespace ProyectoDAM
                     //Main.cs
                     // main mainForm = new main(variablesGlobales.usuario);
                     main mainForm = new main(variablesGlobales.usuario);
+
+
                     //Mensaje bienvendia 
                     MessageBox.Show($"Login Correcto. Bienvenido {variablesGlobales.usuario}");
                     
                     this.Hide();
+
 
                     //Si el main se ha abierto correctamente, lo muestra como ventana principal
                     mainForm.ShowDialog();

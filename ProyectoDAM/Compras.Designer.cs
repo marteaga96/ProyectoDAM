@@ -34,6 +34,10 @@
             btn_MODIFICAR_COMPRA = new Button();
             datagridView1 = new DataGridView();
             comboBox1 = new ComboBox();
+            txtNombreProveedor = new TextBox();
+            txtNombreProducto = new TextBox();
+            txtCantidadComprada = new TextBox();
+            txtID = new TextBox();
             ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
             SuspendLayout();
             // 
@@ -56,6 +60,7 @@
             btnCONSULTA_HISTORIAL.TabIndex = 1;
             btnCONSULTA_HISTORIAL.Text = "CONSULTAR HISTORIAL DE COMPRAS";
             btnCONSULTA_HISTORIAL.UseVisualStyleBackColor = true;
+            btnCONSULTA_HISTORIAL.Click += btnCONSULTA_HISTORIAL_Click;
             // 
             // btn_CREAR_COMPRA
             // 
@@ -66,6 +71,7 @@
             btn_CREAR_COMPRA.TabIndex = 2;
             btn_CREAR_COMPRA.Text = "CREAR COMPRA";
             btn_CREAR_COMPRA.UseVisualStyleBackColor = true;
+            btn_CREAR_COMPRA.Click += btn_CREAR_COMPRA_Click;
             // 
             // btn_MODIFICAR_COMPRA
             // 
@@ -76,14 +82,20 @@
             btn_MODIFICAR_COMPRA.TabIndex = 3;
             btn_MODIFICAR_COMPRA.Text = "MODIFICAR COMPRA";
             btn_MODIFICAR_COMPRA.UseVisualStyleBackColor = true;
+            btn_MODIFICAR_COMPRA.Click += btn_MODIFICAR_COMPRA_Click;
             // 
             // datagridView1
             // 
+            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datagridView1.Location = new Point(845, 268);
+            datagridView1.MultiSelect = false;
             datagridView1.Name = "datagridView1";
+            datagridView1.ReadOnly = true;
+            datagridView1.RowHeadersVisible = false;
             datagridView1.RowTemplate.Height = 25;
-            datagridView1.Size = new Size(240, 150);
+            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datagridView1.Size = new Size(787, 143);
             datagridView1.TabIndex = 4;
             // 
             // comboBox1
@@ -94,11 +106,43 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 5;
             // 
+            // txtNombreProveedor
+            // 
+            txtNombreProveedor.Location = new Point(875, 97);
+            txtNombreProveedor.Name = "txtNombreProveedor";
+            txtNombreProveedor.Size = new Size(100, 23);
+            txtNombreProveedor.TabIndex = 7;
+            // 
+            // txtNombreProducto
+            // 
+            txtNombreProducto.Location = new Point(880, 143);
+            txtNombreProducto.Name = "txtNombreProducto";
+            txtNombreProducto.Size = new Size(100, 23);
+            txtNombreProducto.TabIndex = 8;
+            // 
+            // txtCantidadComprada
+            // 
+            txtCantidadComprada.Location = new Point(887, 180);
+            txtCantidadComprada.Name = "txtCantidadComprada";
+            txtCantidadComprada.Size = new Size(100, 23);
+            txtCantidadComprada.TabIndex = 9;
+            // 
+            // txtID
+            // 
+            txtID.Location = new Point(856, 493);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(100, 23);
+            txtID.TabIndex = 10;
+            // 
             // Compras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1423, 834);
+            ClientSize = new Size(1841, 1089);
+            Controls.Add(txtID);
+            Controls.Add(txtCantidadComprada);
+            Controls.Add(txtNombreProducto);
+            Controls.Add(txtNombreProveedor);
             Controls.Add(comboBox1);
             Controls.Add(datagridView1);
             Controls.Add(btn_MODIFICAR_COMPRA);
@@ -121,5 +165,9 @@
         private Button btn_MODIFICAR_COMPRA;
         private DataGridView datagridView1;
         private ComboBox comboBox1;
+        private TextBox txtNombreProveedor;
+        private TextBox txtNombreProducto;
+        private TextBox txtCantidadComprada;
+        private TextBox txtID;
     }
 }

@@ -17,6 +17,19 @@ namespace ProyectoDAM
             InitializeComponent();
             //Texto de bienvenida.
             lblBIENVENIDA.Text = $"Bienvenid@ {usuario}";
+
+            if (this.MdiChildren.Count(x => x.Name == "Home") < 1)
+            {
+                Home _Conf = new Home();
+                _Conf.MdiParent = this;
+                //_Conf.WindowState = FormWindowState.Maximized;
+                _Conf.Dock = DockStyle.Fill;
+                _Conf.Show();
+            }
+            else
+            {
+                this.MdiChildren.First(y => y.Name == "Home").Activate();
+            }
         }
 
 

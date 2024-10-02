@@ -1,10 +1,11 @@
 CREATE TABLE USUARIOS (
     ID_USUARIO INT PRIMARY KEY IDENTITY(1,1), -- ID autoincremental
     NOMBRE_SESION VARCHAR(15) NOT NULL UNIQUE, -- Tomado de la tabla de usuarios de SQL
-    NOMBRE_USUARIO VARCHAR(15),             -- Nombre del usuario
-    APELLIDOS_USUARIO VARCHAR(25),           -- Apellido del usuario
-    FECHA_NACIMIENTO VARCHAR(10),           -- Fecha de nacimiento del usuario
-    DEPARTAMENTO_USUARIO VARCHAR(20)        -- Departamento del usuario
+    PASS_SESION VARBINARY(200),                -- Almacena la contraseña en formato hash
+    NOMBRE_USUARIO VARCHAR(15),                -- Nombre del usuario
+    APELLIDOS_USUARIO VARCHAR(25),             -- Apellido del usuario
+    FECHA_NACIMIENTO VARCHAR(10),                     -- Cambiado a tipo DATE para almacenar fechas
+    DEPARTAMENTO_USUARIO VARCHAR(20)           -- Departamento del usuario
 );
 
 

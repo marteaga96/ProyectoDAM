@@ -32,13 +32,15 @@
             btnCONSULTA_HISTORIAL = new Button();
             btn_CREAR_COMPRA = new Button();
             btn_MODIFICAR_COMPRA = new Button();
-            datagridView1 = new DataGridView();
             comboBox1 = new ComboBox();
             txtNombreProveedor = new TextBox();
             txtNombreProducto = new TextBox();
             txtCantidadComprada = new TextBox();
             txtID = new TextBox();
+            datagridView1 = new DataGridView();
+            pnlCONSULTA = new Panel();
             ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
+            pnlCONSULTA.SuspendLayout();
             SuspendLayout();
             // 
             // lblTITULO
@@ -49,7 +51,6 @@
             lblTITULO.Name = "lblTITULO";
             lblTITULO.Size = new Size(0, 52);
             lblTITULO.TabIndex = 0;
-            lblTITULO.Visible = false;
             // 
             // btnCONSULTA_HISTORIAL
             // 
@@ -83,20 +84,6 @@
             btn_MODIFICAR_COMPRA.Text = "MODIFICAR COMPRA";
             btn_MODIFICAR_COMPRA.UseVisualStyleBackColor = true;
             btn_MODIFICAR_COMPRA.Click += btn_MODIFICAR_COMPRA_Click;
-            // 
-            // datagridView1
-            // 
-            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datagridView1.Location = new Point(845, 268);
-            datagridView1.MultiSelect = false;
-            datagridView1.Name = "datagridView1";
-            datagridView1.ReadOnly = true;
-            datagridView1.RowHeadersVisible = false;
-            datagridView1.RowTemplate.Height = 25;
-            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridView1.Size = new Size(790, 392);
-            datagridView1.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -134,25 +121,51 @@
             txtID.Size = new Size(100, 23);
             txtID.TabIndex = 10;
             // 
+            // datagridView1
+            // 
+            datagridView1.AllowUserToAddRows = false;
+            datagridView1.AllowUserToDeleteRows = false;
+            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridView1.Location = new Point(59, 43);
+            datagridView1.MultiSelect = false;
+            datagridView1.Name = "datagridView1";
+            datagridView1.ReadOnly = true;
+            datagridView1.RowHeadersVisible = false;
+            datagridView1.RowTemplate.Height = 25;
+            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datagridView1.Size = new Size(790, 392);
+            datagridView1.TabIndex = 4;
+            // 
+            // pnlCONSULTA
+            // 
+            pnlCONSULTA.Controls.Add(datagridView1);
+            pnlCONSULTA.Location = new Point(773, 192);
+            pnlCONSULTA.Name = "pnlCONSULTA";
+            pnlCONSULTA.Size = new Size(1005, 896);
+            pnlCONSULTA.TabIndex = 11;
+            pnlCONSULTA.Visible = false;
+            // 
             // Compras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1841, 1089);
+            Controls.Add(pnlCONSULTA);
             Controls.Add(txtID);
             Controls.Add(txtCantidadComprada);
             Controls.Add(txtNombreProducto);
             Controls.Add(txtNombreProveedor);
             Controls.Add(comboBox1);
-            Controls.Add(datagridView1);
             Controls.Add(btn_MODIFICAR_COMPRA);
             Controls.Add(btn_CREAR_COMPRA);
             Controls.Add(btnCONSULTA_HISTORIAL);
             Controls.Add(lblTITULO);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compras";
-            Text = "Compras";
+            Text = "m";
             ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
+            pnlCONSULTA.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,11 +176,12 @@
         private Button btnCONSULTA_HISTORIAL;
         private Button btn_CREAR_COMPRA;
         private Button btn_MODIFICAR_COMPRA;
-        private DataGridView datagridView1;
         private ComboBox comboBox1;
         private TextBox txtNombreProveedor;
         private TextBox txtNombreProducto;
         private TextBox txtCantidadComprada;
         private TextBox txtID;
+        private DataGridView datagridView1;
+        private Panel pnlCONSULTA;
     }
 }

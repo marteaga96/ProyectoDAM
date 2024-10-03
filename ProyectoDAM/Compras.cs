@@ -18,22 +18,34 @@ namespace ProyectoDAM
         public Compras()
         {
             InitializeComponent();
+
         }
 
-        private void gestionOpciones(string boton, string titulo, int posicion)
+        private void gestionOpciones(string opcion, string titulo, int posicion)
         {
-            if (lblTITULO.Visible == true)
+            switch (opcion)
             {
-                lblTITULO.Text = titulo;
-                lblTITULO.Location = new Point(posicion, 190);
-            }
-            else {
-                lblTITULO.Text = titulo;
-                lblTITULO.Location = new Point(posicion,190);
-                lblTITULO.Visible = true;
+
+                case "CONSULTA":
+                    MessageBox.Show("hola");
+                    pnlCONSULTA.Visible = true;
+                    lblTITULO.Text = titulo;
+                    lblTITULO.Location = new Point(posicion, 190);
+                    break;
+
+                case "CREAR":
+                    lblTITULO.Text = titulo;
+                    lblTITULO.Location = new Point(posicion, 190);
+                    break;
+                case "MODIFICAR":
+                    lblTITULO.Text = titulo;
+                    lblTITULO.Location = new Point(posicion, 190);
+                    break;
+
             }
 
             
+
             
         }
 

@@ -68,89 +68,14 @@ namespace ProyectoDAM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Crear una nueva conexión usando las credenciales del login
-                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
-                SqlCommand comando = new SqlCommand
-                {
-                    CommandText = "INSERT INTO COMPRAS (COMPRADO_POR, NOMBRE_PROVEEDOR, NOMBRE_PRODUCTO, CANTIDAD_COMPRADA) " +
-                                  "VALUES (@compradoPor, @nombreProveedor, @nombreProducto, @cantidadComprada)",
-                    Connection = conexion.datos_conexion
-                };
-
-                // Agregar parámetros a la consulta
-                comando.Parameters.AddWithValue("@compradoPor", variablesGlobales.usuario); // Suponiendo que tienes un TextBox llamado txtCompradoPor
-                comando.Parameters.AddWithValue("@nombreProveedor", txtCrearNombreProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
-                comando.Parameters.AddWithValue("@nombreProducto", txtCrearNombreProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
-                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtCrearCantidadComprada.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
-
-                if (conexion.conAbrir())
-                {
-                    // Ejecutar la consulta de inserción
-                    int rowsAffected = comando.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Compra insertada correctamente.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo insertar la compra.");
-                    }
-                    conexion.conCerrar();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            Consultas.crear_compra(this, EventArgs.Empty, this.txtCrearNombreProveedor.Text, this.txtCrearNombreProducto.Text, this.txtCrearCantidadComprada.Text);
+            
         }
 
         private void btn_confirmarModificacion_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Crear una nueva conexión usando las credenciales del login
-                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
-                SqlCommand comando = new SqlCommand
-                {
-                    CommandText = "UPDATE COMPRAS SET " +
-                                  "NOMBRE_PROVEEDOR = @nombreProveedor, " +
-                                  "NOMBRE_PRODUCTO = @nombreProducto, " +
-                                  "CANTIDAD_COMPRADA = @cantidadComprada " +
-                                  "WHERE ID_COMPRA = @txtID",// Condición para actualizar
-                    Connection = conexion.datos_conexion
-                };
-
-                // Usar la variable global para el campo "COMPRADO_POR" e   n la condición WHERE
-                comando.Parameters.AddWithValue("@compradoPor", variablesGlobales.usuario);
-
-                comando.Parameters.AddWithValue("@txtID", int.Parse(txtCrearID.Text));
-
-                // Agregar parámetros para los campos que se desean actualizar
-                comando.Parameters.AddWithValue("@nombreProveedor", txtModificarProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
-                comando.Parameters.AddWithValue("@nombreProducto", txtModificarProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
-                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtModificarCantidad.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
-
-                if (conexion.conAbrir())
-                {
-                    // Ejecutar la consulta de actualización
-                    int rowsAffected = comando.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Compra actualizada correctamente.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo actualizar la compra.");
-                    }
-                    conexion.conCerrar();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            Consultas.modificar_compra(this, EventArgs.Empty, this.txtCrearID.Text, this.txtModificarProveedor.Text, this.txtModificarProducto.Text, this.txtModificarCantidad.Text);
+            
         }
     }
 }

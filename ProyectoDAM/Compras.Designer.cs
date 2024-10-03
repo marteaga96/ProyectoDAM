@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblTITULO = new Label();
             btnCONSULTA_HISTORIAL = new Button();
             btn_CREAR_COMPRA = new Button();
             btn_MODIFICAR_COMPRA = new Button();
@@ -41,15 +41,15 @@
             ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblTITULO
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(845, 192);
-            label1.Name = "label1";
-            label1.Size = new Size(200, 52);
-            label1.TabIndex = 0;
-            label1.Text = "COMPRAS";
+            lblTITULO.AutoSize = true;
+            lblTITULO.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTITULO.Location = new Point(1035, 192);
+            lblTITULO.Name = "lblTITULO";
+            lblTITULO.Size = new Size(0, 52);
+            lblTITULO.TabIndex = 0;
+            lblTITULO.Visible = false;
             // 
             // btnCONSULTA_HISTORIAL
             // 
@@ -95,7 +95,7 @@
             datagridView1.RowHeadersVisible = false;
             datagridView1.RowTemplate.Height = 25;
             datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridView1.Size = new Size(787, 143);
+            datagridView1.Size = new Size(790, 392);
             datagridView1.TabIndex = 4;
             // 
             // comboBox1
@@ -108,28 +108,28 @@
             // 
             // txtNombreProveedor
             // 
-            txtNombreProveedor.Location = new Point(875, 97);
+            txtNombreProveedor.Location = new Point(1035, 60);
             txtNombreProveedor.Name = "txtNombreProveedor";
             txtNombreProveedor.Size = new Size(100, 23);
             txtNombreProveedor.TabIndex = 7;
             // 
             // txtNombreProducto
             // 
-            txtNombreProducto.Location = new Point(880, 143);
+            txtNombreProducto.Location = new Point(1189, 60);
             txtNombreProducto.Name = "txtNombreProducto";
             txtNombreProducto.Size = new Size(100, 23);
             txtNombreProducto.TabIndex = 8;
             // 
             // txtCantidadComprada
             // 
-            txtCantidadComprada.Location = new Point(887, 180);
+            txtCantidadComprada.Location = new Point(1323, 60);
             txtCantidadComprada.Name = "txtCantidadComprada";
             txtCantidadComprada.Size = new Size(100, 23);
             txtCantidadComprada.TabIndex = 9;
             // 
             // txtID
             // 
-            txtID.Location = new Point(856, 493);
+            txtID.Location = new Point(901, 60);
             txtID.Name = "txtID";
             txtID.Size = new Size(100, 23);
             txtID.TabIndex = 10;
@@ -148,11 +148,10 @@
             Controls.Add(btn_MODIFICAR_COMPRA);
             Controls.Add(btn_CREAR_COMPRA);
             Controls.Add(btnCONSULTA_HISTORIAL);
-            Controls.Add(label1);
+            Controls.Add(lblTITULO);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compras";
             Text = "Compras";
-            Load += Compras_Load;
             ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -160,7 +159,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblTITULO;
         private Button btnCONSULTA_HISTORIAL;
         private Button btn_CREAR_COMPRA;
         private Button btn_MODIFICAR_COMPRA;

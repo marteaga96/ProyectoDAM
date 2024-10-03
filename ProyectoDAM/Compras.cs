@@ -20,8 +20,26 @@ namespace ProyectoDAM
             InitializeComponent();
         }
 
+        private void gestionOpciones(string boton, string titulo, int posicion)
+        {
+            if (lblTITULO.Visible == true)
+            {
+                lblTITULO.Text = titulo;
+                lblTITULO.Location = new Point(posicion, 190);
+            }
+            else {
+                lblTITULO.Text = titulo;
+                lblTITULO.Location = new Point(posicion,190);
+                lblTITULO.Visible = true;
+            }
+
+            
+            
+        }
+
         private void btnCONSULTA_HISTORIAL_Click(object sender, EventArgs e)
         {
+            gestionOpciones("CONSULTA", "HISTORIAL DE COMPRAS", 1035);
             Consultas.consulta_historial_compras(this, EventArgs.Empty, this.datagridView1);
 
             try
@@ -62,6 +80,7 @@ namespace ProyectoDAM
 
         private void btn_CREAR_COMPRA_Click(object sender, EventArgs e)
         {
+            gestionOpciones("CREAR", "CREAR COMPRA", 1100);
             try
             {
                 // Crear una nueva conexión usando las credenciales del login
@@ -102,6 +121,7 @@ namespace ProyectoDAM
 
         private void btn_MODIFICAR_COMPRA_Click(object sender, EventArgs e)
         {
+            gestionOpciones("MODIFICAR", "MODIFICAR COMPRA", 1050);
             try
             {
                 // Crear una nueva conexión usando las credenciales del login
@@ -145,11 +165,6 @@ namespace ProyectoDAM
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
-        private void Compras_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -11,5 +11,7 @@ namespace ProyectoDAM.Resources
         //Guardo variabls estáticas de usuario y password para usarlas a lo largo del programa.
         public static string usuario { get; set; }
         public static string password { get; set; }
+        public static string sesion_usuario { get; set; }
+        public static string password_usuario{ get; set; }
     }
 }

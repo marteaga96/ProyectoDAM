@@ -21,78 +21,53 @@ namespace ProyectoDAM
 
         }
 
-        private void gestionOpciones(string opcion, string titulo, int posicion)
+        private void gestionOpciones(string opcion)
         {
             switch (opcion)
             {
 
                 case "CONSULTA":
-                    MessageBox.Show("hola");
+                    pnlCREAR.Visible = false;
+                    pnlMODIFICAR.Visible = false;
                     pnlCONSULTA.Visible = true;
-                    lblTITULO.Text = titulo;
-                    lblTITULO.Location = new Point(posicion, 190);
                     break;
 
                 case "CREAR":
-                    lblTITULO.Text = titulo;
-                    lblTITULO.Location = new Point(posicion, 190);
+                    pnlCONSULTA.Visible = false;
+                    pnlMODIFICAR.Visible = false;
+                    pnlCREAR.Visible = true;
                     break;
                 case "MODIFICAR":
-                    lblTITULO.Text = titulo;
-                    lblTITULO.Location = new Point(posicion, 190);
+                    pnlCONSULTA.Visible = false;
+                    pnlMODIFICAR.Visible = true;
+                    pnlCREAR.Visible = false;
                     break;
 
             }
 
-            
 
-            
+
+
         }
 
         private void btnCONSULTA_HISTORIAL_Click(object sender, EventArgs e)
         {
-            gestionOpciones("CONSULTA", "HISTORIAL DE COMPRAS", 1035);
+            gestionOpciones("CONSULTA");
             Consultas.consulta_historial_compras(this, EventArgs.Empty, this.datagridView1);
-
-            try
-            {
-                // Pasar datos de login a la clase Conexion
-                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
-                SqlCommand comando = new SqlCommand
-                {
-                    CommandText = "SELECT NOMBRE_USUARIO FROM USUARIOS", // Consulta para obtener NOMBRE_USUARIO
-                    Connection = conexion.datos_conexion
-                };
-
-                if (conexion.conAbrir())
-                {
-                    using (SqlDataReader Reader = comando.ExecuteReader())
-                    {
-                        // Hacer el DataTable para almacenar los resultados
-                        DataTable dataTable = new DataTable();
-                        dataTable.Load(Reader);  // Cargar los datos del SqlDataReader al DataTable
-
-                        // Limpiar el ComboBox antes de llenarlo
-                        comboBox1.Items.Clear();
-
-                        // Rellenar el ComboBox con los nombres de usuario
-                        foreach (DataRow row in dataTable.Rows)
-                        {
-                            comboBox1.Items.Add(row["NOMBRE_USUARIO"].ToString());
-                        }
-                    }
-                    conexion.conCerrar();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
 
         private void btn_CREAR_COMPRA_Click(object sender, EventArgs e)
         {
-            gestionOpciones("CREAR", "CREAR COMPRA", 1100);
+            gestionOpciones("CREAR");
+        }
+
+        private void btn_MODIFICAR_COMPRA_Click(object sender, EventArgs e)
+        {
+            gestionOpciones("MODIFICAR");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
                 // Crear una nueva conexión usando las credenciales del login
@@ -106,9 +81,9 @@ namespace ProyectoDAM
 
                 // Agregar parámetros a la consulta
                 comando.Parameters.AddWithValue("@compradoPor", variablesGlobales.usuario); // Suponiendo que tienes un TextBox llamado txtCompradoPor
-                comando.Parameters.AddWithValue("@nombreProveedor", txtNombreProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
-                comando.Parameters.AddWithValue("@nombreProducto", txtNombreProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
-                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtCantidadComprada.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@nombreProveedor", txtCrearNombreProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@nombreProducto", txtCrearNombreProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtCrearCantidadComprada.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
 
                 if (conexion.conAbrir())
                 {
@@ -131,9 +106,8 @@ namespace ProyectoDAM
             }
         }
 
-        private void btn_MODIFICAR_COMPRA_Click(object sender, EventArgs e)
+        private void btn_confirmarModificacion_Click(object sender, EventArgs e)
         {
-            gestionOpciones("MODIFICAR", "MODIFICAR COMPRA", 1050);
             try
             {
                 // Crear una nueva conexión usando las credenciales del login
@@ -151,12 +125,12 @@ namespace ProyectoDAM
                 // Usar la variable global para el campo "COMPRADO_POR" e   n la condición WHERE
                 comando.Parameters.AddWithValue("@compradoPor", variablesGlobales.usuario);
 
-                comando.Parameters.AddWithValue("@txtID", int.Parse(txtID.Text));
+                comando.Parameters.AddWithValue("@txtID", int.Parse(txtCrearID.Text));
 
                 // Agregar parámetros para los campos que se desean actualizar
-                comando.Parameters.AddWithValue("@nombreProveedor", txtNombreProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
-                comando.Parameters.AddWithValue("@nombreProducto", txtNombreProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
-                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtCantidadComprada.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@nombreProveedor", txtModificarProveedor.Text); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@nombreProducto", txtModificarProducto.Text); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@cantidadComprada", int.Parse(txtModificarCantidad.Text)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
 
                 if (conexion.conAbrir())
                 {

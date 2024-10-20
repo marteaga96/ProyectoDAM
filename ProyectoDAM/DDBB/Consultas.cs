@@ -134,9 +134,83 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void consulta_historial_ventas(object sender, EventArgs e, DataGridView dataGridView1)
+        {
+            try
+            {
+                // Pasar datos de login a la clase Conexion
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = Properties.Resources.consultaVentas,
+                    Connection = conexion.datos_conexion
+                };
 
+                if (conexion.conAbrir())
+                {
+                    using (SqlDataReader Reader = comando.ExecuteReader())
+                    {
+                        // Crear un DataTable para almacenar los resultados
+                        DataTable dataTable = new DataTable();
+                        dataTable.Load(Reader);  // Cargar los datos del SqlDataReader al DataTable
 
+                        // Asignar el DataTable como DataSource del DataGridView
+                        dataGridView1.DataSource = dataTable;
+                    }
+                    conexion.conCerrar();
+                }
+                else
+                {
+                    MessageBox.Show("Error al abrir la conexión.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
+        public static void crear_venta(object sender, EventArgs e, String txtCrearNombreCliente, String txtCrearNombreProducto, String txtCrearCantidadVendida)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "INSERT INTO VENTAS (VENDIDO_POR, NOMBRE_CLIENTE, NOMBRE_PRODUCTO, CANTIDAD_VENDIDA) " +
+                                  "VALUES (@vendidoPor, @nombreCliente, @nombreProducto, @cantidadVendida)",
+                    Connection = conexion.datos_conexion
+                };
+
+                // Agregar parámetros a la consulta
+                comando.Parameters.AddWithValue("@vendidoPor", variablesGlobales.usuario); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@nombreCliente", txtCrearNombreCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@nombreProducto", txtCrearNombreProducto); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@cantidadVendida", int.Parse(txtCrearCantidadVendida)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de inserción
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Compra insertada correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo insertar la compra.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+    }
 
 
 

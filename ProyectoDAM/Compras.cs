@@ -45,9 +45,6 @@ namespace ProyectoDAM
 
             }
 
-
-
-
         }
 
         private void btnCONSULTA_HISTORIAL_Click(object sender, EventArgs e)

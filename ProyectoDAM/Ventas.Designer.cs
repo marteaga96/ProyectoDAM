@@ -103,6 +103,7 @@
             pnlCONSULTA.Name = "pnlCONSULTA";
             pnlCONSULTA.Size = new Size(1007, 916);
             pnlCONSULTA.TabIndex = 4;
+            pnlCONSULTA.Visible = false;
             // 
             // datagridView1
             // 
@@ -145,6 +146,7 @@
             pnlCREAR.Name = "pnlCREAR";
             pnlCREAR.Size = new Size(1006, 915);
             pnlCREAR.TabIndex = 5;
+            pnlCREAR.Visible = false;
             // 
             // btn_confirmarVenta
             // 

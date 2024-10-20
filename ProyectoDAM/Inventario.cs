@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoDAM.DDBB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace ProyectoDAM
         public Inventario()
         {
             InitializeComponent();
+        }
+
+        private void btn_CONSULTA_INVENTARIO_Click(object sender, EventArgs e)
+        {
+            Consultas.consulta_inventario(this, EventArgs.Empty, this.datagridView1);
         }
     }
 }

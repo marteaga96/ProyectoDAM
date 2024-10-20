@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnPRODUCTOS = new Button();
             lblBIENVENIDA = new Label();
             btnCERRARSESION = new Button();
             btnGESTION = new Button();
@@ -42,6 +43,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 43, 54);
+            panel1.Controls.Add(btnPRODUCTOS);
             panel1.Controls.Add(lblBIENVENIDA);
             panel1.Controls.Add(btnCERRARSESION);
             panel1.Controls.Add(btnGESTION);
@@ -54,6 +56,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1924, 102);
             panel1.TabIndex = 1;
+            // 
+            // btnPRODUCTOS
+            // 
+            btnPRODUCTOS.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnPRODUCTOS.BackColor = Color.Transparent;
+            btnPRODUCTOS.Cursor = Cursors.Hand;
+            btnPRODUCTOS.FlatAppearance.BorderColor = SystemColors.ActiveCaption;
+            btnPRODUCTOS.FlatAppearance.BorderSize = 0;
+            btnPRODUCTOS.FlatAppearance.MouseDownBackColor = Color.FromArgb(52, 63, 74);
+            btnPRODUCTOS.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 63, 74);
+            btnPRODUCTOS.FlatStyle = FlatStyle.Flat;
+            btnPRODUCTOS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPRODUCTOS.ForeColor = SystemColors.ButtonHighlight;
+            btnPRODUCTOS.Location = new Point(1412, 0);
+            btnPRODUCTOS.Name = "btnPRODUCTOS";
+            btnPRODUCTOS.Size = new Size(150, 102);
+            btnPRODUCTOS.TabIndex = 9;
+            btnPRODUCTOS.Text = "PRODUCTOS";
+            btnPRODUCTOS.UseVisualStyleBackColor = false;
+            btnPRODUCTOS.Click += btnPRODUCTOS_Click;
             // 
             // lblBIENVENIDA
             // 
@@ -89,7 +111,7 @@
             btnGESTION.FlatStyle = FlatStyle.Flat;
             btnGESTION.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnGESTION.ForeColor = SystemColors.ButtonHighlight;
-            btnGESTION.Location = new Point(1327, 0);
+            btnGESTION.Location = new Point(1225, 0);
             btnGESTION.Name = "btnGESTION";
             btnGESTION.Size = new Size(147, 102);
             btnGESTION.TabIndex = 7;
@@ -109,7 +131,7 @@
             btnINVENTARIO.FlatStyle = FlatStyle.Flat;
             btnINVENTARIO.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnINVENTARIO.ForeColor = SystemColors.ButtonHighlight;
-            btnINVENTARIO.Location = new Point(1133, 0);
+            btnINVENTARIO.Location = new Point(1031, 0);
             btnINVENTARIO.Name = "btnINVENTARIO";
             btnINVENTARIO.Size = new Size(147, 102);
             btnINVENTARIO.TabIndex = 5;
@@ -129,7 +151,7 @@
             btnVENTAS.FlatStyle = FlatStyle.Flat;
             btnVENTAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnVENTAS.ForeColor = SystemColors.ButtonHighlight;
-            btnVENTAS.Location = new Point(968, 0);
+            btnVENTAS.Location = new Point(866, 0);
             btnVENTAS.Name = "btnVENTAS";
             btnVENTAS.Size = new Size(113, 102);
             btnVENTAS.TabIndex = 4;
@@ -149,7 +171,7 @@
             btnCOMPRAS.FlatStyle = FlatStyle.Flat;
             btnCOMPRAS.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnCOMPRAS.ForeColor = SystemColors.ButtonHighlight;
-            btnCOMPRAS.Location = new Point(768, 0);
+            btnCOMPRAS.Location = new Point(666, 0);
             btnCOMPRAS.Name = "btnCOMPRAS";
             btnCOMPRAS.Size = new Size(133, 102);
             btnCOMPRAS.TabIndex = 3;
@@ -169,7 +191,7 @@
             btnHOME.FlatStyle = FlatStyle.Flat;
             btnHOME.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             btnHOME.ForeColor = SystemColors.ButtonHighlight;
-            btnHOME.Location = new Point(568, 0);
+            btnHOME.Location = new Point(466, 0);
             btnHOME.Name = "btnHOME";
             btnHOME.Size = new Size(113, 102);
             btnHOME.TabIndex = 2;
@@ -202,5 +224,6 @@
         private Button btnVENTAS;
         private Button btnCERRARSESION;
         private Label lblBIENVENIDA;
+        private Button btnPRODUCTOS;
     }
 }

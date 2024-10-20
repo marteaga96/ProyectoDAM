@@ -71,8 +71,7 @@ namespace ProyectoDAM
 
         private void btn_confirmarModificacion_Click(object sender, EventArgs e)
         {
-            Consultas.modificar_compra(this, EventArgs.Empty, this.txtCrearID.Text, this.txtModificarProveedor.Text, this.txtModificarProducto.Text, this.txtModificarCantidad.Text);
-            
+            Consultas.modificar_compra(this, EventArgs.Empty, this.txtCrearID.Text, this.txtModificarProveedor.Text, this.txtModificarProducto.Text, this.txtModificarCantidad.Text);          
         }
     }
 }

@@ -38,7 +38,7 @@ namespace ProyectoDAM
             if (this.MdiChildren.Count(x => x.Name == "Home") < 1)
             {
                 Home _Conf = new Home();
-                _Conf.MdiParent =    this;
+                _Conf.MdiParent = this;
                 //_Conf.WindowState = FormWindowState.Maximized;
                 _Conf.Dock = DockStyle.Fill;
                 _Conf.Show();
@@ -119,6 +119,20 @@ namespace ProyectoDAM
             }
         }
 
-
+        private void btnPRODUCTOS_Click(object sender, EventArgs e)
+        {
+            if (this.MdiChildren.Count(x => x.Name == "Productos") < 1)
+            {
+                Productos _Conf = new Productos();
+                _Conf.MdiParent = this;
+                //_Conf.WindowState = FormWindowState.Maximized;
+                _Conf.Dock = DockStyle.Fill;
+                _Conf.Show();
+            }
+            else
+            {
+                this.MdiChildren.First(y => y.Name == "Productos").Activate();
+            }
+        }
     }
 }

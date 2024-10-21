@@ -195,11 +195,11 @@ namespace ProyectoDAM.DDBB
                     int rowsAffected = comando.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Compra insertada correctamente.");
+                        MessageBox.Show("Venta insertada correctamente.");
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo insertar la compra.");
+                        MessageBox.Show("No se pudo insertar la venta.");
                     }
                     conexion.conCerrar();
                 }
@@ -218,7 +218,7 @@ namespace ProyectoDAM.DDBB
                 DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
                 SqlCommand comando = new SqlCommand
                 {
-                    CommandText = Properties.Resources.consultaVentas,
+                    CommandText = Properties.Resources.consultaAlmacen,
                     Connection = conexion.datos_conexion
                 };
 
@@ -238,6 +238,53 @@ namespace ProyectoDAM.DDBB
                 else
                 {
                     MessageBox.Show("Error al abrir la conexión.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public static void modificar_venta(object sender, EventArgs e, String txtCrearID, String txtModificarCliente, String txtModificarProducto, String txtModificarCantidad)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "UPDATE VENTAS SET " +
+                                  "NOMBRE_CLIENTE = @nombreCliente, " +
+                                  "NOMBRE_PRODUCTO = @nombreProducto, " +
+                                  "CANTIDAD_VENDIDA = @cantidadVendida " +
+                                  "WHERE ID_VENTA = @txtID",// Condición para actualizar
+                    Connection = conexion.datos_conexion
+                };
+
+                // Usar la variable global para el campo "COMPRADO_POR" e   n la condición WHERE
+                comando.Parameters.AddWithValue("@vendidoPor", variablesGlobales.usuario);
+
+                comando.Parameters.AddWithValue("@txtID", int.Parse(txtCrearID));
+
+                // Agregar parámetros para los campos que se desean actualizar
+                comando.Parameters.AddWithValue("@nombreCliente", txtModificarCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@nombreProducto", txtModificarProducto); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@cantidadVendida", int.Parse(txtModificarCantidad)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de actualización
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Venta actualizada correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar la venta.");
+                    }
+                    conexion.conCerrar();
                 }
             }
             catch (Exception ex)

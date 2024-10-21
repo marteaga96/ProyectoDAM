@@ -37,7 +37,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(176, 273);
+            label1.Location = new Point(906, 122);
             label1.Name = "label1";
             label1.Size = new Size(134, 52);
             label1.TabIndex = 0;
@@ -46,9 +46,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(782, 351);
+            pictureBox1.Location = new Point(791, 246);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(355, 306);
+            pictureBox1.Size = new Size(355, 397);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -57,7 +57,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1841, 1089);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;

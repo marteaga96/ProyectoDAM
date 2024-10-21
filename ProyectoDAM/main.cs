@@ -33,7 +33,7 @@ namespace ProyectoDAM
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHOME_Click(object sender, EventArgs e)
         {
             if (this.MdiChildren.Count(x => x.Name == "Home") < 1)
             {
@@ -132,6 +132,38 @@ namespace ProyectoDAM
             else
             {
                 this.MdiChildren.First(y => y.Name == "Productos").Activate();
+            }
+        }
+
+        private void btnCLIENTES_Click(object sender, EventArgs e)
+        {
+            if (this.MdiChildren.Count(x => x.Name == "Clientes") < 1)
+            {
+                Clientes _Conf = new Clientes();
+                _Conf.MdiParent = this;
+                //_Conf.WindowState = FormWindowState.Maximized;
+                _Conf.Dock = DockStyle.Fill;
+                _Conf.Show();
+            }
+            else
+            {
+                this.MdiChildren.First(y => y.Name == "Clientes").Activate();
+            }
+        }
+
+        private void btnPROVEEDORES_Click(object sender, EventArgs e)
+        {
+            if (this.MdiChildren.Count(x => x.Name == "Proveedores") < 1)
+            {
+                Proveedores _Conf = new Proveedores();
+                _Conf.MdiParent = this;
+                //_Conf.WindowState = FormWindowState.Maximized;
+                _Conf.Dock = DockStyle.Fill;
+                _Conf.Show();
+            }
+            else
+            {
+                this.MdiChildren.First(y => y.Name == "Proveedores").Activate();
             }
         }
     }

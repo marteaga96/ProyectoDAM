@@ -155,7 +155,7 @@
             btn_confirmarVenta.Name = "btn_confirmarVenta";
             btn_confirmarVenta.Size = new Size(227, 98);
             btn_confirmarVenta.TabIndex = 20;
-            btn_confirmarVenta.Text = "CONFIRMAR MODIFICACIÓN";
+            btn_confirmarVenta.Text = "CONFIRMAR VENTA";
             btn_confirmarVenta.UseVisualStyleBackColor = true;
             btn_confirmarVenta.Click += btn_confirmarVenta_Click;
             // 
@@ -246,7 +246,7 @@
             pnlMODIFICAR.Controls.Add(btn_confirmarModificacion);
             pnlMODIFICAR.Controls.Add(txtCrearID);
             pnlMODIFICAR.Controls.Add(lblTituloModificarVenta);
-            pnlMODIFICAR.Location = new Point(808, 122);
+            pnlMODIFICAR.Location = new Point(809, 123);
             pnlMODIFICAR.Name = "pnlMODIFICAR";
             pnlMODIFICAR.Size = new Size(1007, 916);
             pnlMODIFICAR.TabIndex = 14;
@@ -332,6 +332,7 @@
             btn_confirmarModificacion.TabIndex = 14;
             btn_confirmarModificacion.Text = "CONFIRMAR MODIFICACIÓN";
             btn_confirmarModificacion.UseVisualStyleBackColor = true;
+            btn_confirmarModificacion.Click += btn_confirmarModificacion_Click;
             // 
             // txtCrearID
             // 

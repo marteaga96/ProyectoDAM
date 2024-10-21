@@ -1,6 +1,6 @@
 ﻿namespace ProyectoDAM
 {
-    partial class Gestion
+    partial class Clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(203, 184);
+            label1.Location = new Point(261, 199);
             label1.Name = "label1";
-            label1.Size = new Size(178, 52);
-            label1.TabIndex = 0;
-            label1.Text = "GESTION";
+            label1.Size = new Size(184, 52);
+            label1.TabIndex = 1;
+            label1.Text = "CLIENTES";
             // 
-            // Gestion
+            // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1841, 1089);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Gestion";
-            Text = "Gestion";
+            Name = "Clientes";
+            Text = "Clientes";
             ResumeLayout(false);
             PerformLayout();
         }

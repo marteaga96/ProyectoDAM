@@ -65,5 +65,11 @@ namespace ProyectoDAM
         {
             gestionOpciones("MODIFICAR");
         }
+
+        private void btn_confirmarModificacion_Click(object sender, EventArgs e)
+        {
+            Consultas.modificar_venta(this, EventArgs.Empty, this.txtCrearID.Text, this.txtModificarCliente.Text, this.txtModificarProducto.Text, this.txtModificarCantidad.Text);
+
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace ProyectoDAM
         private void btn_CONSULTAR_HISTORIAL_Click(object sender, EventArgs e)
         {
             gestionOpciones("CONSULTA");
-            Consultas.consulta_historial_ventas(this, EventArgs.Empty, this.datagridView1);
+            Consultas.consulta_historial_ventas(this, EventArgs.Empty, this.datagridVENTAS);
         }
 
         private void btnCREAR_VENTA_Click(object sender, EventArgs e)

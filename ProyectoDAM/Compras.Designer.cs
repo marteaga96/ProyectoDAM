@@ -35,7 +35,7 @@
             txtCrearNombreProveedor = new TextBox();
             txtCrearNombreProducto = new TextBox();
             txtCrearCantidadComprada = new TextBox();
-            datagridView1 = new DataGridView();
+            datagridCOMPRAS = new DataGridView();
             pnlCONSULTA = new Panel();
             lblDescHistorialCompra = new Label();
             pnlCREAR = new Panel();
@@ -57,7 +57,7 @@
             btn_confirmarModificacion = new Button();
             txtCrearID = new TextBox();
             lblTituloModificarCompra = new Label();
-            ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)datagridCOMPRAS).BeginInit();
             pnlCONSULTA.SuspendLayout();
             pnlCREAR.SuspendLayout();
             pnlMODIFICAR.SuspendLayout();
@@ -130,26 +130,26 @@
             txtCrearCantidadComprada.Size = new Size(100, 29);
             txtCrearCantidadComprada.TabIndex = 9;
             // 
-            // datagridView1
+            // datagridCOMPRAS
             // 
-            datagridView1.AllowUserToAddRows = false;
-            datagridView1.AllowUserToDeleteRows = false;
-            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datagridView1.Location = new Point(106, 243);
-            datagridView1.MultiSelect = false;
-            datagridView1.Name = "datagridView1";
-            datagridView1.ReadOnly = true;
-            datagridView1.RowHeadersVisible = false;
-            datagridView1.RowTemplate.Height = 25;
-            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridView1.Size = new Size(790, 392);
-            datagridView1.TabIndex = 4;
+            datagridCOMPRAS.AllowUserToAddRows = false;
+            datagridCOMPRAS.AllowUserToDeleteRows = false;
+            datagridCOMPRAS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridCOMPRAS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridCOMPRAS.Location = new Point(106, 243);
+            datagridCOMPRAS.MultiSelect = false;
+            datagridCOMPRAS.Name = "datagridCOMPRAS";
+            datagridCOMPRAS.ReadOnly = true;
+            datagridCOMPRAS.RowHeadersVisible = false;
+            datagridCOMPRAS.RowTemplate.Height = 25;
+            datagridCOMPRAS.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datagridCOMPRAS.Size = new Size(790, 392);
+            datagridCOMPRAS.TabIndex = 4;
             // 
             // pnlCONSULTA
             // 
             pnlCONSULTA.Controls.Add(lblDescHistorialCompra);
-            pnlCONSULTA.Controls.Add(datagridView1);
+            pnlCONSULTA.Controls.Add(datagridCOMPRAS);
             pnlCONSULTA.Controls.Add(lblTituloConsulta);
             pnlCONSULTA.Location = new Point(805, 119);
             pnlCONSULTA.Name = "pnlCONSULTA";
@@ -169,6 +169,7 @@
             // 
             // pnlCREAR
             // 
+            pnlCREAR.Controls.Add(pnlMODIFICAR);
             pnlCREAR.Controls.Add(lblDescCrearCompra);
             pnlCREAR.Controls.Add(btn_confirmarCompra);
             pnlCREAR.Controls.Add(lbl_compra_cantidad);
@@ -259,7 +260,7 @@
             pnlMODIFICAR.Controls.Add(btn_confirmarModificacion);
             pnlMODIFICAR.Controls.Add(txtCrearID);
             pnlMODIFICAR.Controls.Add(lblTituloModificarCompra);
-            pnlMODIFICAR.Location = new Point(805, 119);
+            pnlMODIFICAR.Location = new Point(78, 243);
             pnlMODIFICAR.Name = "pnlMODIFICAR";
             pnlMODIFICAR.Size = new Size(1007, 916);
             pnlMODIFICAR.TabIndex = 13;
@@ -279,7 +280,7 @@
             // 
             txtModificarCantidad.Location = new Point(879, 287);
             txtModificarCantidad.Name = "txtModificarCantidad";
-            txtModificarCantidad.Size = new Size(100, 23);
+            txtModificarCantidad.Size = new Size(100, 32);
             txtModificarCantidad.TabIndex = 21;
             // 
             // lblModificarCantidad
@@ -296,7 +297,7 @@
             // 
             txtModificarProducto.Location = new Point(684, 287);
             txtModificarProducto.Name = "txtModificarProducto";
-            txtModificarProducto.Size = new Size(100, 23);
+            txtModificarProducto.Size = new Size(100, 32);
             txtModificarProducto.TabIndex = 19;
             // 
             // lblModificarProducto
@@ -313,7 +314,7 @@
             // 
             txtModificarProveedor.Location = new Point(488, 287);
             txtModificarProveedor.Name = "txtModificarProveedor";
-            txtModificarProveedor.Size = new Size(100, 23);
+            txtModificarProveedor.Size = new Size(100, 32);
             txtModificarProveedor.TabIndex = 17;
             // 
             // lblModificarNombreProveedor
@@ -351,7 +352,7 @@
             // 
             txtCrearID.Location = new Point(176, 287);
             txtCrearID.Name = "txtCrearID";
-            txtCrearID.Size = new Size(100, 23);
+            txtCrearID.Size = new Size(100, 32);
             txtCrearID.TabIndex = 10;
             // 
             // lblTituloModificarCompra
@@ -369,7 +370,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1841, 1089);
-            Controls.Add(pnlMODIFICAR);
             Controls.Add(pnlCREAR);
             Controls.Add(pnlCONSULTA);
             Controls.Add(btn_MODIFICAR_COMPRA);
@@ -378,7 +378,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compras";
             Text = "m";
-            ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datagridCOMPRAS).EndInit();
             pnlCONSULTA.ResumeLayout(false);
             pnlCONSULTA.PerformLayout();
             pnlCREAR.ResumeLayout(false);
@@ -397,7 +397,7 @@
         private TextBox txtCrearNombreProveedor;
         private TextBox txtCrearNombreProducto;
         private TextBox txtCrearCantidadComprada;
-        private DataGridView datagridView1;
+        private DataGridView datagridCOMPRAS;
         private Panel pnlCONSULTA;
         private Panel pnlCREAR;
         private Label lblTitutloCrearCompra;

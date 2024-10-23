@@ -32,7 +32,7 @@
             btnCREAR_VENTA = new Button();
             btn_MODIFICAR_VENTA = new Button();
             pnlCONSULTA = new Panel();
-            datagridView1 = new DataGridView();
+            datagridVENTAS = new DataGridView();
             lblHISTORIAL = new Label();
             pnlCREAR = new Panel();
             btn_confirmarVenta = new Button();
@@ -57,7 +57,7 @@
             txtCrearID = new TextBox();
             lblTituloModificarVenta = new Label();
             pnlCONSULTA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)datagridVENTAS).BeginInit();
             pnlCREAR.SuspendLayout();
             pnlMODIFICAR.SuspendLayout();
             SuspendLayout();
@@ -97,7 +97,7 @@
             // 
             // pnlCONSULTA
             // 
-            pnlCONSULTA.Controls.Add(datagridView1);
+            pnlCONSULTA.Controls.Add(datagridVENTAS);
             pnlCONSULTA.Controls.Add(lblHISTORIAL);
             pnlCONSULTA.Location = new Point(807, 121);
             pnlCONSULTA.Name = "pnlCONSULTA";
@@ -105,21 +105,21 @@
             pnlCONSULTA.TabIndex = 4;
             pnlCONSULTA.Visible = false;
             // 
-            // datagridView1
+            // datagridVENTAS
             // 
-            datagridView1.AllowUserToAddRows = false;
-            datagridView1.AllowUserToDeleteRows = false;
-            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datagridView1.Location = new Point(108, 262);
-            datagridView1.MultiSelect = false;
-            datagridView1.Name = "datagridView1";
-            datagridView1.ReadOnly = true;
-            datagridView1.RowHeadersVisible = false;
-            datagridView1.RowTemplate.Height = 25;
-            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridView1.Size = new Size(790, 392);
-            datagridView1.TabIndex = 6;
+            datagridVENTAS.AllowUserToAddRows = false;
+            datagridVENTAS.AllowUserToDeleteRows = false;
+            datagridVENTAS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridVENTAS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridVENTAS.Location = new Point(108, 262);
+            datagridVENTAS.MultiSelect = false;
+            datagridVENTAS.Name = "datagridVENTAS";
+            datagridVENTAS.ReadOnly = true;
+            datagridVENTAS.RowHeadersVisible = false;
+            datagridVENTAS.RowTemplate.Height = 25;
+            datagridVENTAS.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datagridVENTAS.Size = new Size(790, 392);
+            datagridVENTAS.TabIndex = 6;
             // 
             // lblHISTORIAL
             // 
@@ -367,7 +367,7 @@
             Text = "Ventas";
             pnlCONSULTA.ResumeLayout(false);
             pnlCONSULTA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datagridVENTAS).EndInit();
             pnlCREAR.ResumeLayout(false);
             pnlCREAR.PerformLayout();
             pnlMODIFICAR.ResumeLayout(false);
@@ -381,7 +381,7 @@
         private Button btn_MODIFICAR_VENTA;
         private Panel pnlCONSULTA;
         private Label lblHISTORIAL;
-        private DataGridView datagridView1;
+        private DataGridView datagridVENTAS;
         private Panel pnlCREAR;
         private Label lblCREAR;
         private Label label1;

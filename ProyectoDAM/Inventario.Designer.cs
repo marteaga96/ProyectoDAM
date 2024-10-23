@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             btn_CONSULTA_INVENTARIO = new Button();
-            datagridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)datagridView1).BeginInit();
+            datagridINVENTARIO = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)datagridINVENTARIO).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -55,34 +55,34 @@
             btn_CONSULTA_INVENTARIO.UseVisualStyleBackColor = true;
             btn_CONSULTA_INVENTARIO.Click += btn_CONSULTA_INVENTARIO_Click;
             // 
-            // datagridView1
+            // datagridINVENTARIO
             // 
-            datagridView1.AllowUserToAddRows = false;
-            datagridView1.AllowUserToDeleteRows = false;
-            datagridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            datagridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datagridView1.Location = new Point(716, 311);
-            datagridView1.MultiSelect = false;
-            datagridView1.Name = "datagridView1";
-            datagridView1.ReadOnly = true;
-            datagridView1.RowHeadersVisible = false;
-            datagridView1.RowTemplate.Height = 25;
-            datagridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridView1.Size = new Size(790, 392);
-            datagridView1.TabIndex = 5;
+            datagridINVENTARIO.AllowUserToAddRows = false;
+            datagridINVENTARIO.AllowUserToDeleteRows = false;
+            datagridINVENTARIO.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridINVENTARIO.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridINVENTARIO.Location = new Point(716, 311);
+            datagridINVENTARIO.MultiSelect = false;
+            datagridINVENTARIO.Name = "datagridINVENTARIO";
+            datagridINVENTARIO.ReadOnly = true;
+            datagridINVENTARIO.RowHeadersVisible = false;
+            datagridINVENTARIO.RowTemplate.Height = 25;
+            datagridINVENTARIO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datagridINVENTARIO.Size = new Size(790, 392);
+            datagridINVENTARIO.TabIndex = 5;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1841, 1089);
-            Controls.Add(datagridView1);
+            Controls.Add(datagridINVENTARIO);
             Controls.Add(btn_CONSULTA_INVENTARIO);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Inventario";
             Text = "Inventario";
-            ((System.ComponentModel.ISupportInitialize)datagridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datagridINVENTARIO).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -91,6 +91,6 @@
 
         private Label label1;
         private Button btn_CONSULTA_INVENTARIO;
-        private DataGridView datagridView1;
+        private DataGridView datagridINVENTARIO;
     }
 }

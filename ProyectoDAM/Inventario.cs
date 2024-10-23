@@ -20,7 +20,7 @@ namespace ProyectoDAM
 
         private void btn_CONSULTA_INVENTARIO_Click(object sender, EventArgs e)
         {
-            Consultas.consulta_inventario(this, EventArgs.Empty, this.datagridView1);
+            Consultas.consulta_inventario(this, EventArgs.Empty, this.datagridINVENTARIO);
         }
     }
 }

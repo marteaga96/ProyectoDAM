@@ -39,6 +39,12 @@
             pnlCONSULTA = new Panel();
             lblDescHistorialCompra = new Label();
             pnlCREAR = new Panel();
+            lblDescCrearCompra = new Label();
+            btn_confirmarCompra = new Button();
+            lbl_compra_cantidad = new Label();
+            lbl_compra_producto = new Label();
+            lbl_compra_proveedor = new Label();
+            lblTitutloCrearCompra = new Label();
             pnlMODIFICAR = new Panel();
             lblDescModificarCompra = new Label();
             txtModificarCantidad = new TextBox();
@@ -51,12 +57,6 @@
             btn_confirmarModificacion = new Button();
             txtCrearID = new TextBox();
             lblTituloModificarCompra = new Label();
-            lblDescCrearCompra = new Label();
-            btn_confirmarCompra = new Button();
-            lbl_compra_cantidad = new Label();
-            lbl_compra_producto = new Label();
-            lbl_compra_proveedor = new Label();
-            lblTitutloCrearCompra = new Label();
             ((System.ComponentModel.ISupportInitialize)datagridCOMPRAS).BeginInit();
             pnlCONSULTA.SuspendLayout();
             pnlCREAR.SuspendLayout();
@@ -185,6 +185,67 @@
             pnlCREAR.TabIndex = 12;
             pnlCREAR.Visible = false;
             // 
+            // lblDescCrearCompra
+            // 
+            lblDescCrearCompra.AutoSize = true;
+            lblDescCrearCompra.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDescCrearCompra.Location = new Point(369, 106);
+            lblDescCrearCompra.Name = "lblDescCrearCompra";
+            lblDescCrearCompra.Size = new Size(320, 21);
+            lblDescCrearCompra.TabIndex = 14;
+            lblDescCrearCompra.Text = "Introduce los datos para crear la compra:";
+            // 
+            // btn_confirmarCompra
+            // 
+            btn_confirmarCompra.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_confirmarCompra.Location = new Point(427, 508);
+            btn_confirmarCompra.Name = "btn_confirmarCompra";
+            btn_confirmarCompra.Size = new Size(201, 87);
+            btn_confirmarCompra.TabIndex = 14;
+            btn_confirmarCompra.Text = "CONFIRMAR COMPRA";
+            btn_confirmarCompra.UseVisualStyleBackColor = true;
+            btn_confirmarCompra.Click += button1_Click;
+            // 
+            // lbl_compra_cantidad
+            // 
+            lbl_compra_cantidad.AutoSize = true;
+            lbl_compra_cantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_cantidad.Location = new Point(642, 287);
+            lbl_compra_cantidad.Name = "lbl_compra_cantidad";
+            lbl_compra_cantidad.Size = new Size(92, 25);
+            lbl_compra_cantidad.TabIndex = 13;
+            lbl_compra_cantidad.Text = "Cantidad:";
+            // 
+            // lbl_compra_producto
+            // 
+            lbl_compra_producto.AutoSize = true;
+            lbl_compra_producto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_producto.Location = new Point(406, 287);
+            lbl_compra_producto.Name = "lbl_compra_producto";
+            lbl_compra_producto.Size = new Size(93, 25);
+            lbl_compra_producto.TabIndex = 12;
+            lbl_compra_producto.Text = "Producto:";
+            // 
+            // lbl_compra_proveedor
+            // 
+            lbl_compra_proveedor.AutoSize = true;
+            lbl_compra_proveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_proveedor.Location = new Point(46, 287);
+            lbl_compra_proveedor.Name = "lbl_compra_proveedor";
+            lbl_compra_proveedor.Size = new Size(208, 25);
+            lbl_compra_proveedor.TabIndex = 11;
+            lbl_compra_proveedor.Text = "Nombre del Proveedor:";
+            // 
+            // lblTitutloCrearCompra
+            // 
+            lblTitutloCrearCompra.AutoSize = true;
+            lblTitutloCrearCompra.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
+            lblTitutloCrearCompra.Location = new Point(379, 23);
+            lblTitutloCrearCompra.Name = "lblTitutloCrearCompra";
+            lblTitutloCrearCompra.Size = new Size(305, 52);
+            lblTitutloCrearCompra.TabIndex = 0;
+            lblTitutloCrearCompra.Text = "CREAR COMPRA";
+            // 
             // pnlMODIFICAR
             // 
             pnlMODIFICAR.Controls.Add(lblDescModificarCompra);
@@ -302,67 +363,6 @@
             lblTituloModificarCompra.Size = new Size(392, 52);
             lblTituloModificarCompra.TabIndex = 0;
             lblTituloModificarCompra.Text = "MODIFICAR COMPRA";
-            // 
-            // lblDescCrearCompra
-            // 
-            lblDescCrearCompra.AutoSize = true;
-            lblDescCrearCompra.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDescCrearCompra.Location = new Point(369, 106);
-            lblDescCrearCompra.Name = "lblDescCrearCompra";
-            lblDescCrearCompra.Size = new Size(320, 21);
-            lblDescCrearCompra.TabIndex = 14;
-            lblDescCrearCompra.Text = "Introduce los datos para crear la compra:";
-            // 
-            // btn_confirmarCompra
-            // 
-            btn_confirmarCompra.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_confirmarCompra.Location = new Point(427, 508);
-            btn_confirmarCompra.Name = "btn_confirmarCompra";
-            btn_confirmarCompra.Size = new Size(201, 87);
-            btn_confirmarCompra.TabIndex = 14;
-            btn_confirmarCompra.Text = "CONFIRMAR COMPRA";
-            btn_confirmarCompra.UseVisualStyleBackColor = true;
-            btn_confirmarCompra.Click += button1_Click;
-            // 
-            // lbl_compra_cantidad
-            // 
-            lbl_compra_cantidad.AutoSize = true;
-            lbl_compra_cantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_cantidad.Location = new Point(642, 287);
-            lbl_compra_cantidad.Name = "lbl_compra_cantidad";
-            lbl_compra_cantidad.Size = new Size(92, 25);
-            lbl_compra_cantidad.TabIndex = 13;
-            lbl_compra_cantidad.Text = "Cantidad:";
-            // 
-            // lbl_compra_producto
-            // 
-            lbl_compra_producto.AutoSize = true;
-            lbl_compra_producto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_producto.Location = new Point(406, 287);
-            lbl_compra_producto.Name = "lbl_compra_producto";
-            lbl_compra_producto.Size = new Size(93, 25);
-            lbl_compra_producto.TabIndex = 12;
-            lbl_compra_producto.Text = "Producto:";
-            // 
-            // lbl_compra_proveedor
-            // 
-            lbl_compra_proveedor.AutoSize = true;
-            lbl_compra_proveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_proveedor.Location = new Point(46, 287);
-            lbl_compra_proveedor.Name = "lbl_compra_proveedor";
-            lbl_compra_proveedor.Size = new Size(208, 25);
-            lbl_compra_proveedor.TabIndex = 11;
-            lbl_compra_proveedor.Text = "Nombre del Proveedor:";
-            // 
-            // lblTitutloCrearCompra
-            // 
-            lblTitutloCrearCompra.AutoSize = true;
-            lblTitutloCrearCompra.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
-            lblTitutloCrearCompra.Location = new Point(379, 23);
-            lblTitutloCrearCompra.Name = "lblTitutloCrearCompra";
-            lblTitutloCrearCompra.Size = new Size(305, 52);
-            lblTitutloCrearCompra.TabIndex = 0;
-            lblTitutloCrearCompra.Text = "CREAR COMPRA";
             // 
             // Compras
             // 

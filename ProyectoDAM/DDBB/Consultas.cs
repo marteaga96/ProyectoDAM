@@ -412,6 +412,41 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void consulta_clientes(object sender, EventArgs e, DataGridView datagridCLIENTES)
+        {
+            try
+            {
+                // Pasar datos de login a la clase Conexion
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = Properties.Resources.consultaClientes,
+                    Connection = conexion.datos_conexion
+                };
+
+                if (conexion.conAbrir())
+                {
+                    using (SqlDataReader Reader = comando.ExecuteReader())
+                    {
+                        // Crear un DataTable para almacenar los resultados
+                        DataTable dataTable = new DataTable();
+                        dataTable.Load(Reader);  // Cargar los datos del SqlDataReader al DataTable
+
+                        // Asignar el DataTable como DataSource del DataGridView
+                        datagridCLIENTES.DataSource = dataTable;
+                    }
+                    conexion.conCerrar();
+                }
+                else
+                {
+                    MessageBox.Show("Error al abrir la conexión.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 
     }
 

@@ -39,9 +39,13 @@ CREATE TABLE CLIENTES (
     DNI_CIF_CLIENTE VARCHAR(9) UNIQUE NOT NULL, -- DNI/CIF del cliente
     NOMBRE_CLIENTE VARCHAR(25) NOT NULL,        -- Nombre del cliente
     APELLIDOS_CLIENTE VARCHAR(25),              -- Apellidos del cliente
-    DIRECCION_CLIENTE VARCHAR(50) NOT NULL,     -- Dirección del cliente
     EMAIL_CLIENTE VARCHAR(35) NOT NULL,         -- Email del cliente
-    TELEFONO_CLIENTE NVARCHAR(9) NOT NULL       -- Teléfono del cliente
+    TELEFONO_CLIENTE NVARCHAR(9) NOT NULL,      -- Teléfono del cliente
+    PAIS_CLIENTE VARCHAR(20) NOT NULL,			-- País cliente
+    CIUDAD_CLIENTE VARCHAR(20) NOT NULL,		-- Ciudad del cliente
+    POBLACION_CLIENTE VARCHAR(25) NOT NULL,		-- Poblacíon del cliente
+    DIRECCION_CLIENTE VARCHAR(50) NOT NULL,     -- Dirección del cliente
+	
 );
 
 

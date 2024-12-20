@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             btn_CONSULTA_INVENTARIO = new Button();
             datagridINVENTARIO = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)datagridINVENTARIO).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(858, 119);
-            label1.Name = "label1";
-            label1.Size = new Size(238, 52);
-            label1.TabIndex = 0;
-            label1.Text = "INVENTARIO";
             // 
             // btn_CONSULTA_INVENTARIO
             // 
@@ -78,18 +67,14 @@
             ClientSize = new Size(1841, 1089);
             Controls.Add(datagridINVENTARIO);
             Controls.Add(btn_CONSULTA_INVENTARIO);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Inventario";
             Text = "Inventario";
             ((System.ComponentModel.ISupportInitialize)datagridINVENTARIO).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button btn_CONSULTA_INVENTARIO;
         private DataGridView datagridINVENTARIO;
     }

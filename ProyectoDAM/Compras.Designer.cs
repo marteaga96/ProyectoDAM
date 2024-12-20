@@ -39,12 +39,6 @@
             pnlCONSULTA = new Panel();
             lblDescHistorialCompra = new Label();
             pnlCREAR = new Panel();
-            lblDescCrearCompra = new Label();
-            btn_confirmarCompra = new Button();
-            lbl_compra_cantidad = new Label();
-            lbl_compra_producto = new Label();
-            lbl_compra_proveedor = new Label();
-            lblTitutloCrearCompra = new Label();
             pnlMODIFICAR = new Panel();
             lblDescModificarCompra = new Label();
             txtModificarCantidad = new TextBox();
@@ -57,6 +51,12 @@
             btn_confirmarModificacion = new Button();
             txtCrearID = new TextBox();
             lblTituloModificarCompra = new Label();
+            lblDescCrearCompra = new Label();
+            btn_confirmarCompra = new Button();
+            lbl_compra_cantidad = new Label();
+            lbl_compra_producto = new Label();
+            lbl_compra_proveedor = new Label();
+            lblTitutloCrearCompra = new Label();
             ((System.ComponentModel.ISupportInitialize)datagridCOMPRAS).BeginInit();
             pnlCONSULTA.SuspendLayout();
             pnlCREAR.SuspendLayout();
@@ -169,7 +169,6 @@
             // 
             // pnlCREAR
             // 
-            pnlCREAR.Controls.Add(pnlMODIFICAR);
             pnlCREAR.Controls.Add(lblDescCrearCompra);
             pnlCREAR.Controls.Add(btn_confirmarCompra);
             pnlCREAR.Controls.Add(lbl_compra_cantidad);
@@ -185,6 +184,124 @@
             pnlCREAR.Size = new Size(1005, 896);
             pnlCREAR.TabIndex = 12;
             pnlCREAR.Visible = false;
+            // 
+            // pnlMODIFICAR
+            // 
+            pnlMODIFICAR.Controls.Add(lblDescModificarCompra);
+            pnlMODIFICAR.Controls.Add(txtModificarCantidad);
+            pnlMODIFICAR.Controls.Add(lblModificarCantidad);
+            pnlMODIFICAR.Controls.Add(txtModificarProducto);
+            pnlMODIFICAR.Controls.Add(lblModificarProducto);
+            pnlMODIFICAR.Controls.Add(txtModificarProveedor);
+            pnlMODIFICAR.Controls.Add(lblModificarNombreProveedor);
+            pnlMODIFICAR.Controls.Add(lblModificarIDCompra);
+            pnlMODIFICAR.Controls.Add(btn_confirmarModificacion);
+            pnlMODIFICAR.Controls.Add(txtCrearID);
+            pnlMODIFICAR.Controls.Add(lblTituloModificarCompra);
+            pnlMODIFICAR.Location = new Point(805, 118);
+            pnlMODIFICAR.Name = "pnlMODIFICAR";
+            pnlMODIFICAR.Size = new Size(1007, 916);
+            pnlMODIFICAR.TabIndex = 13;
+            pnlMODIFICAR.Visible = false;
+            // 
+            // lblDescModificarCompra
+            // 
+            lblDescModificarCompra.AutoSize = true;
+            lblDescModificarCompra.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDescModificarCompra.Location = new Point(352, 106);
+            lblDescModificarCompra.Name = "lblDescModificarCompra";
+            lblDescModificarCompra.Size = new Size(356, 21);
+            lblDescModificarCompra.TabIndex = 22;
+            lblDescModificarCompra.Text = "Introduce los datos para modificar la compra:";
+            // 
+            // txtModificarCantidad
+            // 
+            txtModificarCantidad.Location = new Point(879, 287);
+            txtModificarCantidad.Name = "txtModificarCantidad";
+            txtModificarCantidad.Size = new Size(100, 23);
+            txtModificarCantidad.TabIndex = 21;
+            // 
+            // lblModificarCantidad
+            // 
+            lblModificarCantidad.AutoSize = true;
+            lblModificarCantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModificarCantidad.Location = new Point(791, 284);
+            lblModificarCantidad.Name = "lblModificarCantidad";
+            lblModificarCantidad.Size = new Size(92, 25);
+            lblModificarCantidad.TabIndex = 20;
+            lblModificarCantidad.Text = "Cantidad:";
+            // 
+            // txtModificarProducto
+            // 
+            txtModificarProducto.Location = new Point(684, 287);
+            txtModificarProducto.Name = "txtModificarProducto";
+            txtModificarProducto.Size = new Size(100, 23);
+            txtModificarProducto.TabIndex = 19;
+            // 
+            // lblModificarProducto
+            // 
+            lblModificarProducto.AutoSize = true;
+            lblModificarProducto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModificarProducto.Location = new Point(591, 284);
+            lblModificarProducto.Name = "lblModificarProducto";
+            lblModificarProducto.Size = new Size(93, 25);
+            lblModificarProducto.TabIndex = 18;
+            lblModificarProducto.Text = "Producto:";
+            // 
+            // txtModificarProveedor
+            // 
+            txtModificarProveedor.Location = new Point(488, 287);
+            txtModificarProveedor.Name = "txtModificarProveedor";
+            txtModificarProveedor.Size = new Size(100, 23);
+            txtModificarProveedor.TabIndex = 17;
+            // 
+            // lblModificarNombreProveedor
+            // 
+            lblModificarNombreProveedor.AutoSize = true;
+            lblModificarNombreProveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModificarNombreProveedor.Location = new Point(281, 284);
+            lblModificarNombreProveedor.Name = "lblModificarNombreProveedor";
+            lblModificarNombreProveedor.Size = new Size(208, 25);
+            lblModificarNombreProveedor.TabIndex = 16;
+            lblModificarNombreProveedor.Text = "Nombre del proveedor:";
+            // 
+            // lblModificarIDCompra
+            // 
+            lblModificarIDCompra.AutoSize = true;
+            lblModificarIDCompra.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModificarIDCompra.Location = new Point(46, 284);
+            lblModificarIDCompra.Name = "lblModificarIDCompra";
+            lblModificarIDCompra.Size = new Size(129, 25);
+            lblModificarIDCompra.TabIndex = 15;
+            lblModificarIDCompra.Text = "ID de compra:";
+            // 
+            // btn_confirmarModificacion
+            // 
+            btn_confirmarModificacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_confirmarModificacion.Location = new Point(427, 508);
+            btn_confirmarModificacion.Name = "btn_confirmarModificacion";
+            btn_confirmarModificacion.Size = new Size(227, 98);
+            btn_confirmarModificacion.TabIndex = 14;
+            btn_confirmarModificacion.Text = "CONFIRMAR MODIFICACIÓN";
+            btn_confirmarModificacion.UseVisualStyleBackColor = true;
+            btn_confirmarModificacion.Click += btn_confirmarModificacion_Click;
+            // 
+            // txtCrearID
+            // 
+            txtCrearID.Location = new Point(176, 287);
+            txtCrearID.Name = "txtCrearID";
+            txtCrearID.Size = new Size(100, 23);
+            txtCrearID.TabIndex = 10;
+            // 
+            // lblTituloModificarCompra
+            // 
+            lblTituloModificarCompra.AutoSize = true;
+            lblTituloModificarCompra.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
+            lblTituloModificarCompra.Location = new Point(336, 24);
+            lblTituloModificarCompra.Name = "lblTituloModificarCompra";
+            lblTituloModificarCompra.Size = new Size(392, 52);
+            lblTituloModificarCompra.TabIndex = 0;
+            lblTituloModificarCompra.Text = "MODIFICAR COMPRA";
             // 
             // lblDescCrearCompra
             // 
@@ -247,129 +364,12 @@
             lblTitutloCrearCompra.TabIndex = 0;
             lblTitutloCrearCompra.Text = "CREAR COMPRA";
             // 
-            // pnlMODIFICAR
-            // 
-            pnlMODIFICAR.Controls.Add(lblDescModificarCompra);
-            pnlMODIFICAR.Controls.Add(txtModificarCantidad);
-            pnlMODIFICAR.Controls.Add(lblModificarCantidad);
-            pnlMODIFICAR.Controls.Add(txtModificarProducto);
-            pnlMODIFICAR.Controls.Add(lblModificarProducto);
-            pnlMODIFICAR.Controls.Add(txtModificarProveedor);
-            pnlMODIFICAR.Controls.Add(lblModificarNombreProveedor);
-            pnlMODIFICAR.Controls.Add(lblModificarIDCompra);
-            pnlMODIFICAR.Controls.Add(btn_confirmarModificacion);
-            pnlMODIFICAR.Controls.Add(txtCrearID);
-            pnlMODIFICAR.Controls.Add(lblTituloModificarCompra);
-            pnlMODIFICAR.Location = new Point(78, 243);
-            pnlMODIFICAR.Name = "pnlMODIFICAR";
-            pnlMODIFICAR.Size = new Size(1007, 916);
-            pnlMODIFICAR.TabIndex = 13;
-            pnlMODIFICAR.Visible = false;
-            // 
-            // lblDescModificarCompra
-            // 
-            lblDescModificarCompra.AutoSize = true;
-            lblDescModificarCompra.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDescModificarCompra.Location = new Point(352, 106);
-            lblDescModificarCompra.Name = "lblDescModificarCompra";
-            lblDescModificarCompra.Size = new Size(356, 21);
-            lblDescModificarCompra.TabIndex = 22;
-            lblDescModificarCompra.Text = "Introduce los datos para modificar la compra:";
-            // 
-            // txtModificarCantidad
-            // 
-            txtModificarCantidad.Location = new Point(879, 287);
-            txtModificarCantidad.Name = "txtModificarCantidad";
-            txtModificarCantidad.Size = new Size(100, 32);
-            txtModificarCantidad.TabIndex = 21;
-            // 
-            // lblModificarCantidad
-            // 
-            lblModificarCantidad.AutoSize = true;
-            lblModificarCantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblModificarCantidad.Location = new Point(791, 284);
-            lblModificarCantidad.Name = "lblModificarCantidad";
-            lblModificarCantidad.Size = new Size(92, 25);
-            lblModificarCantidad.TabIndex = 20;
-            lblModificarCantidad.Text = "Cantidad:";
-            // 
-            // txtModificarProducto
-            // 
-            txtModificarProducto.Location = new Point(684, 287);
-            txtModificarProducto.Name = "txtModificarProducto";
-            txtModificarProducto.Size = new Size(100, 32);
-            txtModificarProducto.TabIndex = 19;
-            // 
-            // lblModificarProducto
-            // 
-            lblModificarProducto.AutoSize = true;
-            lblModificarProducto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblModificarProducto.Location = new Point(591, 284);
-            lblModificarProducto.Name = "lblModificarProducto";
-            lblModificarProducto.Size = new Size(93, 25);
-            lblModificarProducto.TabIndex = 18;
-            lblModificarProducto.Text = "Producto:";
-            // 
-            // txtModificarProveedor
-            // 
-            txtModificarProveedor.Location = new Point(488, 287);
-            txtModificarProveedor.Name = "txtModificarProveedor";
-            txtModificarProveedor.Size = new Size(100, 32);
-            txtModificarProveedor.TabIndex = 17;
-            // 
-            // lblModificarNombreProveedor
-            // 
-            lblModificarNombreProveedor.AutoSize = true;
-            lblModificarNombreProveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblModificarNombreProveedor.Location = new Point(281, 284);
-            lblModificarNombreProveedor.Name = "lblModificarNombreProveedor";
-            lblModificarNombreProveedor.Size = new Size(208, 25);
-            lblModificarNombreProveedor.TabIndex = 16;
-            lblModificarNombreProveedor.Text = "Nombre del proveedor:";
-            // 
-            // lblModificarIDCompra
-            // 
-            lblModificarIDCompra.AutoSize = true;
-            lblModificarIDCompra.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblModificarIDCompra.Location = new Point(46, 284);
-            lblModificarIDCompra.Name = "lblModificarIDCompra";
-            lblModificarIDCompra.Size = new Size(129, 25);
-            lblModificarIDCompra.TabIndex = 15;
-            lblModificarIDCompra.Text = "ID de compra:";
-            // 
-            // btn_confirmarModificacion
-            // 
-            btn_confirmarModificacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_confirmarModificacion.Location = new Point(427, 508);
-            btn_confirmarModificacion.Name = "btn_confirmarModificacion";
-            btn_confirmarModificacion.Size = new Size(227, 98);
-            btn_confirmarModificacion.TabIndex = 14;
-            btn_confirmarModificacion.Text = "CONFIRMAR MODIFICACIÓN";
-            btn_confirmarModificacion.UseVisualStyleBackColor = true;
-            btn_confirmarModificacion.Click += btn_confirmarModificacion_Click;
-            // 
-            // txtCrearID
-            // 
-            txtCrearID.Location = new Point(176, 287);
-            txtCrearID.Name = "txtCrearID";
-            txtCrearID.Size = new Size(100, 32);
-            txtCrearID.TabIndex = 10;
-            // 
-            // lblTituloModificarCompra
-            // 
-            lblTituloModificarCompra.AutoSize = true;
-            lblTituloModificarCompra.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
-            lblTituloModificarCompra.Location = new Point(336, 24);
-            lblTituloModificarCompra.Name = "lblTituloModificarCompra";
-            lblTituloModificarCompra.Size = new Size(392, 52);
-            lblTituloModificarCompra.TabIndex = 0;
-            lblTituloModificarCompra.Text = "MODIFICAR COMPRA";
-            // 
             // Compras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1841, 1089);
+            Controls.Add(pnlMODIFICAR);
             Controls.Add(pnlCREAR);
             Controls.Add(pnlCONSULTA);
             Controls.Add(btn_MODIFICAR_COMPRA);

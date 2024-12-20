@@ -17,7 +17,7 @@ namespace ProyectoDAM.DDBB
 
         public Conexion(string usuario, string password)
         {
-            string connectionString = $"data source=192.168.1.122;Initial Catalog=master;Persist Security Info=True;TrustServerCertificate=true;User ID={usuario};Password={password}";
+            string connectionString = $"data source=localhost;Initial Catalog=master;Persist Security Info=True;TrustServerCertificate=true;User ID={usuario};Password={password}";
             datos_conexion = new SqlConnection(connectionString);
         }
 

@@ -47,6 +47,27 @@ namespace ProyectoDAM
         private void btn_CONSULTAR_HISTORIAL_Click(object sender, EventArgs e)
         {
             Consultas.consulta_productos(this, EventArgs.Empty, this.datagridPRODUCTOS);
+            gestionOpciones("CONSULTA");
+        }
+
+        private void btnCREAR_PRODUCTO_Click(object sender, EventArgs e)
+        {
+            gestionOpciones("CREAR");
+        }
+
+        private void btn_crearProducto_Click(object sender, EventArgs e)
+        {
+            Consultas.crear_producto(this, EventArgs.Empty, this.txtCrearNombreProducto.Text, this.txtCrearIvaProducto.Text, this.txtCrearPrecioProducto.Text);
+        }
+
+        private void btn_MODIFICAR_PRODUCTO_Click(object sender, EventArgs e)
+        {
+            gestionOpciones("MODIFICAR");
+        }
+
+        private void btnConfirmarModificarProducto_Click(object sender, EventArgs e)
+        {
+            Consultas.modificar_producto(this, EventArgs.Empty, this.txtIDModificarProducto.Text, this.txtNombreModificarProducto.Text, this.txtModificarPrecioProducto.Text, this.txtModificarIVAProducto.Text);
         }
     }
 }

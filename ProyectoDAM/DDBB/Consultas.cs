@@ -329,6 +329,90 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void crear_producto(object sender, EventArgs e, String txtCrearNombreProducto, String txtCrearIvaProducto, String txtCrearPrecioProducto)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "INSERT INTO PRODUCTOS (NOMBRE_PRODUCTO, IVA_PRODUCTO, PRECIO_SIN_IVA_PRODUCTO) " +
+                                  "VALUES (@nombreProducto, @ivaProducto, @precioTotalProducto)",
+                    Connection = conexion.datos_conexion
+                };
+
+                // Agregar parámetros a la consulta
+                comando.Parameters.AddWithValue("@nombreProducto", txtCrearNombreProducto); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@ivaProducto", txtCrearIvaProducto); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@precioTotalProducto", int.Parse(txtCrearPrecioProducto)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de inserción
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Producto creado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo crear el producto.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public static void modificar_producto(object sender, EventArgs e, String txtIDModificarProducto, String txtNombreModificarProducto, String txtModificarPrecioProducto, String txtModificarIVAProducto)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "UPDATE PRODUCTOS SET " +
+                                  "NOMBRE_PRODUCTO = @txtNombreModificarProducto, " +
+                                  "IVA_PRODUCTO = @txtModificarIVAProducto, " +
+                                  "PRECIO_SIN_IVA_PRODUCTO = @txtModificarPrecioProducto " +
+                                  "WHERE ID_PRODUCTO = @txtIDModificarProducto",// Condición para actualizar
+                    Connection = conexion.datos_conexion
+                };
+
+                comando.Parameters.AddWithValue("@txtIDModificarProducto", int.Parse(txtIDModificarProducto));
+
+                // Agregar parámetros para los campos que se desean actualizar
+                comando.Parameters.AddWithValue("@txtNombreModificarProducto", txtNombreModificarProducto); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtModificarIVAProducto", txtModificarIVAProducto); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtModificarPrecioProducto", int.Parse(txtModificarPrecioProducto)); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de actualización
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Producto actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el producto.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
     }
 
 

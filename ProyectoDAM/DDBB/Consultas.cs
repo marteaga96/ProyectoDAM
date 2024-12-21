@@ -448,6 +448,108 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void crear_cliente(object sender, EventArgs e, String txtCrearApellidosCliente, String txtCrearCiudadCliente, String  txtCrearDireccionCliente, String txtCrearDNICliente, String txtCrearEmailCliente, String txtCrearNombreCliente, String txtCrearPaisCliente, String txtCrearPoblacionCliente, String txtCrearTelefonoCliente)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "INSERT INTO CLIENTES (DNI_CIF_CLIENTE, NOMBRE_CLIENTE, APELLIDOS_CLIENTE, EMAIL_CLIENTE, TELEFONO_CLIENTE, PAIS_CLIENTE, CIUDAD_CLIENTE, POBLACION_CLIENTE, DIRECCION_CLIENTE) " +
+                                  "VALUES (@dninifCliente, @nombreCliente, @apellidosCliente, @emailCliente, @telefonoCliente, @paisCliente, @ciudadCliente, @poblacionCliente, @direccionCliente)",
+                    Connection = conexion.datos_conexion
+                };
+
+                // Agregar parámetros a la consulta
+                comando.Parameters.AddWithValue("@dninifCliente", txtCrearDNICliente); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@nombreCliente", txtCrearNombreCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@apellidosCliente", (txtCrearApellidosCliente)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@emailCliente", txtCrearEmailCliente); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@telefonoCliente", txtCrearTelefonoCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@paisCliente", (txtCrearPaisCliente)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@ciudadCliente", txtCrearCiudadCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@poblacionCliente", (txtCrearPoblacionCliente)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@direccionCliente", txtCrearDireccionCliente); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de inserción
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente creado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo crear el cliente.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public static void modificar_cliente(object sender, EventArgs e, String txtIDCliente, String txtCrearApellidosCliente, String txtCrearCiudadCliente, String txtCrearDireccionCliente, String txtCrearDNICliente, String txtCrearEmailCliente, String txtCrearNombreCliente, String txtCrearPaisCliente, String txtCrearPoblacionCliente, String txtCrearTelefonoCliente)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "UPDATE CLIENTES SET " +
+                                  "DNI_CIF_CLIENTE = @txtCrearDNICliente, " +
+                                  "NOMBRE_CLIENTE = @txtCrearNombreCliente, " +
+                                  "APELLIDOS_CLIENTE= @txtCrearApellidosCliente, " +
+                                  "EMAIL_CLIENTE = @txtCrearEmailCliente, " +
+                                  "TELEFONO_CLIENTE = @txtCrearTelefonoCliente, " +
+                                  "PAIS_CLIENTE= @txtCrearPaisCliente, " +
+                                  "CIUDAD_CLIENTE = @txtCrearCiudadCliente, " +
+                                  "POBLACION_CLIENTE= @txtCrearPoblacionCliente, " +
+                                  "DIRECCION_CLIENTE= @txtCrearDireccionCliente " +
+                                  "WHERE ID_CLIENTE = @txtIDCliente",// Condición para actualizar
+                    Connection = conexion.datos_conexion
+                };
+
+                comando.Parameters.AddWithValue("@txtIDCliente", int.Parse(txtIDCliente));
+
+                // Agregar parámetros para los campos que se desean actualizar
+                comando.Parameters.AddWithValue("@txtCrearDNICliente", txtCrearDNICliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearNombreCliente", txtCrearNombreCliente); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearApellidosCliente", txtCrearApellidosCliente); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@txtCrearEmailCliente", txtCrearEmailCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearTelefonoCliente", txtCrearTelefonoCliente); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearPaisCliente", txtCrearPaisCliente); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@txtCrearCiudadCliente", txtCrearCiudadCliente); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearPoblacionCliente", txtCrearPoblacionCliente); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearDireccionCliente", txtCrearDireccionCliente); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de actualización
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el cliente.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
     }
 
 

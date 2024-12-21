@@ -549,6 +549,87 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void consulta_proveedores(object sender, EventArgs e, DataGridView datagridPROVEEDORES)
+        {
+            try
+            {
+                // Pasar datos de login a la clase Conexion
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = Properties.Resources.consultaProveedores,
+                    Connection = conexion.datos_conexion
+                };
+
+                if (conexion.conAbrir())
+                {
+                    using (SqlDataReader Reader = comando.ExecuteReader())
+                    {
+                        // Crear un DataTable para almacenar los resultados
+                        DataTable dataTable = new DataTable();
+                        dataTable.Load(Reader);  // Cargar los datos del SqlDataReader al DataTable
+
+                        // Asignar el DataTable como DataSource del DataGridView
+                        datagridPROVEEDORES.DataSource = dataTable;
+                    }
+                    conexion.conCerrar();
+                }
+                else
+                {
+                    MessageBox.Show("Error al abrir la conexión.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public static void crear_proveedor(object sender, EventArgs e, String txtCrearApellidosProveedor, String txtCrearCiudadProveedor, String txtCrearDireccionProveedor, String txtCrearDNIProveedor, String txtCrearEmailProveedor, String txtCrearNombreProveedor, String txtCrearPaisProveedor, String txtCrearPoblacionProveedor, String txtCrearTelefonoProveedor)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "INSERT INTO PROVEEDORES (DNI_CIF_PROVEEDOR, NOMBRE_PROVEEDOR, APELLIDOS_PROVEEDOR, EMAIL_PROVEEDOR, TELEFONO_PROVEEDOR, PAIS_PROVEEDOR, CIUDAD_PROVEEDOR, POBLACION_PROVEEDOR, DIRECCION_PROVEEDOR) " +
+                                  "VALUES (@dninifProveedor, @nombreProveedor, @apellidosProveedor, @emailProveedor, @telefonoProveedor, @paisProveedor, @ciudadProveedor, @poblacionProveedor, @direccionProveedor)",
+                    Connection = conexion.datos_conexion
+                };
+
+                // Agregar parámetros a la consulta
+                comando.Parameters.AddWithValue("@dninifProveedor", txtCrearDNIProveedor); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@nombreProveedor", txtCrearNombreProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@apellidosProveedor", (txtCrearApellidosProveedor)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@emailProveedor", txtCrearEmailProveedor); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+                comando.Parameters.AddWithValue("@telefonoProveedor", txtCrearTelefonoProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@paisProveedor", (txtCrearPaisProveedor)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@ciudadProveedor", txtCrearCiudadProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@poblacionProveedor", (txtCrearPoblacionProveedor)); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@direccionProveedor", txtCrearDireccionProveedor); // Suponiendo que tienes un TextBox llamado txtCompradoPor
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de inserción
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente creado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo crear el cliente.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
     }
 

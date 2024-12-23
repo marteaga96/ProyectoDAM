@@ -60,5 +60,11 @@ namespace ProyectoDAM
             Consultas.crear_proveedor(this, EventArgs.Empty, this.txtCrearApellidosProveedor.Text, this.txtCrearCiudadProveedor.Text, this.txtCrearDireccionProveedor.Text, this.txtCrearDNIProveedor.Text, this.txtCrearEmailProveedor.Text, this.txtCrearNombreProveedor.Text, this.txtCrearPaisProveedor.Text, this.txtCrearPoblacionProveedor.Text, this.txtCrearTelefonoProveedor.Text);
 
         }
+
+        private void btn_CONFIRMAR_MODIFICAR_PROVEEDOR_Click(object sender, EventArgs e)
+        {
+            Consultas.modificar_proveedor(this, EventArgs.Empty, this.txtIDProveedor.Text, this.txtModificarApellidos.Text, this.txtModificarCiudad.Text, this.txtModificarDireccion.Text, this.txtModificarDNICIF.Text, this.txtModificarEmail.Text, this.txtModificarNombre.Text, this.txtModificarPais.Text, this.txtModificarPoblacion.Text, this.txtModificarTelefono.Text);
+
+        }
     }
 }

@@ -630,6 +630,61 @@ namespace ProyectoDAM.DDBB
             }
         }
 
+        public static void modificar_proveedor(object sender, EventArgs e, String txtIDProveedor, String txtCrearApellidosProveedor, String txtCrearCiudadProveedor, String txtCrearDireccionProveedor, String txtCrearDNIProveedor, String txtCrearEmailProveedor, String txtCrearNombreProveedor, String txtCrearPaisProveedor, String txtCrearPoblacionProveedor, String txtCrearTelefonoProveedor)
+        {
+            try
+            {
+                // Crear una nueva conexión usando las credenciales del login
+                DDBB.Conexion conexion = new DDBB.Conexion(variablesGlobales.usuario, variablesGlobales.password);
+                SqlCommand comando = new SqlCommand
+                {
+                    CommandText = "UPDATE PROVEEDORES SET " +
+                                  "DNI_CIF_PROVEEDOR = @txtCrearDNIProveedor, " +
+                                  "NOMBRE_PROVEEDOR = @txtCrearNombreProveedor, " +
+                                  "APELLIDOS_PROVEEDOR= @txtCrearApellidosProveedor, " +
+                                  "EMAIL_PROVEEDOR = @txtCrearEmailProveedor, " +
+                                  "TELEFONO_PROVEEDOR = @txtCrearTelefonoProveedor, " +
+                                  "PAIS_PROVEEDOR= @txtCrearPaisProveedor, " +
+                                  "CIUDAD_PROVEEDOR = @txtCrearCiudadProveedor, " +
+                                  "POBLACION_PROVEEDOR= @txtCrearPoblacionProveedor, " +
+                                  "DIRECCION_PROVEEDOR= @txtCrearDireccionProveedor " +
+                                  "WHERE ID_PROVEEDOR = @txtIDProveedor",// Condición para actualizar
+                    Connection = conexion.datos_conexion
+                };
+
+                comando.Parameters.AddWithValue("@txtIDCliente", int.Parse(txtIDProveedor));
+
+                // Agregar parámetros para los campos que se desean actualizar
+                comando.Parameters.AddWithValue("@txtCrearDNIProveedor", txtCrearDNIProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearNombreProveedor", txtCrearNombreProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearApellidosProveedor", txtCrearApellidosProveedor); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@txtCrearEmailProveedor", txtCrearEmailProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearTelefonoProveedor", txtCrearTelefonoProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearPaisProveedor", txtCrearPaisProveedor); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+                comando.Parameters.AddWithValue("@txtCrearCiudadProveedor", txtCrearCiudadProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProveedor
+                comando.Parameters.AddWithValue("@txtCrearPoblacionProveedor", txtCrearPoblacionProveedor); // Suponiendo que tienes un TextBox llamado txtNombreProducto
+                comando.Parameters.AddWithValue("@txtCrearDireccionProveedor", txtCrearDireccionProveedor); // Suponiendo que tienes un TextBox llamado txtCantidadComprada
+
+                if (conexion.conAbrir())
+                {
+                    // Ejecutar la consulta de actualización
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el cliente.");
+                    }
+                    conexion.conCerrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 
     }
 

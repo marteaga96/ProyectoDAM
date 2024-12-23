@@ -56,9 +56,34 @@
             txtCrearDNIProveedor = new TextBox();
             txtCrearApellidosProveedor = new TextBox();
             txtCrearNombreProveedor = new TextBox();
+            panel1 = new Panel();
+            lbl_MODIFICAR_POBLACION = new Label();
+            txtModificarPoblacion = new TextBox();
+            lbl_MODIFICAR_CIUDAD = new Label();
+            txtModificarCiudad = new TextBox();
+            lbl_MODIFICAR_PAIS = new Label();
+            txtModificarPais = new TextBox();
+            lbl_MODIFICAR_EMAIL = new Label();
+            txtModificarEmail = new TextBox();
+            lbl_MODIFICAR_DIRECCION = new Label();
+            txtModificarDireccion = new TextBox();
+            lbl_MODIFICAR_TELEFONO = new Label();
+            txtModificarTelefono = new TextBox();
+            lbl_DESCRIPCION_MODIFICAR = new Label();
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR = new Button();
+            lbl_MODIFICAR_APELLIDOS = new Label();
+            lbl_MODIFICAR_NOMBRE = new Label();
+            lbl_MODIFICAR_DNICIF = new Label();
+            lbl_MODIFICAR_PROVEEDOR = new Label();
+            txtModificarDNICIF = new TextBox();
+            txtModificarApellidos = new TextBox();
+            txtModificarNombre = new TextBox();
+            lbl_IDProveedor = new Label();
+            txtIDProveedor = new TextBox();
             pnlCONSULTA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datagridPROVEEDORES).BeginInit();
             pnlCREAR.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_MODIFICAR_PROVEEDORES
@@ -132,6 +157,7 @@
             // 
             // pnlCREAR
             // 
+            pnlCREAR.Controls.Add(panel1);
             pnlCREAR.Controls.Add(lbl_poblacion_proveedor);
             pnlCREAR.Controls.Add(txtCrearPoblacionProveedor);
             pnlCREAR.Controls.Add(lbl_ciudad_proveedor);
@@ -353,6 +379,249 @@
             txtCrearNombreProveedor.Size = new Size(100, 32);
             txtCrearNombreProveedor.TabIndex = 8;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(lbl_IDProveedor);
+            panel1.Controls.Add(txtIDProveedor);
+            panel1.Controls.Add(lbl_MODIFICAR_POBLACION);
+            panel1.Controls.Add(txtModificarPoblacion);
+            panel1.Controls.Add(lbl_MODIFICAR_CIUDAD);
+            panel1.Controls.Add(txtModificarCiudad);
+            panel1.Controls.Add(lbl_MODIFICAR_PAIS);
+            panel1.Controls.Add(txtModificarPais);
+            panel1.Controls.Add(lbl_MODIFICAR_EMAIL);
+            panel1.Controls.Add(txtModificarEmail);
+            panel1.Controls.Add(lbl_MODIFICAR_DIRECCION);
+            panel1.Controls.Add(txtModificarDireccion);
+            panel1.Controls.Add(lbl_MODIFICAR_TELEFONO);
+            panel1.Controls.Add(txtModificarTelefono);
+            panel1.Controls.Add(lbl_DESCRIPCION_MODIFICAR);
+            panel1.Controls.Add(btn_CONFIRMAR_MODIFICAR_PROVEEDOR);
+            panel1.Controls.Add(lbl_MODIFICAR_APELLIDOS);
+            panel1.Controls.Add(lbl_MODIFICAR_NOMBRE);
+            panel1.Controls.Add(lbl_MODIFICAR_DNICIF);
+            panel1.Controls.Add(lbl_MODIFICAR_PROVEEDOR);
+            panel1.Controls.Add(txtModificarDNICIF);
+            panel1.Controls.Add(txtModificarApellidos);
+            panel1.Controls.Add(txtModificarNombre);
+            panel1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            panel1.Location = new Point(2, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1005, 896);
+            panel1.TabIndex = 27;
+            panel1.Visible = false;
+            // 
+            // lbl_MODIFICAR_POBLACION
+            // 
+            lbl_MODIFICAR_POBLACION.AutoSize = true;
+            lbl_MODIFICAR_POBLACION.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_POBLACION.Location = new Point(772, 378);
+            lbl_MODIFICAR_POBLACION.Name = "lbl_MODIFICAR_POBLACION";
+            lbl_MODIFICAR_POBLACION.Size = new Size(99, 25);
+            lbl_MODIFICAR_POBLACION.TabIndex = 26;
+            lbl_MODIFICAR_POBLACION.Text = "Población:";
+            // 
+            // txtModificarPoblacion
+            // 
+            txtModificarPoblacion.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarPoblacion.Location = new Point(876, 376);
+            txtModificarPoblacion.Name = "txtModificarPoblacion";
+            txtModificarPoblacion.Size = new Size(100, 32);
+            txtModificarPoblacion.TabIndex = 25;
+            // 
+            // lbl_MODIFICAR_CIUDAD
+            // 
+            lbl_MODIFICAR_CIUDAD.AutoSize = true;
+            lbl_MODIFICAR_CIUDAD.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_CIUDAD.Location = new Point(560, 377);
+            lbl_MODIFICAR_CIUDAD.Name = "lbl_MODIFICAR_CIUDAD";
+            lbl_MODIFICAR_CIUDAD.Size = new Size(76, 25);
+            lbl_MODIFICAR_CIUDAD.TabIndex = 24;
+            lbl_MODIFICAR_CIUDAD.Text = "Ciudad:";
+            // 
+            // txtModificarCiudad
+            // 
+            txtModificarCiudad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarCiudad.Location = new Point(652, 376);
+            txtModificarCiudad.Name = "txtModificarCiudad";
+            txtModificarCiudad.Size = new Size(100, 32);
+            txtModificarCiudad.TabIndex = 23;
+            // 
+            // lbl_MODIFICAR_PAIS
+            // 
+            lbl_MODIFICAR_PAIS.AutoSize = true;
+            lbl_MODIFICAR_PAIS.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_PAIS.Location = new Point(372, 375);
+            lbl_MODIFICAR_PAIS.Name = "lbl_MODIFICAR_PAIS";
+            lbl_MODIFICAR_PAIS.Size = new Size(49, 25);
+            lbl_MODIFICAR_PAIS.TabIndex = 22;
+            lbl_MODIFICAR_PAIS.Text = "País:";
+            // 
+            // txtModificarPais
+            // 
+            txtModificarPais.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarPais.Location = new Point(426, 374);
+            txtModificarPais.Name = "txtModificarPais";
+            txtModificarPais.Size = new Size(100, 32);
+            txtModificarPais.TabIndex = 21;
+            // 
+            // lbl_MODIFICAR_EMAIL
+            // 
+            lbl_MODIFICAR_EMAIL.AutoSize = true;
+            lbl_MODIFICAR_EMAIL.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_EMAIL.Location = new Point(46, 376);
+            lbl_MODIFICAR_EMAIL.Name = "lbl_MODIFICAR_EMAIL";
+            lbl_MODIFICAR_EMAIL.Size = new Size(63, 25);
+            lbl_MODIFICAR_EMAIL.TabIndex = 20;
+            lbl_MODIFICAR_EMAIL.Text = "eMail:";
+            // 
+            // txtModificarEmail
+            // 
+            txtModificarEmail.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarEmail.Location = new Point(114, 373);
+            txtModificarEmail.Name = "txtModificarEmail";
+            txtModificarEmail.Size = new Size(250, 32);
+            txtModificarEmail.TabIndex = 19;
+            // 
+            // lbl_MODIFICAR_DIRECCION
+            // 
+            lbl_MODIFICAR_DIRECCION.AutoSize = true;
+            lbl_MODIFICAR_DIRECCION.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_DIRECCION.Location = new Point(45, 458);
+            lbl_MODIFICAR_DIRECCION.Name = "lbl_MODIFICAR_DIRECCION";
+            lbl_MODIFICAR_DIRECCION.Size = new Size(188, 25);
+            lbl_MODIFICAR_DIRECCION.TabIndex = 18;
+            lbl_MODIFICAR_DIRECCION.Text = "Dirección proveedor:";
+            // 
+            // txtModificarDireccion
+            // 
+            txtModificarDireccion.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarDireccion.Location = new Point(238, 456);
+            txtModificarDireccion.Name = "txtModificarDireccion";
+            txtModificarDireccion.Size = new Size(234, 32);
+            txtModificarDireccion.TabIndex = 17;
+            // 
+            // lbl_MODIFICAR_TELEFONO
+            // 
+            lbl_MODIFICAR_TELEFONO.AutoSize = true;
+            lbl_MODIFICAR_TELEFONO.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_TELEFONO.Location = new Point(775, 291);
+            lbl_MODIFICAR_TELEFONO.Name = "lbl_MODIFICAR_TELEFONO";
+            lbl_MODIFICAR_TELEFONO.Size = new Size(88, 25);
+            lbl_MODIFICAR_TELEFONO.TabIndex = 16;
+            lbl_MODIFICAR_TELEFONO.Text = "Teléfono:";
+            // 
+            // txtModificarTelefono
+            // 
+            txtModificarTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarTelefono.Location = new Point(875, 287);
+            txtModificarTelefono.Name = "txtModificarTelefono";
+            txtModificarTelefono.Size = new Size(100, 29);
+            txtModificarTelefono.TabIndex = 15;
+            // 
+            // lbl_DESCRIPCION_MODIFICAR
+            // 
+            lbl_DESCRIPCION_MODIFICAR.AutoSize = true;
+            lbl_DESCRIPCION_MODIFICAR.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_DESCRIPCION_MODIFICAR.Location = new Point(302, 96);
+            lbl_DESCRIPCION_MODIFICAR.Name = "lbl_DESCRIPCION_MODIFICAR";
+            lbl_DESCRIPCION_MODIFICAR.Size = new Size(378, 21);
+            lbl_DESCRIPCION_MODIFICAR.TabIndex = 14;
+            lbl_DESCRIPCION_MODIFICAR.Text = "Introduce los datos para modificar el proveedor:";
+            // 
+            // btn_CONFIRMAR_MODIFICAR_PROVEEDOR
+            // 
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Location = new Point(427, 686);
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Name = "btn_CONFIRMAR_MODIFICAR_PROVEEDOR";
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Size = new Size(201, 87);
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.TabIndex = 14;
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Text = "MODIFICAR PROVEEDOR";
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.UseVisualStyleBackColor = true;
+            btn_CONFIRMAR_MODIFICAR_PROVEEDOR.Click += btn_CONFIRMAR_MODIFICAR_PROVEEDOR_Click;
+            // 
+            // lbl_MODIFICAR_APELLIDOS
+            // 
+            lbl_MODIFICAR_APELLIDOS.AutoSize = true;
+            lbl_MODIFICAR_APELLIDOS.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_APELLIDOS.Location = new Point(553, 289);
+            lbl_MODIFICAR_APELLIDOS.Name = "lbl_MODIFICAR_APELLIDOS";
+            lbl_MODIFICAR_APELLIDOS.Size = new Size(94, 25);
+            lbl_MODIFICAR_APELLIDOS.TabIndex = 13;
+            lbl_MODIFICAR_APELLIDOS.Text = "Apellidos:";
+            // 
+            // lbl_MODIFICAR_NOMBRE
+            // 
+            lbl_MODIFICAR_NOMBRE.AutoSize = true;
+            lbl_MODIFICAR_NOMBRE.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_NOMBRE.Location = new Point(335, 288);
+            lbl_MODIFICAR_NOMBRE.Name = "lbl_MODIFICAR_NOMBRE";
+            lbl_MODIFICAR_NOMBRE.Size = new Size(85, 25);
+            lbl_MODIFICAR_NOMBRE.TabIndex = 12;
+            lbl_MODIFICAR_NOMBRE.Text = "Nombre:";
+            // 
+            // lbl_MODIFICAR_DNICIF
+            // 
+            lbl_MODIFICAR_DNICIF.AutoSize = true;
+            lbl_MODIFICAR_DNICIF.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_MODIFICAR_DNICIF.Location = new Point(25, 290);
+            lbl_MODIFICAR_DNICIF.Name = "lbl_MODIFICAR_DNICIF";
+            lbl_MODIFICAR_DNICIF.Size = new Size(173, 25);
+            lbl_MODIFICAR_DNICIF.TabIndex = 11;
+            lbl_MODIFICAR_DNICIF.Text = "DNI/CIF proveedor:";
+            // 
+            // lbl_MODIFICAR_PROVEEDOR
+            // 
+            lbl_MODIFICAR_PROVEEDOR.AutoSize = true;
+            lbl_MODIFICAR_PROVEEDOR.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
+            lbl_MODIFICAR_PROVEEDOR.Location = new Point(287, 25);
+            lbl_MODIFICAR_PROVEEDOR.Name = "lbl_MODIFICAR_PROVEEDOR";
+            lbl_MODIFICAR_PROVEEDOR.Size = new Size(451, 52);
+            lbl_MODIFICAR_PROVEEDOR.TabIndex = 0;
+            lbl_MODIFICAR_PROVEEDOR.Text = "MODIFICAR PROVEEDOR";
+            // 
+            // txtModificarDNICIF
+            // 
+            txtModificarDNICIF.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarDNICIF.Location = new Point(204, 287);
+            txtModificarDNICIF.Name = "txtModificarDNICIF";
+            txtModificarDNICIF.Size = new Size(100, 32);
+            txtModificarDNICIF.TabIndex = 7;
+            // 
+            // txtModificarApellidos
+            // 
+            txtModificarApellidos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarApellidos.Location = new Point(653, 287);
+            txtModificarApellidos.Name = "txtModificarApellidos";
+            txtModificarApellidos.Size = new Size(100, 29);
+            txtModificarApellidos.TabIndex = 9;
+            // 
+            // txtModificarNombre
+            // 
+            txtModificarNombre.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtModificarNombre.Location = new Point(427, 287);
+            txtModificarNombre.Name = "txtModificarNombre";
+            txtModificarNombre.Size = new Size(100, 32);
+            txtModificarNombre.TabIndex = 8;
+            // 
+            // lbl_IDProveedor
+            // 
+            lbl_IDProveedor.AutoSize = true;
+            lbl_IDProveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_IDProveedor.Location = new Point(330, 202);
+            lbl_IDProveedor.Name = "lbl_IDProveedor";
+            lbl_IDProveedor.Size = new Size(126, 25);
+            lbl_IDProveedor.TabIndex = 28;
+            lbl_IDProveedor.Text = "ID proveedor:";
+            // 
+            // txtIDProveedor
+            // 
+            txtIDProveedor.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIDProveedor.Location = new Point(509, 199);
+            txtIDProveedor.Name = "txtIDProveedor";
+            txtIDProveedor.Size = new Size(100, 32);
+            txtIDProveedor.TabIndex = 27;
+            // 
             // Proveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -371,6 +640,8 @@
             ((System.ComponentModel.ISupportInitialize)datagridPROVEEDORES).EndInit();
             pnlCREAR.ResumeLayout(false);
             pnlCREAR.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -404,5 +675,29 @@
         private TextBox txtCrearDNIProveedor;
         private TextBox txtCrearApellidosProveedor;
         private TextBox txtCrearNombreProveedor;
+        private Panel panel1;
+        private Label lbl_MODIFICAR_POBLACION;
+        private TextBox txtModificarPoblacion;
+        private Label lbl_MODIFICAR_CIUDAD;
+        private TextBox txtModificarCiudad;
+        private Label lbl_MODIFICAR_PAIS;
+        private TextBox txtModificarPais;
+        private Label lbl_MODIFICAR_EMAIL;
+        private TextBox txtModificarEmail;
+        private Label lbl_MODIFICAR_DIRECCION;
+        private TextBox txtModificarDireccion;
+        private Label lbl_MODIFICAR_TELEFONO;
+        private TextBox txtModificarTelefono;
+        private Label lbl_DESCRIPCION_MODIFICAR;
+        private Button btn_CONFIRMAR_MODIFICAR_PROVEEDOR;
+        private Label lbl_MODIFICAR_APELLIDOS;
+        private Label lbl_MODIFICAR_NOMBRE;
+        private Label lbl_MODIFICAR_DNICIF;
+        private Label lbl_MODIFICAR_PROVEEDOR;
+        private TextBox txtModificarDNICIF;
+        private TextBox txtModificarApellidos;
+        private TextBox txtModificarNombre;
+        private Label lbl_IDProveedor;
+        private TextBox txtIDProveedor;
     }
 }

@@ -33,17 +33,8 @@
             btn_MODIFICAR_VENTA = new Button();
             pnlCONSULTA = new Panel();
             datagridVENTAS = new DataGridView();
-            lblHISTORIAL = new Label();
             pnlCREAR = new Panel();
             btn_confirmarVenta = new Button();
-            lbl_compra_cantidad = new Label();
-            lbl_compra_producto = new Label();
-            lbl_compra_cliente = new Label();
-            txtCrearNombreCliente = new TextBox();
-            txtCrearCantidadVendida = new TextBox();
-            txtCrearNombreProducto = new TextBox();
-            label1 = new Label();
-            lblCREAR = new Label();
             pnlMODIFICAR = new Panel();
             lblDescModificarVenta = new Label();
             txtModificarCantidad = new TextBox();
@@ -56,6 +47,16 @@
             btn_confirmarModificacion = new Button();
             txtCrearID = new TextBox();
             lblTituloModificarVenta = new Label();
+            lbl_compra_cantidad = new Label();
+            lbl_compra_producto = new Label();
+            lbl_compra_cliente = new Label();
+            txtCrearNombreCliente = new TextBox();
+            txtCrearCantidadVendida = new TextBox();
+            txtCrearNombreProducto = new TextBox();
+            label1 = new Label();
+            lblCREAR = new Label();
+            lblHISTORIAL = new Label();
+            btn_MODO_OSCURO = new Button();
             pnlCONSULTA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datagridVENTAS).BeginInit();
             pnlCREAR.SuspendLayout();
@@ -65,6 +66,7 @@
             // btn_CONSULTAR_HISTORIAL
             // 
             btn_CONSULTAR_HISTORIAL.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_CONSULTAR_HISTORIAL.ForeColor = SystemColors.ControlText;
             btn_CONSULTAR_HISTORIAL.Location = new Point(226, 118);
             btn_CONSULTAR_HISTORIAL.Name = "btn_CONSULTAR_HISTORIAL";
             btn_CONSULTAR_HISTORIAL.Size = new Size(484, 126);
@@ -110,6 +112,7 @@
             datagridVENTAS.AllowUserToAddRows = false;
             datagridVENTAS.AllowUserToDeleteRows = false;
             datagridVENTAS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridVENTAS.BackgroundColor = SystemColors.ActiveCaption;
             datagridVENTAS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datagridVENTAS.Location = new Point(108, 262);
             datagridVENTAS.MultiSelect = false;
@@ -120,16 +123,6 @@
             datagridVENTAS.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             datagridVENTAS.Size = new Size(790, 392);
             datagridVENTAS.TabIndex = 6;
-            // 
-            // lblHISTORIAL
-            // 
-            lblHISTORIAL.AutoSize = true;
-            lblHISTORIAL.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
-            lblHISTORIAL.Location = new Point(334, 48);
-            lblHISTORIAL.Name = "lblHISTORIAL";
-            lblHISTORIAL.Size = new Size(409, 52);
-            lblHISTORIAL.TabIndex = 0;
-            lblHISTORIAL.Text = "HISTORIAL DE VENTAS";
             // 
             // pnlCREAR
             // 
@@ -142,7 +135,7 @@
             pnlCREAR.Controls.Add(txtCrearNombreProducto);
             pnlCREAR.Controls.Add(label1);
             pnlCREAR.Controls.Add(lblCREAR);
-            pnlCREAR.Location = new Point(808, 122);
+            pnlCREAR.Location = new Point(807, 121);
             pnlCREAR.Name = "pnlCREAR";
             pnlCREAR.Size = new Size(1006, 915);
             pnlCREAR.TabIndex = 5;
@@ -159,80 +152,6 @@
             btn_confirmarVenta.UseVisualStyleBackColor = true;
             btn_confirmarVenta.Click += btn_confirmarVenta_Click;
             // 
-            // lbl_compra_cantidad
-            // 
-            lbl_compra_cantidad.AutoSize = true;
-            lbl_compra_cantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_cantidad.Location = new Point(715, 370);
-            lbl_compra_cantidad.Name = "lbl_compra_cantidad";
-            lbl_compra_cantidad.Size = new Size(92, 25);
-            lbl_compra_cantidad.TabIndex = 19;
-            lbl_compra_cantidad.Text = "Cantidad:";
-            // 
-            // lbl_compra_producto
-            // 
-            lbl_compra_producto.AutoSize = true;
-            lbl_compra_producto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_producto.Location = new Point(481, 370);
-            lbl_compra_producto.Name = "lbl_compra_producto";
-            lbl_compra_producto.Size = new Size(93, 25);
-            lbl_compra_producto.TabIndex = 18;
-            lbl_compra_producto.Text = "Producto:";
-            // 
-            // lbl_compra_cliente
-            // 
-            lbl_compra_cliente.AutoSize = true;
-            lbl_compra_cliente.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_compra_cliente.Location = new Point(151, 370);
-            lbl_compra_cliente.Name = "lbl_compra_cliente";
-            lbl_compra_cliente.Size = new Size(180, 25);
-            lbl_compra_cliente.TabIndex = 17;
-            lbl_compra_cliente.Text = "Nombre del Cliente:";
-            // 
-            // txtCrearNombreCliente
-            // 
-            txtCrearNombreCliente.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCrearNombreCliente.Location = new Point(345, 367);
-            txtCrearNombreCliente.Name = "txtCrearNombreCliente";
-            txtCrearNombreCliente.Size = new Size(100, 32);
-            txtCrearNombreCliente.TabIndex = 14;
-            // 
-            // txtCrearCantidadVendida
-            // 
-            txtCrearCantidadVendida.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCrearCantidadVendida.Location = new Point(808, 367);
-            txtCrearCantidadVendida.Name = "txtCrearCantidadVendida";
-            txtCrearCantidadVendida.Size = new Size(100, 29);
-            txtCrearCantidadVendida.TabIndex = 16;
-            // 
-            // txtCrearNombreProducto
-            // 
-            txtCrearNombreProducto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCrearNombreProducto.Location = new Point(577, 367);
-            txtCrearNombreProducto.Name = "txtCrearNombreProducto";
-            txtCrearNombreProducto.Size = new Size(100, 32);
-            txtCrearNombreProducto.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(351, 157);
-            label1.Name = "label1";
-            label1.Size = new Size(356, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Introduce los datos para modificar la compra:";
-            // 
-            // lblCREAR
-            // 
-            lblCREAR.AutoSize = true;
-            lblCREAR.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
-            lblCREAR.Location = new Point(403, 58);
-            lblCREAR.Name = "lblCREAR";
-            lblCREAR.Size = new Size(263, 52);
-            lblCREAR.TabIndex = 0;
-            lblCREAR.Text = "CREAR VENTA";
-            // 
             // pnlMODIFICAR
             // 
             pnlMODIFICAR.Controls.Add(lblDescModificarVenta);
@@ -246,7 +165,7 @@
             pnlMODIFICAR.Controls.Add(btn_confirmarModificacion);
             pnlMODIFICAR.Controls.Add(txtCrearID);
             pnlMODIFICAR.Controls.Add(lblTituloModificarVenta);
-            pnlMODIFICAR.Location = new Point(809, 123);
+            pnlMODIFICAR.Location = new Point(807, 121);
             pnlMODIFICAR.Name = "pnlMODIFICAR";
             pnlMODIFICAR.Size = new Size(1007, 916);
             pnlMODIFICAR.TabIndex = 14;
@@ -351,11 +270,107 @@
             lblTituloModificarVenta.TabIndex = 0;
             lblTituloModificarVenta.Text = "MODIFICAR VENTA";
             // 
+            // lbl_compra_cantidad
+            // 
+            lbl_compra_cantidad.AutoSize = true;
+            lbl_compra_cantidad.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_cantidad.Location = new Point(715, 370);
+            lbl_compra_cantidad.Name = "lbl_compra_cantidad";
+            lbl_compra_cantidad.Size = new Size(92, 25);
+            lbl_compra_cantidad.TabIndex = 19;
+            lbl_compra_cantidad.Text = "Cantidad:";
+            // 
+            // lbl_compra_producto
+            // 
+            lbl_compra_producto.AutoSize = true;
+            lbl_compra_producto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_producto.Location = new Point(481, 370);
+            lbl_compra_producto.Name = "lbl_compra_producto";
+            lbl_compra_producto.Size = new Size(93, 25);
+            lbl_compra_producto.TabIndex = 18;
+            lbl_compra_producto.Text = "Producto:";
+            // 
+            // lbl_compra_cliente
+            // 
+            lbl_compra_cliente.AutoSize = true;
+            lbl_compra_cliente.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_compra_cliente.Location = new Point(151, 370);
+            lbl_compra_cliente.Name = "lbl_compra_cliente";
+            lbl_compra_cliente.Size = new Size(180, 25);
+            lbl_compra_cliente.TabIndex = 17;
+            lbl_compra_cliente.Text = "Nombre del Cliente:";
+            // 
+            // txtCrearNombreCliente
+            // 
+            txtCrearNombreCliente.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCrearNombreCliente.Location = new Point(345, 367);
+            txtCrearNombreCliente.Name = "txtCrearNombreCliente";
+            txtCrearNombreCliente.Size = new Size(100, 32);
+            txtCrearNombreCliente.TabIndex = 14;
+            // 
+            // txtCrearCantidadVendida
+            // 
+            txtCrearCantidadVendida.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCrearCantidadVendida.Location = new Point(808, 367);
+            txtCrearCantidadVendida.Name = "txtCrearCantidadVendida";
+            txtCrearCantidadVendida.Size = new Size(100, 29);
+            txtCrearCantidadVendida.TabIndex = 16;
+            // 
+            // txtCrearNombreProducto
+            // 
+            txtCrearNombreProducto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCrearNombreProducto.Location = new Point(577, 367);
+            txtCrearNombreProducto.Name = "txtCrearNombreProducto";
+            txtCrearNombreProducto.Size = new Size(100, 32);
+            txtCrearNombreProducto.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(351, 157);
+            label1.Name = "label1";
+            label1.Size = new Size(356, 21);
+            label1.TabIndex = 1;
+            label1.Text = "Introduce los datos para modificar la compra:";
+            // 
+            // lblCREAR
+            // 
+            lblCREAR.AutoSize = true;
+            lblCREAR.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
+            lblCREAR.Location = new Point(403, 58);
+            lblCREAR.Name = "lblCREAR";
+            lblCREAR.Size = new Size(263, 52);
+            lblCREAR.TabIndex = 0;
+            lblCREAR.Text = "CREAR VENTA";
+            // 
+            // lblHISTORIAL
+            // 
+            lblHISTORIAL.AutoSize = true;
+            lblHISTORIAL.Font = new Font("Segoe UI", 29F, FontStyle.Underline, GraphicsUnit.Point);
+            lblHISTORIAL.Location = new Point(334, 48);
+            lblHISTORIAL.Name = "lblHISTORIAL";
+            lblHISTORIAL.Size = new Size(409, 52);
+            lblHISTORIAL.TabIndex = 0;
+            lblHISTORIAL.Text = "HISTORIAL DE VENTAS";
+            // 
+            // btn_MODO_OSCURO
+            // 
+            btn_MODO_OSCURO.Location = new Point(983, 30);
+            btn_MODO_OSCURO.Name = "btn_MODO_OSCURO";
+            btn_MODO_OSCURO.Size = new Size(252, 23);
+            btn_MODO_OSCURO.TabIndex = 15;
+            btn_MODO_OSCURO.Text = "btn_MODO_OSCURO";
+            btn_MODO_OSCURO.UseVisualStyleBackColor = true;
+            btn_MODO_OSCURO.Click += btn_MODO_OSCURO_Click;
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1841, 1089);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1849, 1097);
+            Controls.Add(btn_MODO_OSCURO);
             Controls.Add(pnlMODIFICAR);
             Controls.Add(pnlCREAR);
             Controls.Add(pnlCONSULTA);
@@ -404,5 +419,6 @@
         private Button btn_confirmarModificacion;
         private TextBox txtCrearID;
         private Label lblTituloModificarVenta;
+        private Button btn_MODO_OSCURO;
     }
 }

@@ -71,5 +71,17 @@ namespace ProyectoDAM
             Consultas.modificar_venta(this, EventArgs.Empty, this.txtCrearID.Text, this.txtModificarCliente.Text, this.txtModificarProducto.Text, this.txtModificarCantidad.Text);
 
         }
+
+        private void btn_MODO_OSCURO_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("OSCURO");
+            this.BackColor = Color.Black;
+            btn_CONSULTAR_HISTORIAL.BackColor = Color.Black;
+            btn_CONSULTAR_HISTORIAL.ForeColor = Color.White;
+            btnCREAR_VENTA.BackColor = Color.Black;
+            btnCREAR_VENTA.ForeColor = Color.White;
+            btn_MODIFICAR_VENTA.BackColor = Color.Black;
+            btn_MODIFICAR_VENTA.ForeColor = Color.White;
+        }
     }
 }
